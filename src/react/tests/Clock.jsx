@@ -1,13 +1,20 @@
 import React, { Component } from "react";
 
 class Clock extends Component {
+    
     constructor(props) {
         super(props);
         this.state = {
             date: new Date(),
-        };    
+            clickCount: 0,
+        };
+        this.clickEvent = this.clickEvent.bind(this);
+        this.hoverEvent = this.hoverEvent.bind(this);
     }
 
+    // ---
+    // MOUNT/DISMOUNT
+    
     componentDidMount() {
         this.timer = setInterval(
             () => this.tick(),
@@ -15,8 +22,24 @@ class Clock extends Component {
         )
     }
     componentWillUnmount() {
-
+        clearInterval(this.timer);
     }
+
+    // ---
+    // EVENT HANDLERS
+
+    clickEvent(e) {
+        console.log("CLICK");
+        this.setState(prevState => ({
+            clickCount: prevState.clickCount + 1,
+        }))
+    }
+    hoverEvent(e) {
+        console.log("HOVER")
+    }
+
+    // ---
+    // CLASS METHODS
 
     tick() {
         this.setState({
@@ -24,10 +47,15 @@ class Clock extends Component {
         })
     }
 
+
+    // ---
+    // FINAL RENDER
+
     render() {
         return (
-            <div>
+            <div onClick={this.clickEvent} onMouseEnter={this.hoverEvent}>
                 <h1>Flotation device.</h1>
+                <p>Clicked {this.state.clickCount} times.</p>
                 <p>It is {this.state.date.toLocaleTimeString()}...</p>
             </div>
         )
