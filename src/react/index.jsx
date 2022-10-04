@@ -1,9 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import Clock from "./tests/Clock.jsx";
+import ReactDOM from "react-dom/client";
+import Wip from "./wip-page/Wip.jsx";
+import "../../dist/style.css"
 
 const root = ReactDOM.createRoot(
     document.getElementById("root")
 );
 
-root.render(<Clock />);
+root.render(<Wip />);
