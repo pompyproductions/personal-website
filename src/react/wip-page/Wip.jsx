@@ -31,7 +31,7 @@ const PageGreeting = props => {
     }
     
     return (
-        <div onClick={nextGreeting}>
+        <div onClick={nextGreeting} className="NOTtyping">
             <AnimText content={`${message}, visitor!`} tag="h1" />
         </div>
       )
@@ -41,6 +41,8 @@ const Wip = () => {
     return (
         <>
             <PageGreeting />
+            <p>The website is under construction.</p>
+            <p>Pro tip: clicking it really fast makes it go crazy!</p>
         </>
     )
 }

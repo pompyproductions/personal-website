@@ -6,7 +6,10 @@ const AnimText = (props) => {
     let animID;
     useEffect(() => {
         animID = setInterval(typeLetter, props.delay); 
-        return updateDisplay("")
+        return () => {
+            clearInterval(animID);
+            updateDisplay("");
+        }
     }, [props.content]); // this make sure it re-renders every time the content changes (return function resets display) 
 
     const typeLetter = () => {
