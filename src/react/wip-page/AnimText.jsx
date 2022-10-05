@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 
 const AnimText = (props) => {
-    const [displayed, updateDisplay] = React.useState(() => {
-        return "";
-    });
+    const [displayed, updateDisplay] = React.useState("");
 
     let animID;
-    useEffect(() => {animID = setInterval(typeLetter, props.delay)}, [])
+    useEffect(() => {
+        animID = setInterval(typeLetter, props.delay); 
+        return updateDisplay("")
+    }, [props.content]); // this make sure it re-renders every time the content changes (return function resets display) 
 
     const typeLetter = () => {
         updateDisplay(prevText => {
@@ -23,6 +24,5 @@ AnimText.defaultProps = {
     delay: 30,
     tag: "p"
 };
-
 
 export default AnimText;
