@@ -1,18 +1,11 @@
 import React, { Component } from "react";
+import AnimText from "./AnimText.jsx";
 
-class Wip extends Component {
 
-    // ---
-    // FINAL RENDER
-
-    render() {
-        return (
-            <>
-                <h1>Hello anam.</h1>
-                <p>This page is under construction.</p>
-            </>
-        )
-    }
+const Wip = () => {
+    return (
+        <AnimText />
+    )
 }
 
 export default Wip;
