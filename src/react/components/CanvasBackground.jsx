@@ -61,7 +61,7 @@ const CanvasBackground = (props) => {
     }
 
     function randomizeCanvas(ctx) {
-        const color = `hsl(${Math.floor(360 * Math.random())}deg 85% 60%)`;
+        const color = `hsl(${Math.floor((200 + 190 * Math.random()) % 360)}deg 85% 60%)`; // between 30 and 200
         setBgStyle({
             ...bgStyle,
             backgroundColor: color
