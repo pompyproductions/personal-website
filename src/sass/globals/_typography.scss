@@ -1,13 +1,17 @@
 body {
     font-family: "Karla", sans-serif;
     line-height: 1.3;
+    color: white;
 }
 
 h1, h2, h3,
 h4, h5, h6 {
     font-family: "Space Grotesk", sans-serif;
     font-weight: 900;
-    color: white;
+}
+
+svg {
+    width: 1em;
 }
 
 span.typing > * {
@@ -18,7 +22,8 @@ span.typing > * {
 }
 
 h1 {
-    font-size: 8rem;
+    font-size: 2rem;
+    position: relative;
 }
 
 a {

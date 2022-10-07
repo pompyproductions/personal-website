@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
+import Icon from "../../assets/refresh.svg";
+import SVG from 'react-inlinesvg';
 
 const CanvasBackground = (props) => {
 
@@ -6,6 +8,10 @@ const CanvasBackground = (props) => {
     const [bgStyle, setBgStyle] = useState({
         transition: "background-color .5s",
     });
+    const [btnStyle, setBtnStyle] = useState({
+        transition: "fill .5s",
+        fill: "yellow"
+    })
     const colors = [
         "hsl(160deg 85% 60%)",
         "hsl(80deg 85% 60%)",
@@ -18,11 +24,17 @@ const CanvasBackground = (props) => {
         canvasRef.current.width = window.innerWidth;
         canvasRef.current.height = window.innerHeight;
         const ctx = canvasRef.current.getContext("2d");
+
+        window.onresize = () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight
+        }
     }, [])
 
     const draw = (ctx, color) => {
         ctx.fillStyle = color;
         ctx.strokeStyle = "white";
+        ctx.lineWidth = 2;
         ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
         ctx.beginPath();
 
@@ -52,14 +64,18 @@ const CanvasBackground = (props) => {
             ...bgStyle,
             backgroundColor: color
         });
+        setBtnStyle({
+            ...btnStyle,
+            fill: color
+        });
         draw(ctx, color);
     }
 
     return (
-        <div className="canvas-container">
+        <>
             <canvas style={bgStyle} ref={canvasRef}/>
-            <button onClick={handle} className="restartSvg">Press Me</button>
-        </div>
+            <button onClick={handle} className="icon-button"><SVG src={Icon} style={btnStyle}/></button>
+        </>
     )
 }
 

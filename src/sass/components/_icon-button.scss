@@ -1,0 +1,14 @@
+.icon-button {
+    background-color: white;
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    border: 1px solid white;
+    transition: background-color 0.2s;
+    &:hover {
+        background-color: transparent;
+    }
+    &:hover svg {
+        fill: white !important;
+    }
+}

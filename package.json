@@ -21,8 +21,10 @@
     "gulp-inject": "^5.0.5",
     "gulp-sass": "^5.1.0",
     "html-webpack-plugin": "^5.5.0",
+    "react-inlinesvg": "^3.0.1",
     "sass": "^1.55.0",
     "style-loader": "^3.3.1",
+    "svg-inline-loader": "^0.8.2",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.11.1"
