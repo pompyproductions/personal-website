@@ -21,7 +21,7 @@ const AnimText = (props) => {
         });
     }
 
-    return <props.tag>{displayed}</props.tag>
+    return <props.tag className="animated-text">{displayed}</props.tag>
 }
 
 AnimText.defaultProps = {

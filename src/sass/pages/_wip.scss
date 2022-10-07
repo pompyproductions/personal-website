@@ -1,9 +1,14 @@
 #root {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
+    min-height: -webkit-fill-avalilable;
     align-items: center;
     justify-content: center;
+}
+
+html {
+    height: -webkit-fill-avalilable;
 }
 
 .wip-content {

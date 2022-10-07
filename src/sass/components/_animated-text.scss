@@ -1,0 +1,11 @@
+.animated-text {
+    cursor: pointer;
+    transition: transform .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}

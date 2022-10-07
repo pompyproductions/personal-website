@@ -8,10 +8,12 @@ body {
     padding: 0;
     margin: 0;
     font-size: 100%;
-    justify-content: stretch;
+    height: 100vh;
     min-height: 100vh;
 } h1, h2, h3, p {
     margin: 0;
+    font-size: 0.8rem;
+    cursor: default;
 } 
 svg {
     width: 1em;
@@ -21,6 +23,7 @@ a {
     color: inherit;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 li {

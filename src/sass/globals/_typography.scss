@@ -14,15 +14,12 @@ svg {
     width: 1em;
 }
 
-span.typing > * {
-    cursor: default;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
+p {
+    font-size: 0.75em;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     position: relative;
 }
 
