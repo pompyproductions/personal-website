@@ -1,5 +1,8 @@
 import React, { Component } from "react";
-import AnimText from "./AnimText.jsx";
+import AnimText from "../components/AnimText.jsx";
+import CanvasBackground from "../components/CanvasBackground.jsx";
+
+// import 
 
 const PageGreeting = props => {
     const greetings = {
@@ -40,6 +43,7 @@ const PageGreeting = props => {
 const Wip = () => {
     return (
         <>
+            <CanvasBackground />
             <PageGreeting />
             <p>The website is under construction.</p>
         </>

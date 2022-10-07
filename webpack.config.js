@@ -6,7 +6,7 @@ module.exports = {
     entry: "./src/react/index.jsx", // this is the "master" file
     output: { // this is where the final bundle goes
         path: path.join(__dirname, "/dist"),
-        filename: "main.js"
+        filename: "main.js",
     },
     module: {
         rules: [
