@@ -29,6 +29,7 @@ const CanvasBackground = (props) => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight
         }
+        randomizeCanvas(ctx);
     }, [])
 
     const draw = (ctx, color) => {
