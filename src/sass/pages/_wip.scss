@@ -1,10 +1,21 @@
+@use "../globals" as *;
+
 #root {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     min-height: -webkit-fill-avalilable;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
+}
+
+p, ol, ul, h1 {
+    text-align: center;
+    // width: 100%;
+    @include break-at("medium") {
+        text-align: left;
+        align-self: flex-start;
+    }
 }
 
 html {
@@ -14,33 +25,67 @@ html {
 .wip-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     padding: 2em 1em;
     gap: 1em;
+    @include break-at("medium") {
+        padding-left: 6rem;
+    }
+}
+
+.greeting-container {
+    @include break-at("medium") {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+}
+
+.hsep {
+    margin: 0 auto;
+    @include break-at("medium") {
+        margin: 0;
+    }
+}
+
+button {
+    margin: 0 auto;
+    @include break-at("medium") {
+        position: absolute;
+        left: 6rem;
+        top: 6rem;
+    }
 }
 
 .icon-button {
     margin-bottom: 1em;
+    
 }
 
 p {
     text-align: center;
     white-space: pre-wrap;
+    @include break-at("medium") {
+        text-align: left;
+    }
 }
 
 li {
-    width: 40vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.25em;
     ul, ol {
-        width: 100%;
-        text-align: center;
         &::before, &::after {
             content: " — "
         }
+        @include break-at("medium") {
+            &::after {
+                content: "";
+            }
+        }
     }
+    
     a {
         display: inline;
     }

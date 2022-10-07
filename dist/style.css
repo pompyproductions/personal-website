@@ -60,10 +60,20 @@ svg {
 p {
   font-size: 0.75em;
 }
+@media only screen and (min-width: 720px) {
+  p {
+    font-size: 1em;
+  }
+}
 
 h1 {
   font-size: 1.8rem;
   position: relative;
+}
+@media only screen and (min-width: 720px) {
+  h1 {
+    font-size: 3rem;
+  }
 }
 
 a {
@@ -114,6 +124,13 @@ canvas {
   -webkit-user-select: none;
   -moz-user-select: none;
 }
+@media only screen and (min-width: 720px) {
+  .animated-text {
+    width: min-content;
+    white-space: nowrap;
+    margin-left: 2rem;
+  }
+}
 .animated-text:hover {
   transform: scale(1.2);
 }
@@ -123,8 +140,18 @@ canvas {
   flex-direction: column;
   min-height: 100vh;
   min-height: -webkit-fill-avalilable;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
+}
+
+p, ol, ul, h1 {
+  text-align: center;
+}
+@media only screen and (min-width: 720px) {
+  p, ol, ul, h1 {
+    text-align: left;
+    align-self: flex-start;
+  }
 }
 
 html {
@@ -134,9 +161,41 @@ html {
 .wip-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   padding: 2em 1em;
   gap: 1em;
+}
+@media only screen and (min-width: 720px) {
+  .wip-content {
+    padding-left: 6rem;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .greeting-container {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+.hsep {
+  margin: 0 auto;
+}
+@media only screen and (min-width: 720px) {
+  .hsep {
+    margin: 0;
+  }
+}
+
+button {
+  margin: 0 auto;
+}
+@media only screen and (min-width: 720px) {
+  button {
+    position: absolute;
+    left: 6rem;
+    top: 6rem;
+  }
 }
 
 .icon-button {
@@ -147,20 +206,26 @@ p {
   text-align: center;
   white-space: pre-wrap;
 }
+@media only screen and (min-width: 720px) {
+  p {
+    text-align: left;
+  }
+}
 
 li {
-  width: 40vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.25em;
 }
-li ul, li ol {
-  width: 100%;
-  text-align: center;
-}
 li ul::before, li ul::after, li ol::before, li ol::after {
   content: " — ";
+}
+@media only screen and (min-width: 720px) {
+  li ul::after, li ol::after {
+    content: "";
+  }
 }
 li a {
   display: inline;

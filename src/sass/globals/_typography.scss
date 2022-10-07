@@ -1,3 +1,5 @@
+@use "breakpoints" as *;
+
 body {
     font-family: "Karla", sans-serif;
     line-height: 1.3;
@@ -16,11 +18,17 @@ svg {
 
 p {
     font-size: 0.75em;
+    @include break-at("medium") {
+        font-size: 1em;
+    }
 }
 
 h1 {
     font-size: 1.8rem;
     position: relative;
+    @include break-at("medium") {
+        font-size: 3rem;
+    }
 }
 
 a {

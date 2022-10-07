@@ -1,9 +1,18 @@
+@use "../globals" as *;
+
 .animated-text {
     cursor: pointer;
     transition: transform .2s;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
+
+    @include break-at("medium") {
+        width: min-content;
+        white-space: nowrap;
+        margin-left: 2rem;    
+    };
+
 
     &:hover {
         transform: scale(1.2);
