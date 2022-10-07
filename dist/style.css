@@ -1,0 +1,148 @@
+@charset "UTF-8";
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  justify-content: stretch;
+  min-height: 100vh;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+svg {
+  width: 1em;
+}
+
+a {
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+}
+li ul, li ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  line-height: 1.3;
+  color: white;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 900;
+}
+
+svg {
+  width: 1em;
+}
+
+span.typing > * {
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+h1 {
+  font-size: 2rem;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+canvas {
+  background-color: rgb(72, 185, 219);
+  position: absolute;
+  z-index: -1;
+}
+
+.icon-button {
+  background-color: white;
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  border: 1px solid white;
+  transition: background-color 0.2s;
+}
+.icon-button:hover {
+  background-color: transparent;
+}
+.icon-button:hover svg {
+  fill: white !important;
+}
+
+.hsep {
+  width: 60vw;
+  min-height: 2px;
+  background-color: white;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.wip-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 1em;
+  gap: 1em;
+}
+
+.icon-button {
+  margin-bottom: 1em;
+}
+
+p {
+  text-align: center;
+  white-space: pre-wrap;
+}
+
+li {
+  width: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25em;
+}
+li ul, li ol {
+  width: 100%;
+  text-align: center;
+}
+li ul::before, li ul::after, li ol::before, li ol::after {
+  content: " — ";
+}
+li a {
+  display: inline;
+}
