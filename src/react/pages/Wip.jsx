@@ -9,7 +9,16 @@ const Wip = () => {
         <>
             <CanvasBackground />
             <PageGreeting />
-            <p>The website is under construction.</p>
+            <div className="wip-content">
+                <p>The website is under construction.</p>
+                <p>In the meantime, you can check out the following links:</p>
+                <li>
+                    <ul>My <a>GitHub profile</a></ul>
+                    <ul>My <a>LinkedIn profile</a></ul>
+                    <ul>My <a>CodePen profile</a></ul>
+                </li>
+                <p>Thank you for visiting!{"\n"}— Eren Gazioglu</p>
+            </div>
         </>
     )
 }

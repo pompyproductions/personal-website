@@ -31,10 +31,13 @@ const PageGreeting = props => {
     }
     
     return (
-        <span onClick={nextGreeting} className="typing">
-            <AnimText content={`${message}!`} tag="h1" delay={30} />
-        </span>
-      )
+        <>
+            <span onClick={nextGreeting} className="typing">
+                <AnimText content={`${message}!`} tag="h1" delay={30} />
+            </span>
+            <div className="hsep"></div>
+        </>
+        )
 }
 
 export default PageGreeting;

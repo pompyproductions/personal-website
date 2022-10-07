@@ -5,3 +5,38 @@
     align-items: center;
     justify-content: center;
 }
+
+.wip-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 1em;
+    gap: 1em;
+}
+
+.icon-button {
+    margin-bottom: 1em;
+}
+
+p {
+    text-align: center;
+    white-space: pre-wrap;
+}
+
+li {
+    width: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25em;
+    ul, ol {
+        width: 100%;
+        text-align: center;
+        &::before, &::after {
+            content: " — "
+        }
+    }
+    a {
+        display: inline;
+    }
+}

@@ -35,6 +35,7 @@ const CanvasBackground = (props) => {
         ctx.fillStyle = color;
         ctx.strokeStyle = "white";
         ctx.lineWidth = 2;
+        ctx.setLineDash([8, 3]);
         ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
         ctx.beginPath();
 
