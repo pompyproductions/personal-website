@@ -32,23 +32,23 @@ const CanvasBackground = (props) => {
         randomizeCanvas(ctx);
     }, [])
 
-    const draw = (ctx, color) => {
+    const draw = (ctx, color, scale=1) => {
         ctx.fillStyle = color;
         ctx.strokeStyle = "white";
-        ctx.lineWidth = 2;
-        ctx.setLineDash([8, 3]);
+        ctx.lineWidth = 2 * scale;
+        ctx.setLineDash([8 * scale, 3 * scale]);
         ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
         ctx.beginPath();
 
         for (let i = 0; i < 50; i++) {
-            const radius = 10 + 100 * Math.random();
+            const radius = 10 * scale + 100 * Math.random();
             const pos = [
                 canvasRef.current.width * Math.random(), 
                 canvasRef.current.height * Math.random()
             ];
-            ctx.moveTo(pos[0] + radius, pos[1]);
+            ctx.moveTo(pos[0] + radius * scale, pos[1]);
             ctx.arc(
-                pos[0], pos[1], radius,
+                pos[0], pos[1], radius * scale,
                 0, 2 * Math.PI
             )
         }
@@ -70,7 +70,11 @@ const CanvasBackground = (props) => {
             ...btnStyle,
             fill: color
         });
-        draw(ctx, color);
+        draw(
+            ctx, 
+            color, 
+            window.innerWidth < 480 ? 0.75 : 1
+            );
     }
 
     return (
