@@ -131,16 +131,19 @@ canvas {
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
+  width: min-content;
+  align-self: center;
+  margin: 0 auto;
 }
 @media only screen and (min-width: 720px) {
   .animated-text {
-    width: min-content;
     white-space: nowrap;
+    width: min-content;
     margin-left: 2rem;
   }
 }
 .animated-text:hover {
-  transform: scale(1.2);
+  transform: skew(-10deg) scale(1.2);
 }
 
 body {

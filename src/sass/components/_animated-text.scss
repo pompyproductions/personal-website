@@ -6,15 +6,19 @@
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
+    width: min-content;
+    align-self: center;
+    margin: 0 auto;
 
+    
     @include break-at("medium") {
-        width: min-content;
         white-space: nowrap;
+        width: min-content;
         margin-left: 2rem;    
     };
 
 
     &:hover {
-        transform: scale(1.2);
+        transform: skew(-10deg) scale(1.2);
     }
 }
