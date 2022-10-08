@@ -30,6 +30,7 @@ p, ol, ul, h1 {
     gap: 1em;
     @include break-at("medium") {
         padding-left: 6rem;
+        padding-right: 6rem;
     }
 }
 

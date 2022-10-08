@@ -180,6 +180,7 @@ p, ol, ul, h1 {
 @media only screen and (min-width: 720px) {
   .wip-content {
     padding-left: 6rem;
+    padding-right: 6rem;
   }
 }
 

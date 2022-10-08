@@ -10,14 +10,15 @@ const Wip = () => {
             <CanvasBackground />
             <PageGreeting />
             <div className="wip-content">
-                <p>The website is under construction.</p>
-                <p>In the meantime, you can check out the following links:</p>
+                <p>I'm Eren Gazioglu— a self-taught front end developer with a background in architecture.</p>
+                <p>Regrettably, this website is currently under construction. In the meantime, I hope you enjoy this little stand-in instead!</p>
+                <p>If you'd like, you can follow these links to find out more about me:</p>
                 <li>
                     <ul>My <a href="https://github.com/pompyproductions" target="_blank">GitHub profile</a></ul>
                     <ul>My <a href="https://www.linkedin.com/in/erengazioglu" target="_blank">LinkedIn profile</a></ul>
                     <ul>My <a href="https://codepen.io/pompyproductions" target="_blank">CodePen profile</a></ul>
                 </li>
-                <p>Thank you for visiting!{"\n"}— Eren Gazioglu</p>
+                <p>Thank you for visiting!{"\n"}Eren Gazioglu</p>
             </div>
         </>
     )
