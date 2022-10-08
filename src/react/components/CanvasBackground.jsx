@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
-import Icon from "../../assets/refresh.svg";
+import refreshIcon from "../../assets/refresh.svg";
 import SVG from 'react-inlinesvg';
+import IconButton from "./IconButton.jsx";
 
 const CanvasBackground = (props) => {
 
@@ -88,7 +89,7 @@ const CanvasBackground = (props) => {
     return (
         <>
             <canvas style={bgStyle} ref={canvasRef}/>
-            <button onClick={handle} className="icon-button"><SVG src={Icon} style={btnStyle}/></button>
+            <IconButton onClick={handle} icon={refreshIcon} iconStyle={btnStyle} content="randomize background" />
         </>
     )
 }

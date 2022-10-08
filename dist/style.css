@@ -102,6 +102,28 @@ canvas {
 }
 
 .icon-button {
+  display: flex;
+  gap: 0.8em;
+  align-items: center;
+  margin: 1.2em auto;
+}
+@media only screen and (min-width: 720px) {
+  .icon-button {
+    position: absolute;
+    left: 6rem;
+    top: 6rem;
+  }
+}
+.icon-button > p {
+  align-self: unset;
+  display: none;
+}
+@media only screen and (min-width: 720px) {
+  .icon-button > p {
+    display: block;
+  }
+}
+.icon-button > button {
   background-color: white;
   border-radius: 50%;
   width: 2.5em;
@@ -112,10 +134,10 @@ canvas {
   align-items: center;
   transition: background-color 0.2s;
 }
-.icon-button:hover {
+.icon-button > button:hover {
   background-color: transparent;
 }
-.icon-button:hover svg {
+.icon-button > button:hover svg {
   fill: white !important;
 }
 
@@ -198,21 +220,6 @@ p, ol, ul, h1 {
   .hsep {
     margin: 0;
   }
-}
-
-button {
-  margin: 0 auto;
-}
-@media only screen and (min-width: 720px) {
-  button {
-    position: absolute;
-    left: 6rem;
-    top: 6rem;
-  }
-}
-
-.icon-button {
-  margin-bottom: 1em;
 }
 
 p {

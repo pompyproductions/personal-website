@@ -48,19 +48,24 @@ p, ol, ul, h1 {
     }
 }
 
-button {
-    margin: 0 auto;
-    @include break-at("medium") {
-        position: absolute;
-        left: 6rem;
-        top: 6rem;
-    }
-}
+// .icon-button {
+//     margin: 0 auto;
+//     display: flex;
+//     align-items: stretch;
+//     p {
+//         height: 100%;
+//     }
+//     @include break-at("medium") {
+//         position: absolute;
+//         left: 6rem;
+//         top: 6rem;
+//     }
+// }
 
-.icon-button {
-    margin-bottom: 1em;
+// .icon-button {
+//     margin-bottom: 1em;
     
-}
+// }
 
 p {
     text-align: center;
