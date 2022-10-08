@@ -27,7 +27,7 @@ const CanvasBackground = (props) => {
 
         window.onresize = () => {
             canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight
+            canvas.height = window.innerHeight;
         }
         randomizeCanvas(ctx);
     }, [])

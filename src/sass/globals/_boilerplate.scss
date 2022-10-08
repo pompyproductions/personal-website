@@ -1,18 +1,24 @@
 html {
     box-sizing: border-box;
-} *, *::before, *::after {
+    min-height: 100vh;
+    overflow: auto;
+} 
+*, *::before, *::after {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     padding: 0;
     margin: 0;
     font-size: 100%;
-    height: 100vh;
     min-height: 100vh;
+    overflow: auto;
+    background-color: black;
 } h1, h2, h3, p {
     margin: 0;
-    font-size: 0.8rem;
+    font-size: .8rem;
     cursor: default;
 } 
 svg {
