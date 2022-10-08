@@ -90,3 +90,13 @@ li {
         display: inline;
     }
 }
+
+.slanted {
+    font-style: italic;
+    &::before {content:"↓  "}
+    &::after {content:"  ↓"}
+    @include break-at("medium") {
+        margin-left: 6rem;
+        &::after {content: ""}
+    }
+}

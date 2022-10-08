@@ -8,6 +8,7 @@ const CanvasBackground = (props) => {
     const [bgStyle, setBgStyle] = useState({
         transition: "background-color .5s",
     });
+    const [color, setColor] = useState("red");
     const [btnStyle, setBtnStyle] = useState({
         transition: "fill .5s",
         fill: "yellow"
@@ -32,7 +33,7 @@ const CanvasBackground = (props) => {
         randomizeCanvas(ctx);
     }, [])
 
-    const draw = (ctx, color, scale=1) => {
+    const drawCircles = (ctx, color, scale=1) => {
         ctx.fillStyle = color;
         ctx.strokeStyle = "white";
         ctx.lineWidth = 2 * scale;
@@ -60,17 +61,24 @@ const CanvasBackground = (props) => {
         randomizeCanvas(canvasRef.current.getContext("2d"));
     }
 
-    function randomizeCanvas(ctx) {
-        const color = `hsl(${Math.floor((200 + 190 * Math.random()) % 360)}deg 85% 60%)`; // between 30 and 200
+    function newRandomColor() {
+        setColor(`hsl(${Math.floor((200 + 190 * Math.random()) % 360)}deg 85% 60%)`)
+    }
+    function switchColor(clr) {
         setBgStyle({
             ...bgStyle,
-            backgroundColor: color
-        });
+            backgroundColor: clr
+        })
         setBtnStyle({
             ...btnStyle,
-            fill: color
+            fill: clr
         });
-        draw(
+    }
+
+    function randomizeCanvas(ctx) {
+        newRandomColor();
+        switchColor(color);
+        drawCircles(
             ctx, 
             color, 
             window.innerWidth < 480 ? 0.75 : 1

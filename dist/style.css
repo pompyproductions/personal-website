@@ -63,11 +63,11 @@ svg {
 }
 
 p {
-  font-size: 0.75em;
+  font-size: 0.85rem;
 }
 @media only screen and (min-width: 720px) {
   p {
-    font-size: 1em;
+    font-size: 1rem;
   }
 }
 
@@ -134,10 +134,10 @@ canvas {
   width: min-content;
   align-self: center;
   margin: 0 auto;
+  white-space: nowrap;
 }
 @media only screen and (min-width: 720px) {
   .animated-text {
-    white-space: nowrap;
     width: min-content;
     margin-left: 2rem;
   }
@@ -241,4 +241,22 @@ li ul::before, li ul::after, li ol::before, li ol::after {
 }
 li a {
   display: inline;
+}
+
+.slanted {
+  font-style: italic;
+}
+.slanted::before {
+  content: "↓  ";
+}
+.slanted::after {
+  content: "  ↓";
+}
+@media only screen and (min-width: 720px) {
+  .slanted {
+    margin-left: 6rem;
+  }
+  .slanted::after {
+    content: "";
+  }
 }

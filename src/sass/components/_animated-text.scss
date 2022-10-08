@@ -9,10 +9,10 @@
     width: min-content;
     align-self: center;
     margin: 0 auto;
+    white-space: nowrap;
 
     
     @include break-at("medium") {
-        white-space: nowrap;
         width: min-content;
         margin-left: 2rem;    
     };
