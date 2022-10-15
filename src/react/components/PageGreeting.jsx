@@ -6,9 +6,10 @@ const PageGreeting = props => {
         // template: generic, morning, generic, afternoon, generic
         "tr": ["Selam", "Günaydın", "Selam", "Tünaydın", "İyi akşamlar"],
         "en": ["Hello", "Good morning", "Hello", "Good afternoon", "Good evening"],
-        "fr": ["Salut", "Bonjour", "Salut", "Salut", "Bonsoir"],
+        "fr": ["Salut ", "Bonjour ", "Salut ", "Salut ", "Bonsoir "],
         "es": ["¡Hola", "¡Buenos días", "¡Buenos días", "¡Buenas tardes", "¡Buenas noches"],
-        "it": ["Ciao", "Buongiorno", "Ciao", "Ciao", "Buonasera"]
+        "it": ["Ciao", "Buongiorno", "Ciao", "Ciao", "Buonasera"],
+        "pt": ["Olá", "Bom dia", "Boas", "Boa tarde", "Boa noite"]
     }
     let hour = new Date();
     hour = hour.getHours();
