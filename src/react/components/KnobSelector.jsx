@@ -3,8 +3,6 @@ import React, { useState, useEffect, useRef } from "react";
 const KnobSelector = (props) => {
     const needleRef = useRef();
     const [rotation, setRotation] = useState(0);
-
-    console.log(props.options);
     
     const handleKnobClick = () => {
         setRotation(prev => {
@@ -24,10 +22,8 @@ const KnobSelector = (props) => {
                 <button className="knob-selector" onClick={handleKnobClick}>
                     <span ref={needleRef}></span>
                 </button>
-                <p>One</p>
-                <p>Two</p>
-                <p>Three</p>
-                <p>Four</p>
+                {props.options.split(" ").map((opt, i) => 
+                <p key={i}>{opt}</p>)}
             </div>
         </div>
     )
