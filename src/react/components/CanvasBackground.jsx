@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import refreshIcon from "../../assets/refresh.svg";
-import SVG from 'react-inlinesvg';
 import IconButton from "./IconButton.jsx";
 
 const CanvasBackground = (props) => {

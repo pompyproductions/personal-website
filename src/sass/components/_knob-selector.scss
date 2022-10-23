@@ -1,0 +1,141 @@
+@use "../globals" as *;
+@use "sass:math";
+
+.knob-container {
+    // font-size: 12px;
+    position: relative;
+    margin: .5em 3em;
+    display: grid;
+    place-items: center;
+    p {
+        font-size: 0.75em;
+        color: #26939f;
+        position: absolute;
+        white-space: nowrap;
+        margin-left: 0.4em;
+        margin-right: -0.4em;
+
+        cursor: pointer;
+        @include disable-selection;
+        
+        height: 1em;
+        line-height: 2em;
+        
+        font-variation-settings: 'wght' 400;
+        transition: 
+            font-variation-settings 0.2s,
+            color 0.2s;
+        
+        &:hover, &.active {
+            font-variation-settings: 'wght' 750;
+            color: #fcf0f0;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            border-bottom: 1px dashed #26939f;
+            width: 1em;
+            bottom: 0px;
+        }
+
+        &:nth-of-type(1) {
+            top: calc(-1em + 1px);
+            left: calc(3em + 1px);
+            &::before {
+                // left: calc(-2em - 1px);
+                left: calc(-1.4em + 1px);
+            }
+        }
+        
+        &:nth-of-type(2) {
+            bottom: -1px;
+            left: calc(3em + 1px);
+            &::before {
+                left: calc(-1.4em + 1px);
+                bottom: 1px;
+            }
+        }
+
+        &:nth-of-type(3) {
+            bottom: -1px;
+            right: 4em;
+            &::before {
+                right: calc(-1.5em + 1px);
+                bottom: 1px;
+            }
+        }
+
+        &:nth-of-type(4) {
+            top: calc(-1em + 1px);
+            right: 4em;
+            &::before {
+                right: calc(-1.5em + 1px);
+            }
+        }
+    }
+}
+
+.knob-selector {
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0);
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    border: none;
+    outline: 0 solid rgb(38, 147, 159);
+    border: 1px solid #fcf0f0;
+    outline-offset: -1px;
+    box-shadow: 0 1em 1em rgba(0, 0, 0, 0);
+    transition: outline 0.2s, outline-offset 0.2s, background-color 0.4s;
+    &:hover {
+        outline: 1px dashed #26939f;
+        outline-offset: 3em;
+        background-color: rgb(38 147 159 / 60%);
+        // box-shadow: 
+        //     1em 1em 1em rgba(0, 0, 0, 0.1),
+        //     -1em -1em 1em rgba(255, 255, 255, 0.3);
+    }
+
+    span { // needle. you can add a class to avoid confusion if you want
+        position: absolute;
+        pointer-events: none;
+        z-index: 2;
+        // border: 1px #fcf0f0 solid;
+        top: -1px;
+        right: calc(1em - 2px);
+        left: calc(1em - 2px);
+        bottom: calc(1em - 2px);
+        background-color: white;
+        transform-origin: center calc(100% - 1px);
+        transition: transform 0.1s ease-out;
+        transform: rotate(45deg);
+    }
+
+
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        // z-index:;
+        top: -1px;
+        bottom: -1px;
+        // background-color: rgba(255, 0, 0, .5);
+        width: math.hypot(2em, 2em);
+        // height: calc(math.hypot(4em, 4em) / 2); // pointless but cute
+        border-top: 1px dashed #26939f;
+        // #26939f
+    }
+    
+    &::before {
+        right: -0.5px; 
+        transform-origin: top right;
+        transform: rotate(-45deg)
+    }
+    &::after {
+        transform-origin: top left;
+        transform: rotate(45deg);
+        left: -0.5px;
+    }
+}

@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
-import SVG from 'react-inlinesvg';
+import { ReactSVG } from 'react-svg'
 
 const IconButton = (props) => {
 
     return (
         <div className="icon-button">
             <button onClick={props.onClick}>
-                <SVG src={props.icon} style={props.iconStyle}/>
+                <ReactSVG src={props.icon} style={props.iconStyle}/>
             </button>
             <p>{props.content}</p>
         </div>

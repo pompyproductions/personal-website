@@ -3,20 +3,26 @@
     min-height: 100vh;
 
     display: grid;
-    grid-template-areas: "nav" "main";
-    grid-template-rows: 4rem auto;
+    grid-template-areas: "header" "main";
+    grid-template-rows: auto 1fr;
     grid-template-columns: 1fr;
+    gap: 1rem;
+
+    background-color: #282724;
 
     align-items: center;
     justify-items: center;
 }
 
-nav {
-    grid-area: nav;
-}
-
 main {
     grid-area: main;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #202020;
 }
 
 aside {

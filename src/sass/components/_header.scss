@@ -1,0 +1,14 @@
+header {
+    grid-area: header;
+    width: 100%;
+    background-color: #202020;
+
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+#eg-logo {
+    width: 2rem;
+}
