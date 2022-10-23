@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import AnimText from "../components/AnimText.jsx";
+import React from "react";
 
 import CanvasBackground from "../components/CanvasBackground.jsx";
 import PageGreeting from "../components/PageGreeting.jsx"

@@ -168,18 +168,33 @@ canvas {
   transform: skew(-10deg) scale(1.2);
 }
 
+#root {
+  padding: 1rem;
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas: "nav" "main";
+  grid-template-rows: 4rem auto;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  position: fixed;
+}
+
 body {
   display: flex;
   flex-direction: column;
   justify-content: stretch;
-}
-
-#root {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
 }
 
 p, ol, ul, h1 {

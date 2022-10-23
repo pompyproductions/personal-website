@@ -1,0 +1,24 @@
+#root {
+    padding: 1rem;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-areas: "nav" "main";
+    grid-template-rows: 4rem auto;
+    grid-template-columns: 1fr;
+
+    align-items: center;
+    justify-items: center;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    position: fixed;
+}
