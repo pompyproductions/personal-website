@@ -5,6 +5,5 @@ Setting up React with Webpack and Babel, and Sass with Gulp.
 
 ## Next steps
 
-Clean up WIP: 
-- Add breakpoints, display aligned to left on bigger screens, items bigger
+Use [FontAwesome](https://fontawesome.com/search?q=linkedin&o=r) for svg icons.
 
