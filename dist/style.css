@@ -105,7 +105,6 @@ canvas {
   display: flex;
   gap: 0.8em;
   align-items: center;
-  margin: 1.2em auto;
 }
 @media only screen and (min-width: 720px) {
   .icon-button {
@@ -124,7 +123,7 @@ canvas {
   }
 }
 .icon-button > button {
-  background-color: white;
+  background-color: transparent;
   border-radius: 50%;
   width: 2.5em;
   height: 2.5em;
@@ -135,10 +134,10 @@ canvas {
   transition: background-color 0.2s;
 }
 .icon-button > button:hover {
-  background-color: transparent;
+  background-color: #fcf0f0;
 }
 .icon-button > button:hover svg {
-  fill: white !important;
+  fill: #282724 !important;
 }
 
 .hsep {
@@ -179,7 +178,7 @@ header {
 }
 
 #eg-logo {
-  width: 2rem;
+  width: 2.4rem;
 }
 
 .knob-container {
