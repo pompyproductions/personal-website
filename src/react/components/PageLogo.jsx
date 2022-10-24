@@ -16,11 +16,10 @@ const PageLogo = (props) => {
         startY -= props.strokeWeight / 2;
         endX += props.strokeWeight;
         endY += props.strokeWeight;
-        icon.setAttribute("viewBox", `\
-            ${startX}, \
-            ${startY}, \
-            ${endX}, \
-            ${endY}`
+        icon.setAttribute("viewBox", `${startX}`
+            + ` ${startY}`
+            + ` ${endX}`
+            + ` ${endY}`
         );
 
         const iconStyle = icon.querySelector("style")
