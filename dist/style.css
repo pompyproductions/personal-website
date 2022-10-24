@@ -322,18 +322,15 @@ header {
   padding: 1rem;
   min-height: 100vh;
   display: grid;
-  grid-template-areas: "header" "main";
-  grid-template-rows: auto 1fr;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: min-content auto min-content;
   grid-template-columns: 1fr;
   gap: 1rem;
   background-color: #282724;
-  align-items: center;
-  justify-items: center;
 }
 
 main {
   grid-area: main;
-  height: 100%;
   width: 100%;
   padding: 2rem;
   display: flex;
@@ -352,6 +349,19 @@ main > p {
 
 aside {
   position: fixed;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #202020;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+footer p {
+  flex-grow: 1;
+  text-align: center;
+  color: #26939f;
 }
 
 body {
