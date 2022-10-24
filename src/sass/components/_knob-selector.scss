@@ -7,6 +7,7 @@
     margin: .5em 3em;
     display: grid;
     place-items: center;
+    @include disable-selection;
     p {
         font-size: 0.75em;
         color: #26939f;

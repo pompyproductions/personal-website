@@ -133,11 +133,15 @@ canvas {
   align-items: center;
   transition: background-color 0.2s;
 }
+.icon-button > button svg {
+  fill: #fcf0f0;
+  width: 1.2em;
+}
 .icon-button > button:hover {
   background-color: #fcf0f0;
 }
 .icon-button > button:hover svg {
-  fill: #282724 !important;
+  fill: #202020 !important;
 }
 
 .hsep {
@@ -186,6 +190,10 @@ header {
   margin: 0.5em 3em;
   display: grid;
   place-items: center;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 .knob-container p {
   font-size: 0.75em;
@@ -198,6 +206,7 @@ header {
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
+  -webkit-tap-highlight-color: transparent;
   height: 1em;
   line-height: 2em;
   font-variation-settings: "wght" 400;
@@ -313,10 +322,11 @@ main {
   grid-area: main;
   height: 100%;
   width: 100%;
+  padding: 2rem;
   display: flex;
   gap: 1rem;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: #202020;
 }
 
