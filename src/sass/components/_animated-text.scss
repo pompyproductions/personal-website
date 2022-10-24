@@ -2,18 +2,17 @@
 
 .animated-text {
     cursor: pointer;
-    transition: transform .2s;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
+    
     width: min-content;
-    align-self: center;
     margin: 0 auto;
+
+    @include disable-selection;
+    // align-self: center;
     white-space: nowrap;
+    transition: transform .2s;
 
     
     @include break-at("medium") {
-        width: min-content;
         margin-left: 2rem;    
     };
 
@@ -21,4 +20,14 @@
     &:hover {
         transform: skew(-10deg) scale(1.2);
     }
+}
+
+.greeting-container {
+    margin-bottom: 1em;
+}
+
+.slanted {
+    font-size: .8rem;
+    text-align: center;
+    color: #26939f
 }

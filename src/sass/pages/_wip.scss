@@ -70,7 +70,7 @@ p, ol, ul, h1 {
 // }
 
 p {
-    text-align: center;
+    text-align: left;
     white-space: pre-wrap;
     @include break-at("medium") {
         text-align: left;

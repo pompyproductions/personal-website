@@ -25,6 +25,15 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     background-color: #202020;
+
+    img {
+        width: calc(100% + 4em);
+        transform: translateX(-2em);
+    }
+
+    & > p {
+        font-size: 1rem;
+    }
 }
 
 aside {

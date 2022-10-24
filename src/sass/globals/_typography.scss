@@ -9,7 +9,7 @@ body {
 h1, h2, h3,
 h4, h5, h6 {
     font-family: "Space Grotesk", sans-serif;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 svg {
@@ -24,7 +24,7 @@ p {
 }
 
 h1 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     position: relative;
     @include break-at("medium") {
         font-size: 3rem;
