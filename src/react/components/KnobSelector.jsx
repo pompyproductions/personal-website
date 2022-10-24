@@ -11,7 +11,6 @@ const KnobSelector = (props) => {
         });
     }
     const handleOptClick = (e) => {
-        // console.log(e.target.getAttribute("data-option"));
         const optionCount = containerRef.current.querySelectorAll("p").length;
         if (rotation % optionCount != e.target.getAttribute("data-option")) {
             setRotation(prev => 

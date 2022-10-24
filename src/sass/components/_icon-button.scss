@@ -4,7 +4,7 @@
     display: flex;
     gap: .8em;
     align-items: center;
-    margin: 1.2em auto;
+    // margin: 1.2em 0;
     
     @include break-at("medium") {
         position: absolute;
@@ -20,7 +20,7 @@
         }
     }
     & > button {
-        background-color: white;
+        background-color: transparent;
         border-radius: 50%;
         width: 2.5em;
         height: 2.5em;
@@ -29,11 +29,16 @@
         justify-content: center;
         align-items: center;
         transition: background-color 0.2s;
+
+        svg {
+            fill: #fcf0f0;
+            width: 1.2em;
+        }
         &:hover {
-            background-color: transparent;
+            background-color: #fcf0f0;
         }
         &:hover svg {
-            fill: white !important;
+            fill: #202020 !important;
         }
     }
 }

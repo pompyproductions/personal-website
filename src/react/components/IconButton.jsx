@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
-import { ReactSVG } from 'react-svg'
+import RefreshIcon from "../../assets/refresh.svg"
 
 const IconButton = (props) => {
 
     return (
         <div className="icon-button">
             <button onClick={props.onClick}>
-                <ReactSVG src={props.icon} style={props.iconStyle}/>
+                <props.icon />
             </button>
             <p>{props.content}</p>
         </div>
@@ -14,7 +14,7 @@ const IconButton = (props) => {
 }
 
 IconButton.defaultProps = {
-    icon: "../../assets/refresh.svg",
+    icon: RefreshIcon,
     content: "Click me!"
 };
 
