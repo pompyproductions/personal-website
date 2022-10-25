@@ -4,7 +4,7 @@
 
     display: grid;
     grid-template-areas: "header" "main" "footer";
-    grid-template-rows: min-content auto min-content;
+    grid-template-rows: min-content 1fr min-content;
     grid-template-columns: 1fr;
     gap: 1rem;
 
@@ -16,14 +16,16 @@
 
 main {
     grid-area: main;
-    // height: min-content;
     width: 100%;
     
     padding: 2rem;
+
     display: flex;
     gap: 1rem;
     flex-direction: column;
     justify-content: flex-start;
+    
+    border-radius: 1rem;
     background-color: #202020;
 
     img {
@@ -42,11 +44,11 @@ aside {
 
 footer {
     grid-area: footer;
-    // height: 4rem;
     background-color: #202020;
     display: flex;
     justify-content: space-between;
     padding: 1rem 2rem;
+    border-radius: 1rem;
     p {
         flex-grow: 1;
         text-align: center;

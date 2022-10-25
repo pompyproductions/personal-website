@@ -195,8 +195,9 @@ canvas {
 header {
   grid-area: header;
   width: 100%;
-  background-color: #202020;
   padding: 1rem;
+  background-color: #202020;
+  border-radius: 1rem;
   display: flex;
   justify-content: space-between;
   gap: 1rem;
@@ -348,6 +349,7 @@ nav.hamburger {
   right: 1rem;
   bottom: 1rem;
   width: 0;
+  border-radius: 1rem;
   background-image: linear-gradient(rgba(230, 100, 101, 0.9), rgba(145, 152, 229, 0.4));
   transition: all 200ms;
 }
@@ -413,7 +415,7 @@ h3 {
   min-height: 100vh;
   display: grid;
   grid-template-areas: "header" "main" "footer";
-  grid-template-rows: min-content auto min-content;
+  grid-template-rows: min-content 1fr min-content;
   grid-template-columns: 1fr;
   gap: 1rem;
   background-color: #282724;
@@ -427,6 +429,7 @@ main {
   gap: 1rem;
   flex-direction: column;
   justify-content: flex-start;
+  border-radius: 1rem;
   background-color: #202020;
 }
 main img {
@@ -447,6 +450,7 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 1rem 2rem;
+  border-radius: 1rem;
 }
 footer p {
   flex-grow: 1;
