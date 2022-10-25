@@ -1,0 +1,68 @@
+@use "../globals" as *;
+
+.icon-button.hamburger {
+    z-index: 5;
+    @include break-at("medium") {
+        display: none;
+    }
+}
+
+nav.hamburger {
+    position: absolute;
+    z-index: 3;
+    overflow: hidden;
+    
+    top: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    width: 0;
+
+
+    background-image: linear-gradient(
+        rgb(230 100 101 / 90%), 
+        rgb(145 152 229 / 40%));
+
+    transition: all 200ms;
+    &.active {
+        width: calc(50vw - 1rem);
+    }
+    li {
+        margin: auto;
+        align-items: flex-start;
+        height: 100%;
+        padding: 0 1rem 1rem 1rem; // magic number: header height
+        gap: 1rem;
+        // font-size: 16px;
+    }
+    ul::before, ul::after {
+        content: unset;
+    }
+    a {
+        font: 1em;
+    }
+    p {
+        height: 95.13px; // magic number: header height
+        line-height: 95.13px;
+        margin-left: 1rem;
+        font-size: 1em;
+    }
+}
+
+h3 {
+    position: absolute;
+    z-index: 10;
+    pointer-events: none;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    height: 95.13px; // magic number: header height
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    // padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+}

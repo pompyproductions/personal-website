@@ -17,7 +17,7 @@ svg {
 }
 
 p {
-    font-size: .85rem;
+    // font-size: .85rem;
     @include break-at("medium") {
         font-size: 1rem;
     }

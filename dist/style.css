@@ -62,9 +62,6 @@ svg {
   width: 1em;
 }
 
-p {
-  font-size: 0.85rem;
-}
 @media only screen and (min-width: 720px) {
   p {
     font-size: 1rem;
@@ -92,6 +89,29 @@ ul, ol {
   list-style: none;
 }
 
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 canvas {
   background-color: rgb(72, 185, 219);
   position: absolute;
@@ -184,6 +204,7 @@ header {
 
 #eg-logo {
   width: 2.4rem;
+  z-index: 3;
 }
 
 .knob-container {
@@ -308,6 +329,83 @@ header {
 
 .theme-knob > p {
   text-align: center;
+}
+
+.icon-button.hamburger {
+  z-index: 5;
+}
+@media only screen and (min-width: 720px) {
+  .icon-button.hamburger {
+    display: none;
+  }
+}
+
+nav.hamburger {
+  position: absolute;
+  z-index: 3;
+  overflow: hidden;
+  top: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  width: 0;
+  background-image: linear-gradient(rgba(230, 100, 101, 0.9), rgba(145, 152, 229, 0.4));
+  transition: all 200ms;
+}
+nav.hamburger.active {
+  width: calc(50vw - 1rem);
+}
+nav.hamburger li {
+  margin: auto;
+  align-items: flex-start;
+  height: 100%;
+  padding: 0 1rem 1rem 1rem;
+  gap: 1rem;
+}
+nav.hamburger ul::before, nav.hamburger ul::after {
+  content: unset;
+}
+nav.hamburger a {
+  font: 1em;
+}
+nav.hamburger p {
+  height: 95.13px;
+  line-height: 95.13px;
+  margin-left: 1rem;
+  font-size: 1em;
+}
+
+h3 {
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  height: 95.13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.backdrop {
+  position: fixed;
+  pointer-events: none;
+  overflow: hidden;
+  transition: all 200ms;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(32, 32, 32, 0);
+  backdrop-filter: blur(0px);
+}
+.backdrop.active {
+  backdrop-filter: blur(2px);
+  pointer-events: all;
+  background-color: rgba(32, 32, 32, 0.4);
 }
 
 #root {

@@ -1,15 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
-import RefreshIcon from "../../assets/refresh.svg"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const IconButton = (props) => {
 
     return (
-        <div className="icon-button">
+        <div className={`icon-button ${props.className}`}>
             <button onClick={props.onClick}>
-                {/* <props.icon /> */}
-                <FontAwesomeIcon icon={faBars} />
+                <FontAwesomeIcon icon={props.icon} />
 
             </button>
             <p>{props.content}</p>
@@ -18,7 +16,7 @@ const IconButton = (props) => {
 }
 
 IconButton.defaultProps = {
-    icon: RefreshIcon,
+    icon: faBars,
     content: "Click me!"
 };
 

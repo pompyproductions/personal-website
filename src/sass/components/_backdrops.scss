@@ -1,0 +1,19 @@
+.backdrop {
+    position: fixed;
+    pointer-events: none;
+    overflow: hidden;
+    transition: all 200ms;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(32 32 32 / 0%);
+    backdrop-filter: blur(0px);
+    // display: none;
+    &.active {
+        backdrop-filter: blur(2px);
+        pointer-events: all;
+        background-color: rgb(32 32 32 / 40%);
+    }
+}
