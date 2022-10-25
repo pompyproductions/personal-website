@@ -5,17 +5,25 @@ import PageGreeting from "../components/PageGreeting.jsx"
 import KnobSelector from "../components/KnobSelector.jsx";
 import IconButton from "../components/IconButton.jsx";
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import HamburgerMenu from "../components/HamburgerMenu.jsx";
+import HamburgerMenu from "../clusters/HamburgerMenu.jsx";
 
 
 const MasterLayout = () => {
+    const toggleHamburger = () => {
+        document.querySelectorAll(".hamburger").forEach(elem => {
+            elem.classList.toggle("active");
+        })
+    }
+
     return (
         <>
             <HamburgerMenu />
             <header>
                 <PageLogo strokeWeight={3} strokeColor="#fcf0f0"/>
                 <KnobSelector />
-                <IconButton icon={faBars} className="hamburger"/>
+                <IconButton icon={faBars} 
+                    className="hamburger" 
+                    onClick={toggleHamburger}/>
             </header>
             <main>
                 <PageGreeting />

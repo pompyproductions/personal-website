@@ -375,6 +375,10 @@ nav.hamburger p {
   margin-left: 1rem;
   font-size: 1em;
 }
+nav.hamburger .hsep {
+  width: 100%;
+  margin-bottom: 1em;
+}
 
 h3 {
   position: absolute;
@@ -408,6 +412,12 @@ h3 {
   backdrop-filter: blur(2px);
   pointer-events: all;
   background-color: rgba(32, 32, 32, 0.4);
+}
+
+.nav-item {
+  display: flex;
+  gap: 0.8em;
+  align-items: center;
 }
 
 #root {
