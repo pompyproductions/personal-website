@@ -6,8 +6,8 @@ const Portfolio = () => {
     console.log(tooltips);
     return <main>
         <h2>{tooltips.logo.title}</h2>
-        {tooltips.logo.description.map(txt => {
-            return <p>{txt}</p>
+        {tooltips.logo.description.map((txt, id) => {
+            return <p key={id}>{txt}</p>
         })}
     </main>
 }

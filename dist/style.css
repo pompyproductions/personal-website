@@ -354,7 +354,7 @@ nav.hamburger {
   transition: all 200ms;
 }
 nav.hamburger.active {
-  width: calc(50vw - 1rem);
+  width: minmax(min-content, calc(50vw - 1rem));
 }
 nav.hamburger li {
   margin: auto;
