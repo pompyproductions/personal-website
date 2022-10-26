@@ -10,10 +10,10 @@ const HamburgerMenu = () => {
             <p>Current: Home</p>
             <li>
                 <div className="hsep"></div>
-                <NavItem icon={faHome}>Home</NavItem>
-                <NavItem icon={faAddressCard}>About me</NavItem>
-                <NavItem icon={faCode}>Portfolio</NavItem>
-                <NavItem icon={faPaperPlane}>Get in touch</NavItem>
+                <NavItem icon={faHome} to="/">Home</NavItem>
+                <NavItem icon={faAddressCard} to="/about-me">About me</NavItem>
+                <NavItem icon={faCode} to="/portfolio">Portfolio</NavItem>
+                <NavItem icon={faPaperPlane} to="/contact">Get in touch</NavItem>
             </li>
         </nav>
     </>
