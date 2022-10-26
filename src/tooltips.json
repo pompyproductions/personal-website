@@ -1,0 +1,9 @@
+{
+    "logo": {
+        "title": "EG Logo",
+        "description": [
+            "A minimal monogram logo I designed by combining the capital letters of my name (Eren Gazioglu).",
+            "Used AutoCAD to draw the precise geometry, Adobe Illustrator to create a SVG file, and some JavaScript to make it fit snugly into a frame while preserving line widths that would otherwise overflow the viewBox."
+        ]
+    }
+}
