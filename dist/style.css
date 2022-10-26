@@ -192,22 +192,6 @@ canvas {
   color: #26939f;
 }
 
-header {
-  grid-area: header;
-  width: 100%;
-  padding: 1rem;
-  background-color: #202020;
-  border-radius: 1rem;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-#eg-logo {
-  width: 2.4rem;
-  z-index: 3;
-}
-
 .knob-container {
   position: relative;
   margin: 0.5em 3em;
@@ -332,6 +316,47 @@ header {
   text-align: center;
 }
 
+.backdrop {
+  position: fixed;
+  pointer-events: none;
+  overflow: hidden;
+  transition: all 200ms;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(32, 32, 32, 0);
+  backdrop-filter: blur(0px);
+}
+.backdrop.active {
+  backdrop-filter: blur(2px);
+  pointer-events: all;
+  background-color: rgba(32, 32, 32, 0.4);
+}
+
+.nav-item {
+  display: flex;
+  gap: 0.8em;
+  align-items: center;
+}
+
+header {
+  grid-area: header;
+  width: 100%;
+  padding: 1rem;
+  background-color: #202020;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+#eg-logo {
+  width: 2rem;
+  z-index: 3;
+}
+
 .icon-button.hamburger {
   z-index: 5;
 }
@@ -354,7 +379,7 @@ nav.hamburger {
   transition: all 200ms;
 }
 nav.hamburger.active {
-  width: minmax(min-content, calc(50vw - 1rem));
+  width: max(50vw, 1rem);
 }
 nav.hamburger li {
   margin: auto;
@@ -395,29 +420,11 @@ h3 {
   font-weight: 400;
 }
 
-.backdrop {
-  position: fixed;
-  pointer-events: none;
-  overflow: hidden;
-  transition: all 200ms;
-  z-index: 3;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(32, 32, 32, 0);
-  backdrop-filter: blur(0px);
-}
-.backdrop.active {
-  backdrop-filter: blur(2px);
-  pointer-events: all;
-  background-color: rgba(32, 32, 32, 0.4);
-}
-
-.nav-item {
+footer ul {
   display: flex;
-  gap: 0.8em;
-  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 1rem;
 }
 
 #root {
