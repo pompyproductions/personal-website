@@ -1,7 +1,13 @@
 import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import EGLogo from "../../assets/eg-logo-03.svg";
 
 const PageLogo = (props) => {
+    const closeHamburger = () => {
+        document.querySelectorAll(".hamburger").forEach(elem => {
+            elem.classList.remove("active");
+        })
+    }
 
     useEffect(() => {
         const icon = document.getElementById("eg-logo");
@@ -32,7 +38,9 @@ const PageLogo = (props) => {
     console.log(props.strokeWeight);
     console.log(props.strokeColor); // hello
     return (
-        <EGLogo id="eg-logo"/>
+        <Link to="/">
+            <EGLogo id="eg-logo" onClick={closeHamburger}/>
+        </Link>
     )
 }
 
