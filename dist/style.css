@@ -379,7 +379,7 @@ nav.hamburger {
   transition: all 200ms;
 }
 nav.hamburger.active {
-  width: max(50vw, 1rem);
+  width: max(50vw, 15rem);
 }
 nav.hamburger li {
   margin: auto;
@@ -425,6 +425,7 @@ footer ul {
   justify-content: space-around;
   width: 100%;
   font-size: 1rem;
+  color: #26939f;
 }
 
 #root {

@@ -38,10 +38,6 @@ module.exports = {
                 test: /\.(png|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
             },
-            {
-                test: /.json$/i,
-                loader: "json-loader"
-            }
         ]
     },
     plugins: [

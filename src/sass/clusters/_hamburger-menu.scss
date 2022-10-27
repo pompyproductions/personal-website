@@ -25,7 +25,7 @@ nav.hamburger {
 
     transition: all 200ms;
     &.active {
-        width: max(50vw, 1rem);
+        width: max(50vw, 15rem);
     }
     li {
         margin: auto;
