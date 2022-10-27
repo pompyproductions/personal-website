@@ -5,10 +5,15 @@ import NavItem from "../components/NavItem.jsx";
 import { faHome, faCode, faAddressCard, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 const HamburgerMenu = () => {
+    const closeHamburger = () => {
+        document.querySelectorAll(".hamburger").forEach(elem => {
+            elem.classList.remove("active");
+        })
+    }
     const location = useLocation();
     return <>
-        <div className="backdrop hamburger active"></div>
-        <nav className="hamburger active">
+        <div className="backdrop hamburger" onClick={closeHamburger}></div>
+        <nav className="hamburger">
             <p>
                 Current: {
                     {
