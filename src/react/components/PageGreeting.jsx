@@ -32,15 +32,13 @@ const PageGreeting = props => {
     }
     
     return (
-        <>
+        <div className="greeting-container">
             <p className="slanted">try clicking this!</p>
-            <div className="greeting-container">
-                <span onClick={nextGreeting} className="typing">
-                    <AnimText content={`${message}!`} tag="h1" delay={30} />
-                </span>
-                <div className="hsep"></div>
-            </div>
-        </>
+            <span onClick={nextGreeting} className="typing">
+                <AnimText content={`${message}!`} tag="p" delay={30} />
+            </span>
+            <div className="hsep"></div>
+        </div>
     )
 }
 

@@ -1,9 +1,21 @@
 footer {
+    grid-area: footer;
+    background-color: rgba(32, 32, 32, 0.6);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    p {
+        flex-grow: 1;
+        text-align: center;
+        color: #26939f;
+    }
     ul {
         display: flex;
         justify-content: space-around;
         width: 100%;
         font-size: 1rem;
-        color: #26939f;
+        color: #a42843;
     }
 }
+

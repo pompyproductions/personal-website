@@ -43,12 +43,12 @@ p, ol, ul, h1 {
     }
 }
 
-.hsep {
-    margin: 0 auto;
-    @include break-at("medium") {
-        margin: 0;
-    }
-}
+// .hsep {
+//     margin: 0 auto;
+//     @include break-at("medium") {
+//         margin: 0;
+//     }
+// }
 
 // .icon-button {
 //     margin: 0 auto;
@@ -99,12 +99,12 @@ li {
     }
 }
 
-.slanted {
-    font-style: italic;
-    &::before {content:"↓  "}
-    &::after {content:"  ↓"}
-    @include break-at("medium") {
-        margin-left: 6rem;
-        &::after {content: ""}
-    }
-}
+// .slanted {
+//     font-style: italic;
+//     &::before {content:"↓  "}
+//     &::after {content:"  ↓"}
+//     @include break-at("medium") {
+//         margin-left: 6rem;
+//         &::after {content: ""}
+//     }
+// }

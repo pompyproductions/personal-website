@@ -4,30 +4,35 @@
     cursor: pointer;
     
     width: min-content;
-    margin: 0 auto;
+    margin: 0 auto 0 1em;
 
     @include disable-selection;
     // align-self: center;
     white-space: nowrap;
     transition: transform .2s;
 
-    
-    @include break-at("medium") {
-        margin-left: 2rem;    
-    };
+    font-size: 1.2rem;
+    font-family: "Space Grotesk";
 
 
+    @include break-at("thin") {
+        font-size: 1.4rem;
+    }
     &:hover {
         transform: skew(-10deg) scale(1.2);
     }
 }
 
-.greeting-container {
-    margin-bottom: 1em;
+.greeting-container .hsep {
+    min-height: 1px;
+    background-color: white;
 }
 
 .slanted {
-    font-size: .8rem;
-    text-align: center;
-    color: #26939f
+    font-size: .7rem;
+    margin-bottom: 1em;
+
+    font-style: italic;
+    color: #26939f;
+    &::after {content:"  ↓"}
 }

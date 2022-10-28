@@ -113,10 +113,11 @@ ul, ol {
   }
 }
 canvas {
-  background-color: rgb(72, 185, 219);
   position: absolute;
-  height: 100vh;
-  width: 100vw;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   overflow: auto;
   z-index: -1;
 }
@@ -157,7 +158,6 @@ canvas {
 }
 
 .hsep {
-  width: 60vw;
   min-height: 1px;
   background-color: white;
 }
@@ -165,31 +165,38 @@ canvas {
 .animated-text {
   cursor: pointer;
   width: min-content;
-  margin: 0 auto;
+  margin: 0 auto 0 1em;
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -webkit-tap-highlight-color: transparent;
   white-space: nowrap;
   transition: transform 0.2s;
+  font-size: 1.2rem;
+  font-family: "Space Grotesk";
 }
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 300px) {
   .animated-text {
-    margin-left: 2rem;
+    font-size: 1.4rem;
   }
 }
 .animated-text:hover {
   transform: skew(-10deg) scale(1.2);
 }
 
-.greeting-container {
-  margin-bottom: 1em;
+.greeting-container .hsep {
+  min-height: 1px;
+  background-color: white;
 }
 
 .slanted {
-  font-size: 0.8rem;
-  text-align: center;
+  font-size: 0.7rem;
+  margin-bottom: 1em;
+  font-style: italic;
   color: #26939f;
+}
+.slanted::after {
+  content: "  ↓";
 }
 
 .knob-container {
@@ -344,8 +351,8 @@ canvas {
 header {
   grid-area: header;
   width: 100%;
-  padding: 1rem;
-  background-color: #202020;
+  padding: 0.5rem 1rem;
+  background-color: rgba(32, 32, 32, 0.6);
   border-radius: 1rem;
   display: flex;
   justify-content: space-between;
@@ -354,7 +361,6 @@ header {
 
 #eg-logo {
   width: 2rem;
-  z-index: 3;
 }
 
 .icon-button.hamburger {
@@ -420,12 +426,25 @@ h3 {
   font-weight: 400;
 }
 
+footer {
+  grid-area: footer;
+  background-color: rgba(32, 32, 32, 0.6);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+footer p {
+  flex-grow: 1;
+  text-align: center;
+  color: #26939f;
+}
 footer ul {
   display: flex;
   justify-content: space-around;
   width: 100%;
   font-size: 1rem;
-  color: #26939f;
+  color: #a42843;
 }
 
 #root {
@@ -436,44 +455,34 @@ footer ul {
   grid-template-rows: min-content 1fr min-content;
   grid-template-columns: 1fr;
   gap: 1rem;
-  background-color: #282724;
+  background-image: linear-gradient(45deg, #702535, #124a4d);
 }
 
 main {
   grid-area: main;
   width: 100%;
+  z-index: 0;
+  position: relative;
+  overflow: hidden;
   padding: 2rem;
+  border-radius: 1rem;
+}
+main > div {
   display: flex;
   gap: 1rem;
   flex-direction: column;
   justify-content: flex-start;
-  border-radius: 1rem;
-  background-color: #202020;
 }
 main img {
   width: calc(100% + 4em);
   transform: translateX(-2em);
 }
-main > p {
+main p {
   font-size: 1rem;
 }
 
 aside {
   position: fixed;
-}
-
-footer {
-  grid-area: footer;
-  background-color: #202020;
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  border-radius: 1rem;
-}
-footer p {
-  flex-grow: 1;
-  text-align: center;
-  color: #26939f;
 }
 
 body {
@@ -513,15 +522,6 @@ p, ol, ul, h1 {
   }
 }
 
-.hsep {
-  margin: 0 auto;
-}
-@media only screen and (min-width: 720px) {
-  .hsep {
-    margin: 0;
-  }
-}
-
 p {
   text-align: left;
   white-space: pre-wrap;
@@ -549,22 +549,4 @@ li ul::before, li ul::after, li ol::before, li ol::after {
 }
 li a {
   display: inline;
-}
-
-.slanted {
-  font-style: italic;
-}
-.slanted::before {
-  content: "↓  ";
-}
-.slanted::after {
-  content: "  ↓";
-}
-@media only screen and (min-width: 720px) {
-  .slanted {
-    margin-left: 6rem;
-  }
-  .slanted::after {
-    content: "";
-  }
 }

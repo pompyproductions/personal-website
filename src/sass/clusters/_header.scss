@@ -1,9 +1,9 @@
 header {
     grid-area: header;
     width: 100%;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
 
-    background-color: #202020;
+    background-color: rgba(32, 32, 32, 0.6);
     border-radius: 1rem;
 
     display: flex;
@@ -13,5 +13,4 @@ header {
 
 #eg-logo {
     width: 2rem;
-    z-index: 3;
 }
