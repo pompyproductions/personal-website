@@ -1,12 +1,12 @@
 import React from "react";
 
-import CanvasBackground from "../components/CanvasBackground.jsx";
+// import CanvasBackground from "../components/CanvasBackground.jsx";
 import PageGreeting from "../components/PageGreeting.jsx"
 
 const Wip = () => {
     return (
         <>
-            <CanvasBackground />
+            {/* <CanvasBackground /> */}
             <PageGreeting />
             <div className="wip-content">
                 <p>I'm Eren Gazioglu— a self-taught front end developer with a background in architecture.</p>
