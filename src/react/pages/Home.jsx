@@ -5,7 +5,7 @@ import Bubbles from "../canvas/Bubbles.jsx";
 
 const Home = () => {
     return (
-        <main>
+        <main className='page-home'>
             <Bubbles />
             <div>
                 <PageGreeting />

@@ -9,17 +9,21 @@ const Bubbles = (props) => {
         fillColor: "blue",
     }
     const canvasRef = useRef();
+    let timeoutID;
 
     // set stuff on mount
     useEffect(() => {
         const canvas = canvasRef.current;
-        canvasRef.current.width = window.innerWidth;
-        canvasRef.current.height = window.innerHeight;
+        canvasRef.current.width = canvas.parentElement.clientWidth;
+        canvasRef.current.height = canvas.parentElement.clientHeight;
         const ctx = canvasRef.current.getContext("2d");
 
         window.onresize = () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+            canvas.width = canvas.parentElement.clientWidth;
+            canvas.height = canvas.parentElement.clientHeight;
+            clearTimeout(timeoutID);
+            timeoutID = setTimeout(randomizeCanvas, 100, ctx)
+            console.log(timeoutID);
         }
         randomizeCanvas(ctx);
     }, [])

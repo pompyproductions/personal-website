@@ -1,0 +1,23 @@
+@use "../globals" as *;
+
+.text-couple {
+    display: flex;
+    gap: .5em;
+    // p {
+    //     white-space: nowrap;
+    // }
+    p:first-of-type {
+        font-weight: 200;
+    }
+    p:last-of-type {
+        flex: 1 1 min-content;
+    }
+    
+    @include break-at("thin") {
+        gap: 0.8em;
+        p:first-of-type {
+            width: 6rem;
+            text-align: right;
+        }
+    }
+}

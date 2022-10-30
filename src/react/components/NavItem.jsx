@@ -10,10 +10,10 @@ const NavItem = (props) => {
             elem.classList.remove("active");
         })
     }
-    return <ul className="nav-item">
+    return <div className="nav-item">
         <FontAwesomeIcon icon={props.icon}/>
         <Link to={props.to} onClick={closeHamburger}>{props.children}</Link>
-    </ul>
+    </div>
 }
 
 NavItem.defaultProps = {

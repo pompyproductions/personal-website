@@ -21,7 +21,9 @@ main {
     z-index: 0; // create new stacking context (for canvas)
     position: relative; // for absolute canvas positioning
     overflow: hidden;
-    padding: 2rem;
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: 1rem;
     
 
     &>div {
@@ -32,11 +34,6 @@ main {
     }
     
     border-radius: 1rem;
-
-    img {
-        width: calc(100% + 4em);
-        transform: translateX(-2em);
-    }
 
     p {
         font-size: 1rem;

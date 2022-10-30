@@ -1,0 +1,60 @@
+.content-card {
+    z-index: 0;
+    position: relative; // for canvas absolute positioning
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: 0.8rem;
+    overflow: hidden; // for canvas clipping at rounded borders
+    border-radius: 1rem;
+    & > p {
+        font-weight: 200;
+    }
+    & > h2 {
+        font-weight: 200;
+        font-variation-settings: "ital" 1;
+    }
+    .img-wrapper {
+        height: 11rem;
+        width: 100%;
+    }
+    img {
+        // margin: -2rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 12rem;
+        object-fit: cover;
+        object-position: 50% 53%;
+        border-radius: 1rem;
+        transition: all .3s;
+        box-shadow: 3px 3px 5px rgba(20, 20, 20, 0.6);
+        &.active {
+            height: calc(100%);
+        }
+    }
+    .hsep {
+        background-color: #a42843;
+    }
+    .content-bit {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        & > p {
+            font-weight: 200;
+        }
+        & > h3 {
+            background-image: linear-gradient(90deg, transparent, #00000036);
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+    }
+    canvas {
+        width: 100%;
+        height: 100%;
+    }
+}

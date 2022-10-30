@@ -16,13 +16,13 @@ body {
 //     justify-content: center;
 // }
 
-p, ol, ul, h1 {
-    text-align: center;
-    @include break-at("medium") {
-        text-align: left;
-        align-self: flex-start;
-    }
-}
+// p, ol, ul, h1 {
+//     text-align: center;
+//     @include break-at("medium") {
+//         text-align: left;
+//         align-self: flex-start;
+//     }
+// }
 
 .wip-content {
     display: flex;
@@ -77,27 +77,27 @@ p {
     }
 }
 
-li {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.25em;
-    ul, ol {
-        &::before, &::after {
-            content: " — "
-        }
-        @include break-at("medium") {
-            &::after {
-                content: "";
-            }
-        }
-    }
+// li {
+//     width: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     gap: 0.25em;
+//     ul, ol {
+//         &::before, &::after {
+//             content: " — "
+//         }
+//         @include break-at("medium") {
+//             &::after {
+//                 content: "";
+//             }
+//         }
+//     }
     
-    a {
-        display: inline;
-    }
-}
+//     a {
+//         display: inline;
+//     }
+// }
 
 // .slanted {
 //     font-style: italic;

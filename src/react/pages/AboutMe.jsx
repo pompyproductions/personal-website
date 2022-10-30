@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect} from 'react';
+import Passions from '../clusters/content-cards/Passions.jsx';
+import PersonalInfo from "../clusters/content-cards/PersonalInfo.jsx"
 
 const AboutMe = () => {
+    function handleImageClick(e) {
+        e.target.classList.toggle("active");
+    }
     return (
-        <main>
-            <p>"About Me" page currently under development.</p>
+        <main className="about-me">
+            <PersonalInfo />
+            <Passions />
         </main>
     )
 }
