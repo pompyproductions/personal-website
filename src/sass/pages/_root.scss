@@ -1,44 +1,46 @@
+@use "../globals" as *;
+
 #root {
     padding: 1rem;
     min-height: 100vh;
 
     display: grid;
-    grid-template-areas: "header" "main" "footer";
     grid-template-rows: min-content 1fr min-content;
     grid-template-columns: 1fr;
+    grid-template-areas: "header" "main" "footer";
     gap: 1rem;
 
-    background-image: linear-gradient(45deg, #702535, #124a4d)
+    @include break-at("medium") {
+        background-image: none;
+        grid-template-columns: 8rem repeat(2, 1fr);
+        grid-template-areas: 
+            "sidebar main main main"
+            "sidebar main main main"
+            "sidebar footer footer footer";
+        header {
+            grid-area: sidebar;
+        }
+    }
+    @include break-at("large") {
+        background-color: rgb(48, 48, 177);
+        grid-template-columns: 8rem repeat(3, 1fr);
+        grid-template-areas: 
+            "sidebar main main main"
+            "sidebar main main main"
+            "sidebar footer footer footer";
+        header {
+            grid-area: sidebar;
+        }
+    }
+
+    background-image: linear-gradient(45deg, #1f21c5, #492caa);
+    background-image: linear-gradient(45deg, #1f21c5, #492caa);
 
     // align-items: center;
     // justify-items: center;
 }
 
-main {
-    grid-area: main;
-    width: 100%;
-    
-    z-index: 0; // create new stacking context (for canvas)
-    position: relative; // for absolute canvas positioning
-    overflow: hidden;
-    display: grid;
-    grid-auto-rows: min-content;
-    gap: 1rem;
-    
 
-    &>div {
-        display: flex;
-        gap: 1rem;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-    
-    border-radius: 1rem;
-
-    p {
-        font-size: 1rem;
-    }
-}
 
 aside {
     position: fixed;

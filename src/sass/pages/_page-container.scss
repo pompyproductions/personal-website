@@ -1,0 +1,134 @@
+main {
+    position: relative; // for canvas absolute positioning
+    z-index: 0; // creates new stacking context
+    overflow: hidden;
+    
+    grid-area: main;
+    width: 100%;
+    
+    &>div {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    border-radius: 1rem;
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+.page-container {
+    z-index: 0; // creates new stacking context
+    position: relative; // for canvas absolute positioning
+    overflow: hidden; // for canvas clipping at rounded borders
+    
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: 1rem;
+    
+    border-radius: 1rem;
+    
+    & > p {
+        font-weight: 200;
+    }
+    & > h2 {
+        font-weight: 200;
+        font-variation-settings: "ital" 1;
+    }
+    
+    .img-wrapper {
+        height: 11rem; // taking 1rem padding into account
+        width: 100%;
+        img {
+            // margin: -2rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 12rem;
+            object-fit: cover;
+            object-position: 50% 53%;
+            border-radius: 1rem;
+            transition: all .3s;
+            box-shadow: 3px 3px 5px rgba(20, 20, 20, 0.6);
+            &.active {
+                height: calc(100%);
+            }
+        }
+    }
+
+    .hsep {
+        background-color: #a42843;
+    }
+
+    .content-bit {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        & > p {
+            font-weight: 200;
+        }
+        & > h3 {
+            background-image: linear-gradient(90deg, transparent, #00000036);
+            font-weight: 200;
+            font-size: 1.4rem;
+            line-height: 2.4rem;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+    }
+    
+    canvas {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.about-me {
+    article {
+        padding: 1rem;
+        background-image: linear-gradient(45deg, #4f46ea69, #ffffff00);
+    }
+}
+
+.portfolio {
+    .img-wrapper {
+        height: 7rem; // taking 1rem padding into account
+        width: 100%;
+        img {
+            // margin: -2rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 8rem;
+            object-fit: cover;
+            object-position: 50% 53%;
+            border-radius: 1rem;
+            transition: all .3s;
+            box-shadow: 3px 3px 5px rgba(20, 20, 20, 0.6);
+            &.active {
+                height: calc(100%);
+            }
+        }
+    }
+    article {
+        padding: 1rem;
+        background-image: linear-gradient(45deg, #4f46ea69, #ffffff00);
+    }
+}
+
+.contact {
+    article {
+        padding: 1rem;
+        background-image: linear-gradient(45deg, #4f46ea69, #ffffff00);
+    }
+}

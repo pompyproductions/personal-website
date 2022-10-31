@@ -10,14 +10,14 @@ const IconButton = (props) => {
                 <FontAwesomeIcon icon={props.icon} />
 
             </button>
-            <p>{props.content}</p>
+            <p>{props.children}</p>
         </div>
     )
 }
 
 IconButton.defaultProps = {
     icon: faBars,
-    content: "Click me!"
+    children: "Click me!"
 };
 
 export default IconButton;

@@ -9,6 +9,7 @@ import Footer from "../clusters/Footer.jsx";
 import Home from "./Home.jsx";
 import AboutMe from "./AboutMe.jsx";
 import Portfolio from "./Portfolio.jsx";
+import Contact from "./Contact.jsx";
 
 
 const MasterLayout = () => {
@@ -21,6 +22,7 @@ const MasterLayout = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/about-me" element={<AboutMe />} />
                 <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/contact" element={<Contact />} />
             </Routes>
             <Footer />
         </>

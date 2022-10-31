@@ -129,7 +129,9 @@ canvas {
 }
 .icon-button > p {
   align-self: unset;
-  display: none;
+  display: block;
+  font-weight: 200;
+  font-family: "Space Grotesk", sans-serif;
 }
 @media only screen and (min-width: 720px) {
   .icon-button > p {
@@ -138,9 +140,8 @@ canvas {
 }
 .icon-button > button {
   background-color: transparent;
-  border-radius: 50%;
-  width: 2.5em;
-  height: 2.5em;
+  width: 2.4em;
+  height: 2.4em;
   border: 1px solid white;
   display: flex;
   justify-content: center;
@@ -149,6 +150,7 @@ canvas {
 }
 .icon-button > button svg {
   color: #fcf0f0;
+  font-size: 1.2em;
 }
 .icon-button > button:hover {
   background-color: #fcf0f0;
@@ -391,6 +393,12 @@ header {
     display: none;
   }
 }
+.icon-button.hamburger > button {
+  border-radius: 50%;
+}
+.icon-button.hamburger > p {
+  display: none;
+}
 
 nav.hamburger {
   position: absolute;
@@ -459,7 +467,7 @@ footer ul {
   position: relative;
   display: grid;
   grid-auto-rows: min-content;
-  gap: 0.8rem;
+  gap: 0.6rem;
   overflow: hidden;
   border-radius: 1rem;
 }
@@ -518,32 +526,32 @@ footer ul {
   padding: 1rem;
   min-height: 100vh;
   display: grid;
-  grid-template-areas: "header" "main" "footer";
   grid-template-rows: min-content 1fr min-content;
   grid-template-columns: 1fr;
+  grid-template-areas: "header" "main" "footer";
   gap: 1rem;
-  background-image: linear-gradient(45deg, #702535, #124a4d);
+  background-image: linear-gradient(45deg, #1f21c5, #492caa);
+  background-image: linear-gradient(45deg, #1f21c5, #492caa);
 }
-
-main {
-  grid-area: main;
-  width: 100%;
-  z-index: 0;
-  position: relative;
-  overflow: hidden;
-  display: grid;
-  grid-auto-rows: min-content;
-  gap: 1rem;
-  border-radius: 1rem;
+@media only screen and (min-width: 720px) {
+  #root {
+    background-image: none;
+    grid-template-columns: 8rem repeat(2, 1fr);
+    grid-template-areas: "sidebar main main main" "sidebar main main main" "sidebar footer footer footer";
+  }
+  #root header {
+    grid-area: sidebar;
+  }
 }
-main > div {
-  display: flex;
-  gap: 1rem;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-main p {
-  font-size: 1rem;
+@media only screen and (min-width: 1024px) {
+  #root {
+    background-color: rgb(48, 48, 177);
+    grid-template-columns: 8rem repeat(3, 1fr);
+    grid-template-areas: "sidebar main main main" "sidebar main main main" "sidebar footer footer footer";
+  }
+  #root header {
+    grid-area: sidebar;
+  }
 }
 
 aside {
@@ -592,11 +600,118 @@ p {
   padding: 1rem;
 }
 
-.about-me article {
-  padding: 1rem;
+main {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  grid-area: main;
+  width: 100%;
   border-radius: 1rem;
 }
-.about-me h3 {
-  font-size: 1.4em;
-  font-weight: 400;
+main > div {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+main p {
+  font-size: 1rem;
+}
+
+.page-container {
+  z-index: 0;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-auto-rows: min-content;
+  gap: 1rem;
+  border-radius: 1rem;
+}
+.page-container > p {
+  font-weight: 200;
+}
+.page-container > h2 {
+  font-weight: 200;
+  font-variation-settings: "ital" 1;
+}
+.page-container .img-wrapper {
+  height: 11rem;
+  width: 100%;
+}
+.page-container .img-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  object-position: 50% 53%;
+  border-radius: 1rem;
+  transition: all 0.3s;
+  box-shadow: 3px 3px 5px rgba(20, 20, 20, 0.6);
+}
+.page-container .img-wrapper img.active {
+  height: 100%;
+}
+.page-container .hsep {
+  background-color: #a42843;
+}
+.page-container .content-bit {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.page-container .content-bit > p {
+  font-weight: 200;
+}
+.page-container .content-bit > h3 {
+  background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.2117647059));
+  font-weight: 200;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+}
+.page-container .content-bit ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.page-container canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.about-me article {
+  padding: 1rem;
+  background-image: linear-gradient(45deg, rgba(79, 70, 234, 0.4117647059), rgba(255, 255, 255, 0));
+}
+
+.portfolio .img-wrapper {
+  height: 7rem;
+  width: 100%;
+}
+.portfolio .img-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 8rem;
+  object-fit: cover;
+  object-position: 50% 53%;
+  border-radius: 1rem;
+  transition: all 0.3s;
+  box-shadow: 3px 3px 5px rgba(20, 20, 20, 0.6);
+}
+.portfolio .img-wrapper img.active {
+  height: 100%;
+}
+.portfolio article {
+  padding: 1rem;
+  background-image: linear-gradient(45deg, rgba(79, 70, 234, 0.4117647059), rgba(255, 255, 255, 0));
+}
+
+.contact article {
+  padding: 1rem;
+  background-image: linear-gradient(45deg, rgba(79, 70, 234, 0.4117647059), rgba(255, 255, 255, 0));
 }

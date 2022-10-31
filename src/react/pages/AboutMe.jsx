@@ -7,7 +7,7 @@ const AboutMe = () => {
         e.target.classList.toggle("active");
     }
     return (
-        <main className="about-me">
+        <main className="about-me page-container">
             <PersonalInfo />
             <Passions />
         </main>

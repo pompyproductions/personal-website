@@ -5,6 +5,13 @@
     @include break-at("medium") {
         display: none;
     }
+
+    & > button {
+        border-radius: 50%;
+    }
+    & > p {
+        display: none;
+    }
 }
 
 nav.hamburger {

@@ -3,7 +3,7 @@
     position: relative; // for canvas absolute positioning
     display: grid;
     grid-auto-rows: min-content;
-    gap: 0.8rem;
+    gap: 0.6rem;
     overflow: hidden; // for canvas clipping at rounded borders
     border-radius: 1rem;
     & > p {

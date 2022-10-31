@@ -7,16 +7,18 @@
     
     & > p {
         align-self: unset;
-        display: none;
+        display: block;
+        font-weight: 200;
+        font-family: "Space Grotesk", sans-serif;
         @include break-at("medium") {
             display: block;
         }
     }
     & > button {
         background-color: transparent;
-        border-radius: 50%;
-        width: 2.5em;
-        height: 2.5em;
+        // border-radius: 50%;
+        width: 2.4em;
+        height: 2.4em;
         border: 1px solid white;
         display: flex;
         justify-content: center;
@@ -25,6 +27,7 @@
 
         svg {
             color: #fcf0f0;
+            font-size: 1.2em;
         }
         &:hover {
             background-color: #fcf0f0;
