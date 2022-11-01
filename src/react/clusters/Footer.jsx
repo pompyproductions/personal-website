@@ -6,10 +6,18 @@ import { faLinkedin, faGithub, faCodepen, faBandcamp } from '@fortawesome/free-b
 const Footer = () => {
     return <footer>
         <ul>
-            <li><a href="https://www.linkedin.com/in/erengazioglu/" target="_blank"><FontAwesomeIcon icon={faLinkedin}/></a></li>
-            <li><a href="https://github.com/pompyproductions" target="_blank"><FontAwesomeIcon icon={faGithub}/></a></li>
-            <li><a href="https://codepen.io/pompyproductions" target="_blank"><FontAwesomeIcon icon={faCodepen}/></a></li>
-            <li><a href="https://granoturco.bandcamp.com/" target="_blank"><FontAwesomeIcon icon={faBandcamp}/></a></li>
+            <a href="https://www.linkedin.com/in/erengazioglu/" target="_blank"><li>
+                <FontAwesomeIcon icon={faLinkedin}/>
+            </li></a>
+            <a href="https://github.com/pompyproductions" target="_blank"><li>
+                <FontAwesomeIcon icon={faGithub}/>
+            </li></a>
+            <a href="https://codepen.io/pompyproductions" target="_blank"><li>
+                <FontAwesomeIcon icon={faCodepen}/>
+            </li></a>
+            <a href="https://granoturco.bandcamp.com/" target="_blank"><li>
+                <FontAwesomeIcon icon={faBandcamp}/>
+            </li></a>
         </ul>
     </footer>
 }

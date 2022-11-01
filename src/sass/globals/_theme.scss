@@ -1,10 +1,12 @@
 :root {
-    --accent-faded: #9d26412e;
-    --accent-solid: #a42843;
-    --accent-bright: #df3169;
+    --primary-faded: #9d26412e;
+    --primary-solid: #a42843;
+    --primary-bright: #df3169;
     --text-basic: #fbf0f0;
-    // --text-faded: #4fb4bf;
     --text-faded: #3daab6;
+    --text-bright: #67d8e5;
     --background: linear-gradient(45deg, #260909, #20131f);
-    --hamburger-background: linear-gradient(rgb(64 86 107 / 90%), rgb(45 45 50 / 40%));
+    --hamburger-background: linear-gradient(
+        rgb(55 150 127 / 90%), 
+        rgb(80 115 80 / 40%));
 }

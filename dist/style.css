@@ -26,14 +26,8 @@ h1, h2, h3, p {
   cursor: default;
 }
 
-svg {
-  width: 1em;
-}
-
 a {
-  color: inherit;
-  display: flex;
-  align-items: center;
+  color: var(--text-faded);
   cursor: pointer;
 }
 
@@ -56,10 +50,6 @@ h1, h2, h3,
 h4, h5, h6 {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
-}
-
-svg {
-  width: 1em;
 }
 
 @media only screen and (min-width: 720px) {
@@ -90,13 +80,16 @@ ul, ol {
 }
 
 :root {
-  --accent-faded: #9d26412e;
-  --accent-solid: #a42843;
-  --accent-bright: #df3169;
+  --primary-faded: #9d26412e;
+  --primary-solid: #a42843;
+  --primary-bright: #df3169;
   --text-basic: #fbf0f0;
   --text-faded: #3daab6;
+  --text-bright: #67d8e5;
   --background: linear-gradient(45deg, #260909, #20131f);
-  --hamburger-background: linear-gradient(rgb(64 86 107 / 90%), rgb(45 45 50 / 40%));
+  --hamburger-background: linear-gradient(
+      rgb(55 150 127 / 90%),
+      rgb(80 115 80 / 40%));
 }
 
 @keyframes appear {
@@ -393,7 +386,7 @@ header {
   grid-area: header;
   width: 100%;
   padding: 0.5rem 1rem;
-  box-shadow: inset 0 0 0 1px var(--accent-faded);
+  box-shadow: inset 0 0 0 1px var(--primary-faded);
   display: flex;
   justify-content: space-between;
   gap: 1rem;
@@ -403,6 +396,10 @@ header {
     flex-direction: column;
     padding: 0;
   }
+}
+header a {
+  display: flex;
+  align-items: center;
 }
 
 #eg-logo {
@@ -457,6 +454,7 @@ nav.hamburger ul::before, nav.hamburger ul::after {
 }
 nav.hamburger a {
   font: 1em;
+  color: white;
 }
 nav.hamburger p {
   height: 95.13px;
@@ -473,8 +471,7 @@ footer {
   grid-area: footer;
   display: flex;
   justify-content: space-between;
-  padding: 1rem 2rem;
-  box-shadow: inset 0 0 0 1px var(--accent-faded);
+  box-shadow: inset 0 0 0 1px var(--primary-faded);
 }
 footer p {
   flex-grow: 1;
@@ -483,7 +480,7 @@ footer p {
 }
 footer ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
   font-size: 1rem;
   color: #a42843;
@@ -491,6 +488,10 @@ footer ul {
 footer ul a:hover {
   transition: color 150ms;
   color: var(--text-faded);
+}
+footer li {
+  box-shadow: inset 0 0 0 1px var(--primary-faded);
+  padding: 1rem;
 }
 
 .content-card {
@@ -500,6 +501,7 @@ footer ul a:hover {
   grid-auto-rows: min-content;
   gap: 0.6rem;
   overflow: hidden;
+  box-shadow: inset 0 0 0 1px var(--primary-faded);
 }
 .content-card > p {
   font-weight: 200;
@@ -528,7 +530,7 @@ footer ul a:hover {
   height: 100%;
 }
 .content-card .hsep {
-  background-color: var(--accent-faded);
+  background-color: var(--primary-faded);
 }
 .content-card .content-bit {
   display: flex;
@@ -621,7 +623,7 @@ main {
   overflow: hidden;
   grid-area: main;
   width: 100%;
-  box-shadow: inset 0 0 0 1px var(--accent-faded);
+  box-shadow: inset 0 0 0 1px var(--primary-faded);
 }
 main > div {
   display: flex;
@@ -668,7 +670,7 @@ main p {
   height: 100%;
 }
 .page-container .hsep {
-  background-color: var(--accent-faded);
+  background-color: var(--primary-faded);
 }
 .page-container .content-bit {
   display: flex;

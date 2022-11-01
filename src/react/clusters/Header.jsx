@@ -7,12 +7,13 @@ import IconButton from "../components/IconButton.jsx";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
+    function handleResize() {
+        setLogoWeight(window.innerWidth > 720 ? 1 : 2.5);
+    };
     const [logoWeight, setLogoWeight] = useState(() => {
         return window.innerWidth > 720 ? 1 : 2.5
     });
-    function handleResize() {
-        setLogoWeight(window.innerWidth > 720 ? 1 : 2.5);
-    } 
+
 
     useEffect(() => {
         window.addEventListener("resize", handleResize);
@@ -20,7 +21,7 @@ const Header = () => {
             window.removeEventListener("resize", handleResize)
         }
     }, []);
-    
+
     const toggleHamburger = () => {
         document.querySelectorAll(".hamburger").forEach(elem => {
             elem.classList.toggle("active");

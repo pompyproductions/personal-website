@@ -5,6 +5,7 @@
     grid-auto-rows: min-content;
     gap: 0.6rem;
     overflow: hidden; // for canvas clipping at rounded borders
+    box-shadow: inset 0 0 0 1px var(--primary-faded);
     & > p {
         font-weight: 200;
     }
@@ -33,7 +34,7 @@
         }
     }
     .hsep {
-        background-color: var(--accent-faded);
+        background-color: var(--primary-faded);
     }
     .content-bit {
         display: flex;

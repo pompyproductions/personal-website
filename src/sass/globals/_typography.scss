@@ -12,10 +12,6 @@ h4, h5, h6 {
     font-weight: 700;
 }
 
-svg {
-    width: 1em;
-}
-
 p {
     // font-size: .85rem;
     @include break-at("medium") {

@@ -4,7 +4,7 @@ header {
     grid-area: header;
     width: 100%;
     padding: 0.5rem 1rem;
-    box-shadow: inset 0 0 0 1px var(--accent-faded);
+    box-shadow: inset 0 0 0 1px var(--primary-faded);
 
     display: flex;
     justify-content: space-between;
@@ -14,11 +14,15 @@ header {
         flex-direction: column;
         padding: 0;
     }
+
+    a {
+        display: flex;
+        align-items: center;
+    }
 }
 
 #eg-logo {
     width: 2rem;
-
     @include break-at("medium") {
         flex-grow: 1;
     }

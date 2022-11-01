@@ -21,14 +21,9 @@ body {
     font-size: .8rem;
     cursor: default;
 } 
-svg {
-    width: 1em;
-}
 
 a {
-    color: inherit;
-    display: flex;
-    align-items: center;
+    color: var(--text-faded);
     cursor: pointer;
 }
 
