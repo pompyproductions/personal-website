@@ -15,7 +15,7 @@
 }
 
 nav.hamburger {
-    position: absolute;
+    position: fixed;
     z-index: 3;
     overflow: hidden;
     
@@ -24,11 +24,7 @@ nav.hamburger {
     bottom: 1rem;
     width: 0;
 
-    border-radius: 1rem;
-
-    background-image: linear-gradient(
-        rgb(230 100 101 / 90%), 
-        rgb(145 152 229 / 40%));
+    background-image: var(--hamburger-background);
 
     transition: all 200ms;
     &.active {

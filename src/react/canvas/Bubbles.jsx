@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 const Bubbles = (props) => {
 
     const DEFAULT_STYLES = {
-        lineColor: "yellow",
+        lineColor: false,
         lineWeight: 1,
         lineDash: false,
         fillColor: "blue",
@@ -18,14 +18,18 @@ const Bubbles = (props) => {
         canvasRef.current.height = canvas.parentElement.clientHeight;
         const ctx = canvasRef.current.getContext("2d");
 
-        window.onresize = () => {
+        function handleResize() {
             canvas.width = canvas.parentElement.clientWidth;
             canvas.height = canvas.parentElement.clientHeight;
             clearTimeout(timeoutID);
-            timeoutID = setTimeout(randomizeCanvas, 100, ctx)
-            console.log(timeoutID);
+            timeoutID = setTimeout(randomizeCanvas, 100, ctx);
         }
+
+        window.addEventListener("resize", handleResize);
+
         randomizeCanvas(ctx);
+
+        return 
     }, [])
 
     function clearCircle(ctx, x, y, radius) {
@@ -44,7 +48,6 @@ const Bubbles = (props) => {
             ctx.setLineDash(styles.lineDash)
         }
         ctx.fillStyle = styles.fillColor;
-        console.log(ctx);
     }
 
     function drawCircles(ctx, scale=1) {
@@ -73,7 +76,6 @@ const Bubbles = (props) => {
 
         const styles = Object.assign(DEFAULT_STYLES, props.styles);
         applyStyles(ctx, styles, scale);
-        console.log(ctx);
 
         if (styles.fillColor && props.invert) {
             ctx.fillRect(0, 0, canvasRef.current.width, canvasRef.current.height)

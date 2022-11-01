@@ -96,6 +96,7 @@ ul, ol {
   --text-basic: #fbf0f0;
   --text-faded: #3daab6;
   --background: linear-gradient(45deg, #260909, #20131f);
+  --hamburger-background: linear-gradient(rgb(64 86 107 / 90%), rgb(45 45 50 / 40%));
 }
 
 @keyframes appear {
@@ -396,7 +397,6 @@ header {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0;
 }
 @media only screen and (min-width: 720px) {
   header {
@@ -430,15 +430,14 @@ header {
 }
 
 nav.hamburger {
-  position: absolute;
+  position: fixed;
   z-index: 3;
   overflow: hidden;
   top: 1rem;
   right: 1rem;
   bottom: 1rem;
   width: 0;
-  border-radius: 1rem;
-  background-image: linear-gradient(rgba(230, 100, 101, 0.9), rgba(145, 152, 229, 0.4));
+  background-image: var(--hamburger-background);
   transition: all 200ms;
 }
 nav.hamburger.active {
