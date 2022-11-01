@@ -19,6 +19,9 @@
     footer {
         grid-row: 3;
     }
+    .optional {
+        display: none;
+    }
 
     color: var(--text-basic);
 
@@ -37,6 +40,7 @@
             grid-row: 2;
             grid-column: 2;
         }
+
     }
     @include break-at("large") {
         background-color: rgb(48, 48, 177);

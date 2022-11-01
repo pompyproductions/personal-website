@@ -2,6 +2,7 @@ import React from "react";
 import tooltips from "../../tooltips.json"
 import Bubbles from "../canvas/Bubbles.jsx"
 import Codepens from "../clusters/content-cards/Codepens.jsx";
+import SizeMatters from "../clusters/content-cards/SizeMatters.jsx";
 import ProjectEuler from "../clusters/content-cards/ProjectEuler.jsx";
 
 
@@ -17,8 +18,7 @@ const Portfolio = () => {
         <main className="portfolio page-container">
             <Codepens />
             <ProjectEuler />
-            <ProjectEuler />
-            <ProjectEuler />
+            <SizeMatters />
         </main>
     )
 }

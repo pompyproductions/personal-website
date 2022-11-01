@@ -1,12 +1,12 @@
 import React from 'react';
-import profilePicture from "../../../assets/profile.jpg";
+import screenshot from "../../../assets/screenshot-sizematters.png";
 import Bubbles from '../../canvas/Bubbles.jsx';
 import IconButton from '../../components/IconButton.jsx';
 import TextCouple from '../../components/TextCouple.jsx';
 import ExpandText from '../../components/ExpandText.jsx';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-const ProjectEuler = () => {
+const SizeMatters = () => {
     function handleImageClick(e) {
         e.target.classList.toggle("active");
     }
@@ -15,26 +15,23 @@ const ProjectEuler = () => {
             <Bubbles/>
             <div className="img-wrapper">
                 <img 
-                    src={profilePicture} 
-                    alt="Portrait of Eren Gazioglu." 
+                    src={screenshot} 
+                    alt="Screenshot of the game." 
                     onClick={handleImageClick}
                 />
             </div>
             <section className="content-bit">
-                <h2>Project Euler</h2>
+                <h2>Size Matters</h2>
                 <ExpandText>
                         <p>
-                            Problem-solving exercises that combine maths and programming.
+                            A pixel-art game prototype made in Godot.
                         </p>
                         <p className="hidden">
-                            <i>From the official website:</i>
+                            A prototype made in a single weekend during the #GoGodotJam hosted on itch.io.
                         </p>
                         <p className="hidden">
-                            <i>
-                                Project Euler is a series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve.
-                                Although mathematics will help you arrive at elegant and efficient methods,
-                                the use of a computer and programming skills will be required to solve most problems.
-                            </i>
+                            Although it is unfinished as a game, I achieved my primary objective before shelving it for the time being:
+                            hand-drawn pixel animations that look good, all made with just Godot and Aseprite.
                         </p>
                 </ExpandText>
                 <IconButton icon={faGithub}>Visit GitHub repository</IconButton>
@@ -49,4 +46,4 @@ const ProjectEuler = () => {
     )
 }
 
-export default ProjectEuler;
+export default SizeMatters;

@@ -1,8 +1,7 @@
 import React from 'react';
+
 import Bubbles from '../../canvas/Bubbles.jsx';
-import IconButton from '../../components/IconButton.jsx';
 import TextCouple from '../../components/TextCouple.jsx';
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 const ContactForm = () => {
     function handleImageClick(e) {
@@ -14,7 +13,7 @@ const ContactForm = () => {
             <h2>Contact Form</h2>
             <p>
                 This contact form is currently under development. 
-                Please consider reaching me by the alternative means described right below.
+                Please consider reaching me by the alternative means described in the next card.
             </p>
             <div className="hsep"></div>
             <section className="content-bit">

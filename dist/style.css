@@ -645,6 +645,9 @@ footer li {
 #root footer {
   grid-row: 3;
 }
+#root .optional {
+  display: none;
+}
 @media only screen and (min-width: 720px) {
   #root {
     grid-template-rows: 1fr min-content;
