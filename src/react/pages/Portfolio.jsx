@@ -17,6 +17,8 @@ const Portfolio = () => {
         <main className="portfolio page-container">
             <Codepens />
             <ProjectEuler />
+            <ProjectEuler />
+            <ProjectEuler />
         </main>
     )
 }
