@@ -29,13 +29,13 @@
         
         &:hover, &.active {
             font-variation-settings: 'wght' 750;
-            color: #fcf0f0;
+            color: var(--text-basic);
         }
 
         &::before {
             content: "";
             position: absolute;
-            border-bottom: 1px dashed #26939f;
+            border-bottom: 1px dashed var(--text-faded);
             width: 1em;
             bottom: 0px;
         }
@@ -85,8 +85,8 @@
     width: 2em;
     border-radius: 50%;
     border: none;
-    outline: 0 solid #df3169;
-    border: 1px solid #fcf0f0;
+    outline: 0 solid var(--primary-bright);
+    border: 1px solid var(--text-basic);
     outline-offset: -1px;
     box-shadow: 0 1em 1em rgba(0, 0, 0, 0);
     transition: outline 0.2s, outline-offset 0.2s, background-color 0.4s;
@@ -108,7 +108,7 @@
         right: calc(1em - 2px);
         left: calc(1em - 2px);
         bottom: calc(1em - 2px);
-        background-color: white;
+        background-color: var(--text-basic);
         transform-origin: center calc(100% - 1px);
         transition: transform 0.1s ease-out;
         transform: rotate(45deg);

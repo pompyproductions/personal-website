@@ -45,7 +45,7 @@ nav.hamburger {
     }
     a {
         font: 1em;
-        color: white;
+        color: var(--text-basic);
     }
     p {
         height: 95.13px; // magic number: header height

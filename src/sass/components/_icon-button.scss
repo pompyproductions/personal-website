@@ -19,18 +19,18 @@
         // border-radius: 50%;
         width: 2.4em;
         height: 2.4em;
-        border: 1px solid white;
+        border: 1px solid var(--text-basic);
         display: flex;
         justify-content: center;
         align-items: center;
         transition: background-color 0.2s;
 
         svg {
-            color: #fcf0f0;
+            color: var(--text-basic);
             font-size: 1.2em;
         }
         &:hover {
-            background-color: #fcf0f0;
+            background-color: var(--text-basic);
         }
         &:hover svg {
             color: #202020 !important;

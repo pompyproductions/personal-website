@@ -43,7 +43,7 @@ li ul, li ol {
 body {
   font-family: "Karla", sans-serif;
   line-height: 1.3;
-  color: white;
+  color: var(--text-basic);
 }
 
 h1, h2, h3,
@@ -83,7 +83,7 @@ ul, ol {
   --primary-faded: #9d26412e;
   --primary-solid: #a42843;
   --primary-bright: #df3169;
-  --text-basic: #fbf0f0;
+  --text-basic: #fbf0f0fb;
   --text-faded: #3daab6;
   --text-bright: #67d8e5;
   --background: linear-gradient(45deg, #260909, #20131f);
@@ -145,18 +145,18 @@ canvas {
   background-color: transparent;
   width: 2.4em;
   height: 2.4em;
-  border: 1px solid white;
+  border: 1px solid var(--text-basic);
   display: flex;
   justify-content: center;
   align-items: center;
   transition: background-color 0.2s;
 }
 .icon-button > button svg {
-  color: #fcf0f0;
+  color: var(--text-basic);
   font-size: 1.2em;
 }
 .icon-button > button:hover {
-  background-color: #fcf0f0;
+  background-color: var(--text-basic);
 }
 .icon-button > button:hover svg {
   color: #202020 !important;
@@ -164,7 +164,7 @@ canvas {
 
 .hsep {
   min-height: 1px;
-  background-color: white;
+  background-color: var(--text-basic);
 }
 
 .animated-text {
@@ -243,12 +243,12 @@ canvas {
 }
 .knob-container p:hover, .knob-container p.active {
   font-variation-settings: "wght" 750;
-  color: #fcf0f0;
+  color: var(--text-basic);
 }
 .knob-container p::before {
   content: "";
   position: absolute;
-  border-bottom: 1px dashed #26939f;
+  border-bottom: 1px dashed var(--text-faded);
   width: 1em;
   bottom: 0px;
 }
@@ -291,8 +291,8 @@ canvas {
   width: 2em;
   border-radius: 50%;
   border: none;
-  outline: 0 solid #df3169;
-  border: 1px solid #fcf0f0;
+  outline: 0 solid var(--primary-bright);
+  border: 1px solid var(--text-basic);
   outline-offset: -1px;
   box-shadow: 0 1em 1em rgba(0, 0, 0, 0);
   transition: outline 0.2s, outline-offset 0.2s, background-color 0.4s;
@@ -309,7 +309,7 @@ canvas {
   right: calc(1em - 2px);
   left: calc(1em - 2px);
   bottom: calc(1em - 2px);
-  background-color: white;
+  background-color: var(--text-basic);
   transform-origin: center calc(100% - 1px);
   transition: transform 0.1s ease-out;
   transform: rotate(45deg);
@@ -379,13 +379,14 @@ canvas {
   .text-couple p:first-of-type {
     width: 6rem;
     text-align: right;
+    color: var(--text-bright);
   }
 }
 
 header {
   grid-area: header;
   width: 100%;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1rem;
   box-shadow: inset 0 0 0 1px var(--primary-faded);
   display: flex;
   justify-content: space-between;
@@ -454,7 +455,7 @@ nav.hamburger ul::before, nav.hamburger ul::after {
 }
 nav.hamburger a {
   font: 1em;
-  color: white;
+  color: var(--text-basic);
 }
 nav.hamburger p {
   height: 95.13px;
@@ -491,7 +492,7 @@ footer ul a:hover {
 }
 footer li {
   box-shadow: inset 0 0 0 1px var(--primary-faded);
-  padding: 1rem;
+  padding: 0.6rem 1rem;
 }
 
 .content-card {
@@ -725,5 +726,4 @@ main p {
 
 .contact article {
   padding: 1rem;
-  background-image: linear-gradient(45deg, rgba(79, 70, 234, 0.4117647059), rgba(255, 255, 255, 0));
 }
