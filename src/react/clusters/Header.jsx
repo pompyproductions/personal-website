@@ -30,7 +30,8 @@ const Header = () => {
 
     return <header>
         <PageLogo strokeWeight={logoWeight} strokeColor="#fcf0f0"/>
-        <KnobSelector />
+        <h1>erengazioglu.com</h1>
+        {/* <KnobSelector /> */}
         <IconButton icon={faBars} 
             className="hamburger" 
             onClick={toggleHamburger}/>

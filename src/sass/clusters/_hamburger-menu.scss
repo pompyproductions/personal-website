@@ -36,7 +36,7 @@ nav.hamburger {
         flex-direction: column;
         align-items: flex-start;
         height: 100%;
-        padding: 0 1rem 1rem 1rem; // magic number: header height
+        padding: 0 1rem 1rem 1rem;
         gap: 1rem;
         // font-size: 16px;
     }
@@ -48,13 +48,16 @@ nav.hamburger {
         color: var(--text-basic);
     }
     p {
-        height: 95.13px; // magic number: header height
-        line-height: 95.13px;
+        height: 78.47px; // magic number: header height
+        line-height: 78.47px; // magic number: header height
         margin-left: 1rem;
         font-size: 1em;
     }
     .hsep {
         width: 100%;
         margin-bottom: 1em;
+    }
+    svg {
+        width: 1.4rem; // could be improved
     }
 }

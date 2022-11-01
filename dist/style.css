@@ -143,23 +143,24 @@ canvas {
 }
 .icon-button > button {
   background-color: transparent;
+  cursor: pointer;
   width: 2.4em;
   height: 2.4em;
   border: 1px solid var(--text-basic);
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 0.2s;
+  transition: all 0.2s;
 }
 .icon-button > button svg {
   color: var(--text-basic);
   font-size: 1.2em;
 }
 .icon-button > button:hover {
-  background-color: var(--text-basic);
+  border-radius: 50%;
 }
 .icon-button > button:hover svg {
-  color: #202020 !important;
+  color: var(--text-basic);
 }
 
 .hsep {
@@ -382,6 +383,9 @@ canvas {
     color: var(--text-bright);
   }
 }
+.text-couple a {
+  color: var(--text-basic);
+}
 
 header {
   grid-area: header;
@@ -401,6 +405,16 @@ header {
 header a {
   display: flex;
   align-items: center;
+}
+header h1 {
+  font-weight: 200;
+  align-self: center;
+  justify-self: flex-end;
+}
+@media only screen and (min-width: 720px) {
+  header h1 {
+    display: none;
+  }
 }
 
 #eg-logo {
@@ -458,14 +472,17 @@ nav.hamburger a {
   color: var(--text-basic);
 }
 nav.hamburger p {
-  height: 95.13px;
-  line-height: 95.13px;
+  height: 78.47px;
+  line-height: 78.47px;
   margin-left: 1rem;
   font-size: 1em;
 }
 nav.hamburger .hsep {
   width: 100%;
   margin-bottom: 1em;
+}
+nav.hamburger svg {
+  width: 1.4rem;
 }
 
 footer {

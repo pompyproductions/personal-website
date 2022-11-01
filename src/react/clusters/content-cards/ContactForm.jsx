@@ -12,12 +12,15 @@ const ContactForm = () => {
         <article className="content-card">
             <Bubbles/>
             <h2>Contact Form</h2>
-            <p>Components and utilities I made and published for prototyping and archive purposes.</p>
-            <IconButton icon={faPaperPlane}>Visit my Codepen profile</IconButton>
+            <p>
+                This contact form is currently under development. 
+                Please consider reaching me by the alternative means described right below.
+            </p>
             <div className="hsep"></div>
             <section className="content-bit">
                 <ul>
-                    <li><TextCouple title="Last updated">October 2022</TextCouple></li>
+                    <li><TextCouple title="Status">Under development</TextCouple></li>
+                    <li><TextCouple title="Scheduled">November 2022</TextCouple></li>
                 </ul>
             </section>
         </article>

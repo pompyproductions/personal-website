@@ -17,23 +17,24 @@
     & > button {
         background-color: transparent;
         // border-radius: 50%;
+        cursor: pointer;
         width: 2.4em;
         height: 2.4em;
         border: 1px solid var(--text-basic);
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: background-color 0.2s;
+        transition: all 0.2s;
 
         svg {
             color: var(--text-basic);
             font-size: 1.2em;
         }
         &:hover {
-            background-color: var(--text-basic);
+            border-radius: 50%;
         }
         &:hover svg {
-            color: #202020 !important;
+            color: var(--text-basic);
         }
     }
 }
