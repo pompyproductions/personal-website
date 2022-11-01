@@ -5,7 +5,6 @@
     grid-auto-rows: min-content;
     gap: 0.6rem;
     overflow: hidden; // for canvas clipping at rounded borders
-    border-radius: 1rem;
     & > p {
         font-weight: 200;
     }
@@ -27,7 +26,6 @@
         height: 12rem;
         object-fit: cover;
         object-position: 50% 53%;
-        border-radius: 1rem;
         transition: all .3s;
         box-shadow: 3px 3px 5px rgba(20, 20, 20, 0.6);
         &.active {
@@ -35,7 +33,7 @@
         }
     }
     .hsep {
-        background-color: #a42843;
+        background-color: var(--accent-faded);
     }
     .content-bit {
         display: flex;

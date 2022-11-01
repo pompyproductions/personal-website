@@ -14,7 +14,7 @@ const Header = () => {
     }
 
     return <header>
-        <PageLogo strokeWeight={3} strokeColor="#fcf0f0"/>
+        <PageLogo strokeWeight={1} strokeColor="#fcf0f0"/>
         <KnobSelector />
         <IconButton icon={faBars} 
             className="hamburger" 

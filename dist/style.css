@@ -89,6 +89,15 @@ ul, ol {
   list-style: none;
 }
 
+:root {
+  --accent-faded: #9d26412e;
+  --accent-solid: #a42843;
+  --accent-bright: #df3169;
+  --text-basic: #fbf0f0;
+  --text-faded: #3daab6;
+  --background: linear-gradient(45deg, #260909, #20131f);
+}
+
 @keyframes appear {
   0% {
     opacity: 0;
@@ -167,19 +176,29 @@ canvas {
 .animated-text {
   cursor: pointer;
   width: min-content;
-  margin: 0 auto 0 1em;
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -webkit-tap-highlight-color: transparent;
   white-space: nowrap;
   transition: transform 0.2s;
-  font-size: 1.2rem;
+  transform-origin: left;
+  font-size: 1.4rem;
   font-family: "Space Grotesk";
 }
 @media only screen and (min-width: 320px) {
   .animated-text {
-    font-size: 1.4rem;
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 720px) {
+  .animated-text {
+    font-size: 3.2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .animated-text {
+    font-size: 5rem;
   }
 }
 .animated-text:hover {
@@ -188,14 +207,14 @@ canvas {
 
 .greeting-container .hsep {
   min-height: 1px;
-  background-color: white;
+  background-color: var(--text-faded);
 }
 
 .slanted {
   font-size: 0.7rem;
   margin-bottom: 1em;
   font-style: italic;
-  color: #26939f;
+  color: #3daab6;
 }
 .slanted::after {
   content: "  ↓";
@@ -213,7 +232,7 @@ canvas {
 }
 .knob-container p {
   font-size: 0.75em;
-  color: #26939f;
+  color: var(--text-faded);
   position: absolute;
   white-space: nowrap;
   margin-left: 0.4em;
@@ -278,16 +297,15 @@ canvas {
   width: 2em;
   border-radius: 50%;
   border: none;
-  outline: 0 solid rgb(38, 147, 159);
+  outline: 0 solid #df3169;
   border: 1px solid #fcf0f0;
   outline-offset: -1px;
   box-shadow: 0 1em 1em rgba(0, 0, 0, 0);
   transition: outline 0.2s, outline-offset 0.2s, background-color 0.4s;
 }
 .knob-selector:hover {
-  outline: 1px dashed #26939f;
+  outline: 1px dashed #df3169;
   outline-offset: 3em;
-  background-color: rgba(38, 147, 159, 0.6);
 }
 .knob-selector span {
   position: absolute;
@@ -374,15 +392,26 @@ header {
   grid-area: header;
   width: 100%;
   padding: 0.5rem 1rem;
-  background-color: rgba(32, 32, 32, 0.6);
-  border-radius: 1rem;
+  box-shadow: inset 0 0 0 1px var(--accent-faded);
   display: flex;
   justify-content: space-between;
   gap: 1rem;
+  padding: 0;
+}
+@media only screen and (min-width: 720px) {
+  header {
+    flex-direction: column;
+    padding: 0;
+  }
 }
 
 #eg-logo {
   width: 2rem;
+}
+@media only screen and (min-width: 720px) {
+  #eg-logo {
+    flex-grow: 1;
+  }
 }
 
 .icon-button.hamburger {
@@ -443,11 +472,10 @@ nav.hamburger .hsep {
 
 footer {
   grid-area: footer;
-  background-color: rgba(32, 32, 32, 0.6);
   display: flex;
   justify-content: space-between;
   padding: 1rem 2rem;
-  border-radius: 1rem;
+  box-shadow: inset 0 0 0 1px var(--accent-faded);
 }
 footer p {
   flex-grow: 1;
@@ -461,6 +489,10 @@ footer ul {
   font-size: 1rem;
   color: #a42843;
 }
+footer ul a:hover {
+  transition: color 150ms;
+  color: var(--text-faded);
+}
 
 .content-card {
   z-index: 0;
@@ -469,7 +501,6 @@ footer ul {
   grid-auto-rows: min-content;
   gap: 0.6rem;
   overflow: hidden;
-  border-radius: 1rem;
 }
 .content-card > p {
   font-weight: 200;
@@ -491,7 +522,6 @@ footer ul {
   height: 12rem;
   object-fit: cover;
   object-position: 50% 53%;
-  border-radius: 1rem;
   transition: all 0.3s;
   box-shadow: 3px 3px 5px rgba(20, 20, 20, 0.6);
 }
@@ -499,7 +529,7 @@ footer ul {
   height: 100%;
 }
 .content-card .hsep {
-  background-color: #a42843;
+  background-color: var(--accent-faded);
 }
 .content-card .content-bit {
   display: flex;
@@ -530,12 +560,11 @@ footer ul {
   grid-template-columns: 1fr;
   grid-template-areas: "header" "main" "footer";
   gap: 1rem;
-  background-image: linear-gradient(45deg, #1f21c5, #492caa);
-  background-image: linear-gradient(45deg, #1f21c5, #492caa);
+  color: var(--text-basic);
+  background-image: var(--background);
 }
 @media only screen and (min-width: 720px) {
   #root {
-    background-image: none;
     grid-template-columns: 8rem repeat(2, 1fr);
     grid-template-areas: "sidebar main main main" "sidebar main main main" "sidebar footer footer footer";
   }
@@ -571,19 +600,6 @@ body {
   padding: 2em 1em;
   gap: 1em;
 }
-@media only screen and (min-width: 720px) {
-  .wip-content {
-    padding-left: 6rem;
-    padding-right: 6rem;
-  }
-}
-
-@media only screen and (min-width: 720px) {
-  .greeting-container {
-    padding-left: 6rem;
-    padding-right: 6rem;
-  }
-}
 
 p {
   text-align: left;
@@ -606,7 +622,7 @@ main {
   overflow: hidden;
   grid-area: main;
   width: 100%;
-  border-radius: 1rem;
+  box-shadow: inset 0 0 0 1px var(--accent-faded);
 }
 main > div {
   display: flex;
@@ -625,7 +641,6 @@ main p {
   display: grid;
   grid-auto-rows: min-content;
   gap: 1rem;
-  border-radius: 1rem;
 }
 .page-container > p {
   font-weight: 200;
@@ -647,7 +662,6 @@ main p {
   height: 12rem;
   object-fit: cover;
   object-position: 50% 53%;
-  border-radius: 1rem;
   transition: all 0.3s;
   box-shadow: 3px 3px 5px rgba(20, 20, 20, 0.6);
 }
@@ -655,7 +669,7 @@ main p {
   height: 100%;
 }
 .page-container .hsep {
-  background-color: #a42843;
+  background-color: var(--accent-faded);
 }
 .page-container .content-bit {
   display: flex;
@@ -683,7 +697,6 @@ main p {
 
 .about-me article {
   padding: 1rem;
-  background-image: linear-gradient(45deg, rgba(79, 70, 234, 0.4117647059), rgba(255, 255, 255, 0));
 }
 
 .portfolio .img-wrapper {
@@ -699,7 +712,6 @@ main p {
   height: 8rem;
   object-fit: cover;
   object-position: 50% 53%;
-  border-radius: 1rem;
   transition: all 0.3s;
   box-shadow: 3px 3px 5px rgba(20, 20, 20, 0.6);
 }
@@ -708,7 +720,6 @@ main p {
 }
 .portfolio article {
   padding: 1rem;
-  background-image: linear-gradient(45deg, rgba(79, 70, 234, 0.4117647059), rgba(255, 255, 255, 0));
 }
 
 .contact article {

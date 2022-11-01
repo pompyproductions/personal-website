@@ -30,17 +30,6 @@ body {
     align-items: stretch;
     padding: 2em 1em;
     gap: 1em;
-    @include break-at("medium") {
-        padding-left: 6rem;
-        padding-right: 6rem;
-    }
-}
-
-.greeting-container {
-    @include break-at("medium") {
-        padding-left: 6rem;
-        padding-right: 6rem;
-    }
 }
 
 // .hsep {

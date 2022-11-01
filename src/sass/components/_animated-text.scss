@@ -4,19 +4,25 @@
     cursor: pointer;
     
     width: min-content;
-    margin: 0 auto 0 1em;
 
     @include disable-selection;
     // align-self: center;
     white-space: nowrap;
     transition: transform .2s;
+    transform-origin: left;
 
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-family: "Space Grotesk";
 
 
     @include break-at("thin") {
-        font-size: 1.4rem;
+        font-size: 2rem;
+    }
+    @include break-at("medium") {
+        font-size: 3.2rem;
+    }
+    @include break-at("large") {
+        font-size: 5rem;
     }
     &:hover {
         transform: skew(-10deg) scale(1.2);
@@ -25,7 +31,7 @@
 
 .greeting-container .hsep {
     min-height: 1px;
-    background-color: white;
+    background-color: var(--text-faded);
 }
 
 .slanted {
@@ -33,6 +39,6 @@
     margin-bottom: 1em;
 
     font-style: italic;
-    color: #26939f;
+    color: #3daab6;
     &::after {content:"  ↓"}
 }

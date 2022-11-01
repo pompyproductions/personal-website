@@ -4,7 +4,7 @@ const Bubbles = (props) => {
 
     const DEFAULT_STYLES = {
         lineColor: "yellow",
-        lineWeight: 2,
+        lineWeight: 1,
         lineDash: false,
         fillColor: "blue",
     }
@@ -101,7 +101,7 @@ Bubbles.defaultProps = {
     invert: true,
     styles: {
         lineColor: false,
-        fillColor: "rgba(30, 30, 30, 0.6)"
+        fillColor: "#9d26412e"
     }
 }
 

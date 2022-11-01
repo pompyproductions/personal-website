@@ -10,7 +10,7 @@
     @include disable-selection;
     p {
         font-size: 0.75em;
-        color: #26939f;
+        color: var(--text-faded);
         position: absolute;
         white-space: nowrap;
         margin-left: 0.4em;
@@ -85,15 +85,15 @@
     width: 2em;
     border-radius: 50%;
     border: none;
-    outline: 0 solid rgb(38, 147, 159);
+    outline: 0 solid #df3169;
     border: 1px solid #fcf0f0;
     outline-offset: -1px;
     box-shadow: 0 1em 1em rgba(0, 0, 0, 0);
     transition: outline 0.2s, outline-offset 0.2s, background-color 0.4s;
     &:hover {
-        outline: 1px dashed #26939f;
+        outline: 1px dashed #df3169;
         outline-offset: 3em;
-        background-color: rgb(38 147 159 / 60%);
+        // background-color: rgb(38 147 159 / 60%);
         // box-shadow: 
         //     1em 1em 1em rgba(0, 0, 0, 0.1),
         //     -1em -1em 1em rgba(255, 255, 255, 0.3);

@@ -1,16 +1,26 @@
+@use "../globals" as *;
+
 header {
     grid-area: header;
     width: 100%;
     padding: 0.5rem 1rem;
-
-    background-color: rgba(32, 32, 32, 0.6);
-    border-radius: 1rem;
+    box-shadow: inset 0 0 0 1px var(--accent-faded);
 
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+    padding: 0;
+
+    @include break-at("medium") {
+        flex-direction: column;
+        padding: 0;
+    }
 }
 
 #eg-logo {
     width: 2rem;
+
+    @include break-at("medium") {
+        flex-grow: 1;
+    }
 }
