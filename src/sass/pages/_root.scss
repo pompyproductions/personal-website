@@ -13,7 +13,7 @@
     color: var(--text-basic);
 
     @include break-at("medium") {
-        grid-template-columns: 8rem repeat(2, 1fr);
+        grid-template-columns: 9rem repeat(2, 1fr);
         grid-template-areas: 
             "sidebar main main main"
             "sidebar main main main"

@@ -400,6 +400,7 @@ header {
   header {
     flex-direction: column;
     padding: 0;
+    justify-content: flex-start;
   }
 }
 header a {
@@ -408,13 +409,46 @@ header a {
 }
 header h1 {
   font-weight: 200;
+  display: none;
   align-self: center;
   justify-self: flex-end;
+}
+@media only screen and (min-width: 320px) {
+  header h1 {
+    font-size: 1.2rem;
+    display: block;
+  }
 }
 @media only screen and (min-width: 720px) {
   header h1 {
     display: none;
   }
+}
+header nav {
+  color: var(--text-basic);
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.4rem 0;
+}
+@media only screen and (min-width: 720px) {
+  header nav {
+    display: flex;
+  }
+}
+header nav li {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+header nav .hsep {
+  margin-bottom: 0.6rem;
+}
+header nav svg {
+  width: 1rem;
+}
+header nav a {
+  color: var(--text-basic);
 }
 
 #eg-logo {
@@ -584,7 +618,7 @@ footer li {
 }
 @media only screen and (min-width: 720px) {
   #root {
-    grid-template-columns: 8rem repeat(2, 1fr);
+    grid-template-columns: 9rem repeat(2, 1fr);
     grid-template-areas: "sidebar main main main" "sidebar main main main" "sidebar footer footer footer";
   }
   #root header {

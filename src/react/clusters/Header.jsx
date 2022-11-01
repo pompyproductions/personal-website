@@ -5,6 +5,7 @@ import KnobSelector from "../components/KnobSelector.jsx";
 import IconButton from "../components/IconButton.jsx";
 
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import NavGroup from "../components/NavGroup.jsx";
 
 const Header = () => {
     function handleResize() {
@@ -32,6 +33,7 @@ const Header = () => {
         <PageLogo strokeWeight={logoWeight} strokeColor="#fcf0f0"/>
         <h1>erengazioglu.com</h1>
         {/* <KnobSelector /> */}
+        <NavGroup />
         <IconButton icon={faBars} 
             className="hamburger" 
             onClick={toggleHamburger}/>
