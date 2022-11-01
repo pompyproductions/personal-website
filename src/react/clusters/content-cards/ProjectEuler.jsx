@@ -37,10 +37,11 @@ const ProjectEuler = () => {
                             </i>
                         </p>
                 </ExpandText>
+            </section>
+            <div className="flex-spacer"></div>
+            <section className="content-bit">
                 <IconButton icon={faGithub}>Visit GitHub repository</IconButton>
                 <div className="hsep"></div>
-            </section>
-            <section className="content-bit">
                 <ul>
                     <li><TextCouple title="Last updated">October 2022</TextCouple></li>
                 </ul>

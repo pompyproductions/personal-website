@@ -168,6 +168,10 @@ canvas {
   background-color: var(--text-basic);
 }
 
+.flex-spacer {
+  flex-grow: 1;
+}
+
 .animated-text {
   cursor: pointer;
   width: min-content;
@@ -569,8 +573,8 @@ footer li {
 .content-card {
   z-index: 0;
   position: relative;
-  display: grid;
-  grid-auto-rows: min-content;
+  display: flex;
+  flex-direction: column;
   gap: 0.6rem;
   overflow: hidden;
   box-shadow: inset 0 0 0 1px var(--primary-faded);

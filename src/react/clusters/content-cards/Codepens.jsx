@@ -21,9 +21,10 @@ const Codepens = () => {
             </div>
             <h2>Codepens</h2>
             <p>Components and utilities I made and published for prototyping and archive purposes.</p>
-            <IconButton icon={faCodepen}>Visit my Codepen profile</IconButton>
-            <div className="hsep"></div>
+            <div className="flex-spacer"></div>
             <section className="content-bit">
+                <IconButton icon={faCodepen}>Visit my Codepen profile</IconButton>
+                <div className="hsep"></div>
                 <ul>
                     <li><TextCouple title="Last updated">October 2022</TextCouple></li>
                 </ul>

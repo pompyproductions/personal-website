@@ -3,3 +3,7 @@
     min-height: 1px;
     background-color: var(--text-basic);
 }
+
+.flex-spacer {
+    flex-grow: 1;
+}
