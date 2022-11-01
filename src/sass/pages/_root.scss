@@ -24,7 +24,7 @@
     }
     @include break-at("large") {
         background-color: rgb(48, 48, 177);
-        grid-template-columns: 8rem repeat(3, 1fr);
+        grid-template-columns: 9rem repeat(3, 1fr);
         grid-template-areas: 
             "sidebar main main main"
             "sidebar main main main"

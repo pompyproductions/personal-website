@@ -20,7 +20,12 @@ const ProjectEuler = () => {
                 />
             </div>
             <h2>Project Euler</h2>
-            <p>Exercises combining maths and programming.</p>
+            <p>
+                <i>From the official website:</i>
+            </p>
+            <p>
+                Project Euler is a series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve. Although mathematics will help you arrive at elegant and efficient methods, the use of a computer and programming skills will be required to solve most problems.
+            </p>
             <IconButton icon={faGithub}>Visit GitHub repository</IconButton>
             <div className="hsep"></div>
             <section className="content-bit">

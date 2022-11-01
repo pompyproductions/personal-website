@@ -1,6 +1,7 @@
 import React from 'react';
 import profilePicture from "../../../assets/profile.jpg";
 import Bubbles from '../../canvas/Bubbles.jsx';
+import ExpandText from '../../components/ExpandText.jsx';
 import TextCouple from '../../components/TextCouple.jsx';
 
 const PersonalInfo = () => {
@@ -22,10 +23,17 @@ const PersonalInfo = () => {
                 <ul>
                     <li><TextCouple title="Name">Eren Gazioglu</TextCouple></li>
                     <li><TextCouple title="Nationality">Turkish</TextCouple></li>
-                    <li><TextCouple title="Birth">Istanbul, 21 Nov. 2022</TextCouple></li>
-                    <li><TextCouple title="Citizenship">Turkey, Portugal</TextCouple></li>
+                    <li><TextCouple title="Birth">Istanbul, 21 Nov. 1994</TextCouple></li>
+                    <li><TextCouple title="Citizenships">Turkey, Portugal</TextCouple></li>
                 </ul>
-                <p>Solid HTML+CSS+JS foundation. Some long long text describing me. I'm not sure how to fill so much space up, but I will do it nonetheless.</p>
+                <ExpandText>
+                    <p>
+                        Born in Istanbul (TR) in 1994, relocated to Milan (IT) in 2012 for architecture studies, and then to Lisbon (PT) in 2015 to finish the master's degree. Currently in the process of transitioning to Paris (FR).
+                    </p>
+                    <p className="hidden">
+                    Originally began learning programming and digital arts for game development (Python, Godot, Blender, Aseprite) during an unintentional break caused by the COVID-19 lockdown in 2019. This gradually developed a broader sense of appreciation and curiosity for programming (especially regarding GUI), which I continued pursuing through frontend development while actively pursuing an architecture career. 
+                    </p>
+                </ExpandText>
             </section>
             <div className="hsep"></div>
             <section className="content-bit">

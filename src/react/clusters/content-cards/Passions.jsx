@@ -28,7 +28,7 @@ const Passions = () => {
                         AutoCAD, Rhinoceros, Blender, SketchUp.
                     </TextCouple></li>
                     <li><TextCouple title="Graphics">
-                        Adobe Creative Suite, Aseprite.
+                        Adobe Creative Suite, Aseprite, Figma.
                     </TextCouple></li>
                     <li><TextCouple title="Experiences">
                         Gonçalo Byrne Arquitectos (Lisbon, PT), Atelier Bugio (Lisbon, PT), 02Arch (Milan, IT).
@@ -41,7 +41,7 @@ const Passions = () => {
 
             <section className="content-bit">
                 <h3>Music Production</h3>
-                <p>Self-taught composer, multi-instrumentalist, and bedroom producer.</p>
+                <p>Self-taught composer, multi-instrumentalist, and bedroom producer. Began learning to play guitar in 2007, composing and arranging in 2009, and recording in 2011. Currently working on a one-man project (GRANOTURCO).</p>
                 <div className="hsep"></div>
                 <ul>
                     <li><TextCouple title="Software">Reaper, Ableton, Cubase, Guitar Pro.</TextCouple></li>

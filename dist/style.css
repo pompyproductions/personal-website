@@ -387,6 +387,27 @@ canvas {
   color: var(--text-basic);
 }
 
+.expand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.expand-text span {
+  display: inline;
+  color: var(--primary-bright);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.expand-text span:hover {
+  text-decoration: underline;
+}
+.expand-text .hidden {
+  display: none;
+}
+
 header {
   grid-area: header;
   width: 100%;
@@ -628,7 +649,7 @@ footer li {
 @media only screen and (min-width: 1024px) {
   #root {
     background-color: rgb(48, 48, 177);
-    grid-template-columns: 8rem repeat(3, 1fr);
+    grid-template-columns: 9rem repeat(3, 1fr);
     grid-template-areas: "sidebar main main main" "sidebar main main main" "sidebar footer footer footer";
   }
   #root header {

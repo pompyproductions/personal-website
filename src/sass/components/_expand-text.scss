@@ -1,0 +1,19 @@
+@use "../globals" as *;
+
+.expand-text {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    span {
+        display: inline;
+        color: var(--primary-bright);
+        cursor: pointer;
+        @include disable-selection;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .hidden {
+        display: none;
+    }
+}
