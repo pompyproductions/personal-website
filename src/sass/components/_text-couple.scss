@@ -11,6 +11,7 @@
     }
     p:last-of-type {
         flex: 1 1 min-content;
+        font-weight: 400 !important;
     }
     
     @include break-at("thin") {

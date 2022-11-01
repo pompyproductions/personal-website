@@ -41,7 +41,7 @@ const Passions = () => {
 
             <section className="content-bit">
                 <h3>Music Production</h3>
-                <p>Self-taught composer, multi-instrumentalist, and bedroom producer. Began learning to play guitar in 2007, composing and arranging in 2009, and recording in 2011. Currently working on a one-man project (GRANOTURCO).</p>
+                <p>Self-taught composer, multi-instrumentalist, and bedroom producer. Began learning to play guitar in 2007, composing and arranging in 2009, and recording in 2011. Currently working on a solo project named GRANOTURCO.</p>
                 <div className="hsep"></div>
                 <ul>
                     <li><TextCouple title="Software">Reaper, Ableton, Cubase, Guitar Pro.</TextCouple></li>
