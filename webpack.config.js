@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 // the HTML plugin will inject the code you create into a "template" file
 
 module.exports = {
@@ -44,6 +45,12 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: "./src/react/template.html",
             favicon: "./src/assets/favicon.ico"
-        })
+        }),
+        new CopyPlugin({
+            patterns: [
+                // {from: "src/assets"},
+                path.resolve(__dirname, "src/assets", "_redirects")
+            ]
+        }),
     ]
 }
