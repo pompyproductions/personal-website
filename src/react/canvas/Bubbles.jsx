@@ -29,7 +29,9 @@ const Bubbles = (props) => {
 
         randomizeCanvas(ctx);
 
-        return 
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        }
     }, [])
 
     function clearCircle(ctx, x, y, radius) {
