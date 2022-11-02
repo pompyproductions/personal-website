@@ -5,10 +5,9 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 const IconButton = (props) => {
 
     return (
-        <div className={`icon-button ${props.className}`}>
-            <button onClick={props.onClick}>
+        <div className={`icon-button ${props.className}`} onClick={props.onClick} data-href={props.href}>
+            <button>
                 <FontAwesomeIcon icon={props.icon} />
-
             </button>
             <p>{props.children}</p>
         </div>

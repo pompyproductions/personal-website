@@ -5,8 +5,13 @@ import IconButton from '../../components/IconButton.jsx';
 import TextCouple from '../../components/TextCouple.jsx';
 import ExpandText from '../../components/ExpandText.jsx';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGamepad } from '@fortawesome/free-solid-svg-icons';
 
 const SizeMatters = () => {
+    function handleButtonClick(e) {
+        console.log(e.target);
+        window.open(e.target.getAttribute("data-href"), "_blank");
+    }
     function handleImageClick(e) {
         e.target.classList.toggle("active");
     }
@@ -37,7 +42,14 @@ const SizeMatters = () => {
             </section>
             <div className="flex-spacer"></div>
             <section className="content-bit">
-                <IconButton icon={faGithub}>Visit GitHub repository</IconButton>
+                <IconButton 
+                    icon={faGamepad} 
+                    href="https://pompyproductions.itch.io/size-matters" 
+                    onClick={handleButtonClick}>Play on itch.io</IconButton>
+                <IconButton 
+                    icon={faGithub}
+                    href="https://github.com/pompyproductions/size-matters"
+                    onClick={handleButtonClick}>Visit GitHub repository</IconButton>
                 <div className="hsep"></div>
                 <ul>
                     <li><TextCouple title="Last updated">October 2022</TextCouple></li>

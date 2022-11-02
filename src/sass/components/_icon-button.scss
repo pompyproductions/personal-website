@@ -4,8 +4,13 @@
     display: flex;
     gap: .8em;
     align-items: center;
+    cursor: pointer;
+    &:hover button {
+        border-radius: 50%;
+    }
     
     & > p {
+        cursor: pointer;
         align-self: unset;
         display: block;
         font-weight: 200;
@@ -30,11 +35,11 @@
             color: var(--text-basic);
             font-size: 1.2em;
         }
-        &:hover {
-            border-radius: 50%;
-        }
         &:hover svg {
             color: var(--text-basic);
         }
+    }
+    * {
+        pointer-events: none;
     }
 }

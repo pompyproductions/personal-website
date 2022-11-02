@@ -129,8 +129,13 @@ canvas {
   display: flex;
   gap: 0.8em;
   align-items: center;
+  cursor: pointer;
+}
+.icon-button:hover button {
+  border-radius: 50%;
 }
 .icon-button > p {
+  cursor: pointer;
   align-self: unset;
   display: block;
   font-weight: 200;
@@ -156,11 +161,11 @@ canvas {
   color: var(--text-basic);
   font-size: 1.2em;
 }
-.icon-button > button:hover {
-  border-radius: 50%;
-}
 .icon-button > button:hover svg {
   color: var(--text-basic);
+}
+.icon-button * {
+  pointer-events: none;
 }
 
 .hsep {
@@ -604,6 +609,9 @@ footer li {
 }
 .content-card img.active {
   height: 100%;
+}
+.content-card img#euler {
+  object-position: 50% 18%;
 }
 .content-card .hsep {
   background-color: var(--primary-faded);

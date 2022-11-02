@@ -32,6 +32,9 @@
         &.active {
             height: calc(100%);
         }
+        &#euler {
+            object-position: 50% 18%;
+        }
     }
     .hsep {
         background-color: var(--primary-faded);
