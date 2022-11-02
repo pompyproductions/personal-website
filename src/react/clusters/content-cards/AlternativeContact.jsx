@@ -19,9 +19,10 @@ const AlternativeContact = () => {
                 You can also reach me through my social media profiles linked below,
                 or send me an email directly.
             </p>
-            <IconButton icon={faPaperPlane} onClick={sendEmail}>eren.g94@gmail.com</IconButton>
-            <div className="hsep"></div>
+            <div className="flex-spacer"></div>
             <section className="content-bit">
+                <IconButton icon={faPaperPlane} onClick={sendEmail}>eren.g94@gmail.com</IconButton>
+                <div className="hsep"></div>
                 <ul>
                     <li>
                         <TextCouple title="LinkedIn">

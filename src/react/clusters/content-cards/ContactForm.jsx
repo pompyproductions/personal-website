@@ -15,6 +15,7 @@ const ContactForm = () => {
                 This contact form is currently under development. 
                 Please consider reaching me by the alternative means described in the next card.
             </p>
+            <div className="flex-spacer"></div>
             <div className="hsep"></div>
             <section className="content-bit">
                 <ul>
