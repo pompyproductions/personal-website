@@ -48,7 +48,6 @@ module.exports = {
         }),
         new CopyPlugin({
             patterns: [
-                // {from: "src/assets"},
                 path.resolve(__dirname, "src/assets", "_redirects")
             ]
         }),
