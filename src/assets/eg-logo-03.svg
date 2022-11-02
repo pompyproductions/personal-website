@@ -1,50 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="_x30_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg version="1.1"
 	 viewBox="0 0 100 166.4" style="enable-background:new 0 0 100 166.4;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-</style>
-<g id="LINE_23_">
-	<line class="st0" x1="0" y1="166.4" x2="100" y2="166.4"/>
+<!-- <style type="text/css">
+	*{fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style> -->
+<g>
+	<line x1="0" y1="166.4" x2="100" y2="166.4"/>
 </g>
-<g id="LINE_22_">
-	<line class="st0" x1="100" y1="166.4" x2="100" y2="66.4"/>
+<g>
+	<line x1="100" y1="166.4" x2="100" y2="66.4"/>
 </g>
-<g id="LINE_21_">
-	<line class="st0" x1="0" y1="166.4" x2="100" y2="66.4"/>
+<g>
+	<line x1="0" y1="166.4" x2="100" y2="66.4"/>
 </g>
-<g id="ARC_1_">
-	<path class="st0" d="M100,66.4C73.5,39.9,37.5,25,0,25"/>
+<g>
+	<path d="M100,66.4C73.5,39.9,37.5,25,0,25"/>
 </g>
-<g id="LINE_20_">
-	<line class="st0" x1="0" y1="166.4" x2="0" y2="25"/>
+<g>
+	<line x1="0" y1="166.4" x2="0" y2="25"/>
 </g>
-<g id="LINE_19_">
-	<line class="st0" x1="50" y1="116.4" x2="100" y2="116.4"/>
+<g>
+	<line x1="50" y1="116.4" x2="100" y2="116.4"/>
 </g>
-<g id="LINE_18_">
-	<line class="st0" x1="100" y1="116.4" x2="100" y2="166.4"/>
+<g>
+	<line x1="100" y1="116.4" x2="100" y2="166.4"/>
 </g>
-<g id="LINE_17_">
-	<line class="st0" x1="100" y1="166.4" x2="50" y2="166.4"/>
+<g>
+	<line x1="100" y1="166.4" x2="50" y2="166.4"/>
 </g>
-<g id="LINE_16_">
-	<line class="st0" x1="50" y1="166.4" x2="50" y2="116.4"/>
+<g>
+	<line x1="50" y1="166.4" x2="50" y2="116.4"/>
 </g>
-<g id="CIRCLE_1_">
-	<path class="st0" d="M0,116.4c0-27.6,22.4-50,50-50s50,22.4,50,50s-22.4,50-50,50S0,144,0,116.4L0,116.4z"/>
+<g>
+	<path d="M0,116.4c0-27.6,22.4-50,50-50s50,22.4,50,50s-22.4,50-50,50S0,144,0,116.4L0,116.4z"/>
 </g>
-<g id="LINE_15_">
-	<line class="st0" x1="100" y1="0" x2="0" y2="0"/>
+<g>
+	<line x1="100" y1="0" x2="0" y2="0"/>
 </g>
-<g id="LINE_14_">
-	<line class="st0" x1="0" y1="0" x2="0" y2="25"/>
+<g>
+	<line x1="0" y1="0" x2="0" y2="25"/>
 </g>
-<g id="LINE_13_">
-	<line class="st0" x1="0" y1="25" x2="100" y2="25"/>
+<g>
+	<line x1="0" y1="25" x2="100" y2="25"/>
 </g>
-<g id="LINE_12_">
-	<line class="st0" x1="100" y1="25" x2="100" y2="0"/>
+<g>
+	<line x1="100" y1="25" x2="100" y2="0"/>
 </g>
 </svg>

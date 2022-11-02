@@ -27,12 +27,9 @@ const PageLogo = (props) => {
             + ` ${endX}`
             + ` ${endY}`
         );
-
-        const iconStyle = icon.querySelector("style")
-        .sheet.cssRules[0].style;
-        iconStyle.stroke = props.strokeColor;
-        iconStyle.strokeWidth = props.strokeWeight;
-
+        icon.style.stroke = props.strokeColor;
+        icon.style.strokeWidth = props.strokeWeight;
+        icon.style.fill = "none";
     }, [props]);
 
     console.log(props.strokeWeight);
