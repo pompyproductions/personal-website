@@ -11,7 +11,6 @@ Please let me know if you have any feedback or notice any issues!
 The website is online! [Click here to view it.](https://erengazioglu.com)
 
 ## Roadmap
----
 
 This roadmap broadly follows a **"NOW/NEXT/LATER"** format, with an additional 3-letter prefix to summarize the nature of the alteration. However, please note that this does not translate immediately to a Semantic Versioning scheme.
 
