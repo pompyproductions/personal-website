@@ -20,8 +20,8 @@ const PageLogo = (props) => {
         } = icon.getBBox();
         startX -= props.strokeWeight / 2;
         startY -= props.strokeWeight / 2;
-        endX += props.strokeWeight;
-        endY += props.strokeWeight;
+        endX += props.strokeWeight * 2;
+        endY += props.strokeWeight * 2;
         icon.setAttribute("viewBox", `${startX}`
             + ` ${startY}`
             + ` ${endX}`
@@ -32,8 +32,6 @@ const PageLogo = (props) => {
         icon.style.fill = "none";
     }, [props]);
 
-    console.log(props.strokeWeight);
-    console.log(props.strokeColor); // hello
     return (
         <Link to="/">
             <EGLogo id="eg-logo" onClick={closeHamburger}/>

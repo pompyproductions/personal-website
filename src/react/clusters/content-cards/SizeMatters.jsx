@@ -9,7 +9,6 @@ import { faGamepad } from '@fortawesome/free-solid-svg-icons';
 
 const SizeMatters = () => {
     function handleButtonClick(e) {
-        console.log(e.target);
         window.open(e.target.getAttribute("data-href"), "_blank");
     }
     function handleImageClick(e) {

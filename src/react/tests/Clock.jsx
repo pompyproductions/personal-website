@@ -29,7 +29,6 @@ class Clock extends Component {
     // EVENT HANDLERS
 
     clickEvent(e) {
-        console.log("CLICK");
         this.setState(prevState => ({
             clickCount: prevState.clickCount + 1,
         }))

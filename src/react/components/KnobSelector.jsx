@@ -37,7 +37,6 @@ const KnobSelector = (props) => {
                 </button>
                 {
                     props.options.split(" ").map((opt, i) => {
-                        console.log({opt, i});
                         return <p key={i} data-option={i} onClick={handleOptClick}>{opt}</p>
                     })
                 }

@@ -7,7 +7,6 @@ import ProjectEuler from "../clusters/content-cards/ProjectEuler.jsx";
 
 
 const Portfolio = () => {
-    console.log(tooltips);
     // return <main>
     //     <h2>{tooltips.logo.title}</h2>
     //     {tooltips.logo.description.map((txt, id) => {
