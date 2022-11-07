@@ -51,7 +51,7 @@ const SizeMatters = () => {
                     onClick={handleButtonClick}>Visit GitHub repository</IconButton>
                 <div className="hsep"></div>
                 <ul>
-                    <li><TextCouple title="Last updated">October 2022</TextCouple></li>
+                    <li><TextCouple title="Last updated">June 2021</TextCouple></li>
                 </ul>
             </section>
         </article>

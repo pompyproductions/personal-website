@@ -33,7 +33,7 @@ Prefix reference:
 
 ### NOW
 
-- [ ] **FIX:** Correct the "Last Updated" dates on the portfolio page.
+- [x] **FIX:** Correct the "Last Updated" dates on the portfolio page.
 - [ ] **FIX:** Portfolio, "Codepens" and "Project Euler" have different `<h2>` stylings because of the `<section>` element.
 - [ ] **MOD:** Make header link also clickable (erengazioglu.com).
 - [ ] **MOD:** Header nav styling, change the "current" element and the hsep to "text-faded".
