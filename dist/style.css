@@ -17,7 +17,7 @@ body {
   font-size: 100%;
   min-height: 100vh;
   overflow: auto;
-  background-color: rgb(153, 0, 153);
+  background-color: #44282e;
 }
 
 h1, h2, h3, p {
