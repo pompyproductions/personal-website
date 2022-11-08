@@ -24,8 +24,8 @@ const SizeMatters = () => {
                     onClick={handleImageClick}
                 />
             </div>
+            <h2>Size Matters</h2>
             <section className="content-bit">
-                <h2>Size Matters</h2>
                 <ExpandText>
                         <p>
                             A pixel-art game prototype made in Godot.

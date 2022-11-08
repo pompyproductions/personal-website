@@ -25,8 +25,8 @@ const ProjectEuler = () => {
                     onClick={handleImageClick}
                 />
             </div>
+            <h2>Project Euler</h2>
             <section className="content-bit">
-                <h2>Project Euler</h2>
                 <ExpandText>
                         <p>
                             Problem-solving exercises that combine maths and programming.
