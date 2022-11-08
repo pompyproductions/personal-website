@@ -74,3 +74,18 @@ Tooltips.
 
 - [ ] **ADD:** Create a div that holds the tooltip element. Store tooltips in a json file and have elements append and remove elements on the tooltip div.
 
+
+## Workflow
+
+1. Plan out the work in the Roadmap section of _README.md_. **(Always on main branch!)**
+2. Switch to the development branch (`git checkout development`). Work with atomic commits.
+3. When the patch is done and ready to merge, update _version-history.md_ and _README.md_.
+4. Squash commits:
+   - `git checkout main`
+   - `git merge --squash development`
+   - `git commit -m "v#.# patch #` (replace #'s with versions)
+5. Update the deployment branch:
+   - `git checkout netlify-deploy`
+   - `git merge main`
+
+Rinse & repeat.
