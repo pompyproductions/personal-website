@@ -25,8 +25,8 @@ const ProjectEuler = () => {
                     onClick={handleImageClick}
                 />
             </div>
+            <h2>Project Euler</h2>
             <section className="content-bit">
-                <h2>Project Euler</h2>
                 <ExpandText>
                         <p>
                             Problem-solving exercises that combine maths and programming.
@@ -48,7 +48,7 @@ const ProjectEuler = () => {
                 <IconButton icon={faGithub} onClick={handleButtonClick}>Visit GitHub repository</IconButton>
                 <div className="hsep"></div>
                 <ul>
-                    <li><TextCouple title="Last updated">October 2022</TextCouple></li>
+                    <li><TextCouple title="Last updated">September 2022</TextCouple></li>
                 </ul>
             </section>
         </article>
