@@ -35,8 +35,9 @@ Prefix reference:
 
 - [x] **FIX:** Correct the "Last Updated" dates on the portfolio page.
 - [ ] **FIX:** Portfolio, "Codepens" and "Project Euler" have different `<h2>` stylings because of the `<section>` element.
-- [ ] **MOD:** Make header link also clickable (erengazioglu.com).
-- [ ] **MOD:** Header nav styling, change the "current" element and the hsep to "text-faded".
+- [x] **MOD:** Make header link also clickable (erengazioglu.com).
+- [x] **MOD:** Header nav styling, change the "current" element and the hsep to "text-faded".
+- [x] **MOD:** Footer ul styling, add hover effects to SVG buttons (background-color and color transition).
 
 
 ### NEXT
@@ -77,8 +78,4 @@ Portfolio content.
 Tooltips.
 
 - [ ] **ADD:** Create a div that holds the tooltip element. Store tooltips in a json file and have elements append and remove elements on the tooltip div.
-
-Other.
-
-- [ ] **MOD:** Footer ul styling, add hover effects to SVG buttons (background-color and color transition).
 

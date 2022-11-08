@@ -32,6 +32,14 @@ header {
         @include break-at("medium") {
             display: none;
         }
+        a {
+            color: var(--primary-solid);
+            transition: color 0.2s;
+            &:hover {
+                color: var(--primary-bright);
+                text-decoration: none;
+            }
+        }
     }
 
     nav {
@@ -52,12 +60,16 @@ header {
         }
         .hsep {
             margin-bottom: 0.6rem;
+            background-color: var(--text-faded);
         }
         svg {
             width: 1rem;
         }
         a {
             color: var(--text-basic)
+        }
+        p {
+            color: var(--text-faded);
         }
     }
 }

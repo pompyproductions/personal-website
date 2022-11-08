@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import PageLogo from "../components/PageLogo.jsx";
-import KnobSelector from "../components/KnobSelector.jsx";
+// import KnobSelector from "../components/KnobSelector.jsx";
 import IconButton from "../components/IconButton.jsx";
 
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -31,7 +32,7 @@ const Header = () => {
 
     return <header>
         <PageLogo strokeWeight={logoWeight} strokeColor="#fcf0f0"/>
-        <h1>erengazioglu.com</h1>
+        <h1><Link to="/">erengazioglu.com</Link></h1>
         {/* <KnobSelector /> */}
         <NavGroup />
         <IconButton icon={faBars} 
