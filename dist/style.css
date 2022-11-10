@@ -839,3 +839,35 @@ main p {
 .portfolio .img-wrapper img.active {
   height: 100%;
 }
+
+.landing {
+  grid-area: 1/1/-1/-1 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: none;
+}
+.landing div {
+  align-items: center;
+}
+.landing h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.landing .greeting-container {
+  width: 100%;
+  text-align: center;
+}
+@media only screen and (min-width: 320px) {
+  .landing .greeting-container .animated-text {
+    margin: 0 auto;
+    transform-origin: center;
+  }
+}
+.landing #eg-logo {
+  margin: 2rem 0;
+  width: 3rem;
+}
+.landing #eg-logo * {
+  pointer-events: none;
+}

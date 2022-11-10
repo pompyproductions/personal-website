@@ -1,0 +1,47 @@
+@use "../globals" as *;
+
+.landing {
+    grid-area: 1 / 1 / -1 / -1 !important;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    gap: 2rem;
+    // padding: 1rem;
+    box-shadow: none;
+
+    div {
+        align-items: center;
+    }
+
+    // .animated-text {
+    //     width: 80vw;
+    // }
+    p {
+        @include break-at("slim") {
+            text-align: center;
+        }
+    }
+    h2 {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+    .greeting-container {
+        width: 100%;
+        text-align: center;
+        
+        .animated-text {
+            @include break-at("thin") {
+                margin: 0 auto;
+                transform-origin: center;
+            }
+        }
+    }
+
+    #eg-logo {
+        margin: 2rem 0;
+        width: 3rem;
+        * {pointer-events: none;}
+    }
+}
