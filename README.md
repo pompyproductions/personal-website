@@ -33,13 +33,17 @@ Prefix reference:
 
 ### NOW
 
-v1.1: Accomodate changes in CV:
+v1.0 patch 2: Stopgap to accomodate changes in CV.
 
-- [ ] **ADD:** "./the-odin-project": simple page that displays links to all exercises; github repos and their relative Github Pages.
-- [ ] **ADD:** "./landing": a barebones "bio link" page that takes you to the website or to other pages.
+- [ ] **ADD:** WIP page for "./landing": short text, links, and "Download CV".
+- [ ] **ADD:** WIP page for "./the-odin-project": short text, links to github repos and preview
 
 
 ### NEXT
+
+v1.1: Full-fledged landing page:
+
+- [ ] **ADD:** "./landing": a page with greeting, scrolls down to a link carousel, and then to "download cv" link.
 
 v1.2: Overall page content improvements.
 
