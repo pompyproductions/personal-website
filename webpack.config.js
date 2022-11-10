@@ -51,5 +51,8 @@ module.exports = {
                 path.resolve(__dirname, "src/assets", "_redirects")
             ]
         }),
-    ]
+    ],
+    devServer: {
+        historyApiFallback: true,
+    }
 }
