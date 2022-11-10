@@ -4,27 +4,37 @@
     grid-area: 1 / 1 / -1 / -1 !important;
     display: flex;
     flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
-    gap: 2rem;
-    // padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
     box-shadow: none;
+
+    @include break-at("thin") {
+        box-shadow: inset 0 0 0 1px var(--primary-faded);
+        padding: 1rem;
+        gap: 1.4rem;
+        justify-content: flex-start;
+        .slanted {
+            text-align: center;
+        }
+    }
 
     div {
         align-items: center;
+        width: 100%;
+        gap: 1.4rem;
     }
-
-    // .animated-text {
-    //     width: 80vw;
-    // }
     p {
-        @include break-at("slim") {
-            text-align: center;
+        width: 100%;
+    }
+    .typing > .animated-text {
+        @include break-at("medium") {
+            text-align: center !important;
         }
     }
     h2 {
         font-size: 1.2rem;
-        font-weight: 400;
+        font-weight: 500;
     }
 
     .greeting-container {
@@ -40,8 +50,10 @@
     }
 
     #eg-logo {
-        margin: 2rem 0;
+        margin: 0 auto;
         width: 3rem;
-        * {pointer-events: none;}
+        @include break-at("thin") {
+            margin: 2rem auto 0 auto;
+        }
     }
 }
