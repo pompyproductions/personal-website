@@ -1,11 +1,15 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const IconButton = (props) => {
 
     return (
-        <div className={`icon-button ${props.className}`} onClick={props.onClick} data-href={props.href}>
+        <div 
+        className={`icon-button ${props.className} ${props.strip ? "strip" : ""}`} 
+        onClick={props.onClick} 
+        data-href={props.href}>
             <button>
                 <FontAwesomeIcon icon={props.icon} />
             </button>
@@ -16,7 +20,8 @@ const IconButton = (props) => {
 
 IconButton.defaultProps = {
     icon: faBars,
-    children: "Click me!"
+    children: "Click me!",
+    strip: false
 };
 
 export default IconButton;

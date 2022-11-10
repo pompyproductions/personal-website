@@ -131,6 +131,9 @@ canvas {
   align-items: center;
   cursor: pointer;
 }
+.icon-button.strip {
+  flex-direction: row-reverse;
+}
 .icon-button:hover button {
   border-radius: 50%;
 }

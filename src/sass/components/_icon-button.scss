@@ -5,6 +5,11 @@
     gap: .8em;
     align-items: center;
     cursor: pointer;
+    &.strip {
+        flex-direction: row-reverse;
+    }
+
+
     &:hover button {
         border-radius: 50%;
     }

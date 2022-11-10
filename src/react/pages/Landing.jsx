@@ -5,6 +5,9 @@ import PageGreeting from "../components/PageGreeting.jsx";
 import PageLogo from '../components/PageLogo.jsx';
 import IconButton from "../components/IconButton.jsx"
 
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faDownload, faFileDownload } from '@fortawesome/free-solid-svg-icons';
+
 const Landing = () => {
     return (
         <main className='landing'>
@@ -26,16 +29,16 @@ const Landing = () => {
                 </p>
             </div>
             <div className="container" id="links">
-                <IconButton>
+                <IconButton strip onClick={window.open("https://erengazioglu.com")}>
                     Personal website.
                 </IconButton>
-                <IconButton>
+                <IconButton strip icon={faGithub} onClick={window.open("https://github.com/pompyproductions")}>
                     Github profile (Projects).
                 </IconButton>
-                <IconButton>
+                <IconButton strip onClick={window.open("https://issuu.com/erengazioglu")}>
                     Issuu profile (Print works).
                 </IconButton>
-                <IconButton>
+                <IconButton strip icon={faFileDownload}>
                     Download CV.
                 </IconButton>
             </div>
