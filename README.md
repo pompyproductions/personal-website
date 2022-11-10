@@ -33,13 +33,17 @@ Prefix reference:
 
 ### NOW
 
-v1.1: Accomodate changes in CV:
+v1.0 patch 2: Stopgap to accomodate changes in CV.
 
-- [ ] **ADD:** "./the-odin-project": simple page that displays links to all exercises; github repos and their relative Github Pages.
-- [ ] **ADD:** "./landing": a barebones "bio link" page that takes you to the website or to other pages.
+- [ ] **ADD:** WIP page for "./landing": short text, links, and "Download CV".
+- [ ] **ADD:** WIP page for "./the-odin-project": short text, links to github repos and preview
 
 
 ### NEXT
+
+v1.1: Full-fledged landing page:
+
+- [ ] **ADD:** "./landing": a page with greeting, scrolls down to a link carousel, and then to "download cv" link.
 
 v1.2: Overall page content improvements.
 
@@ -74,3 +78,21 @@ Tooltips.
 
 - [ ] **ADD:** Create a div that holds the tooltip element. Store tooltips in a json file and have elements append and remove elements on the tooltip div.
 
+<<<<<<< HEAD
+=======
+
+## Workflow
+
+1. Plan out the work in the Roadmap section of _README.md_. **(Always on main branch!)**
+2. Switch to the development branch (`git checkout development`). Work with atomic commits.
+3. When the patch is done and ready to merge, update _version-history.md_ and _README.md_.
+4. Squash commits:
+   - `git checkout main`
+   - `git merge --squash development`
+   - `git commit -m "v#.# patch #` (replace #'s with versions)
+5. Update the deployment branch:
+   - `git checkout netlify-deploy`
+   - `git merge main`
+
+Rinse & repeat.
+>>>>>>> main
