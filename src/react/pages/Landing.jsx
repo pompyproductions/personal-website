@@ -3,15 +3,16 @@ import { Link } from "react-router-dom";
 
 import PageGreeting from "../components/PageGreeting.jsx";
 import PageLogo from '../components/PageLogo.jsx';
+import IconButton from "../components/IconButton.jsx"
 
 const Landing = () => {
     return (
         <main className='landing'>
-            <PageLogo />
-            <div>
-                <PageGreeting />
+            <div class="container" id="logo">
+                <PageLogo />
             </div>
-            <div>
+            <div class="container" id="content">
+                <PageGreeting />
                 <p>
                     If you made it here, it means that you probably followed some sort of link. 
                 </p>
@@ -21,6 +22,12 @@ const Landing = () => {
                     <em> all the information that will be displayed here in the future 
                     can be accessed by following the links below.</em>
                 </p>
+            </div>
+            <div class="container" id="links">
+                <IconButton />
+                <IconButton />
+                <IconButton />
+                <IconButton />
             </div>
         </main>
     )
