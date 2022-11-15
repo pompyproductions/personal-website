@@ -49,6 +49,7 @@
 
     .icon-button.strip {
         flex-direction: row-reverse;
+        justify-content: space-between;
         box-shadow: inset 0 0 0 1px var(--primary-faded);
         &>button {
             border: none;
@@ -93,13 +94,8 @@
         .slanted {
             text-align: center;
         }
-        // .icon-button {
-        //     justify-content: space-between;
-        //     box-shadow: inset 0 0 0 1px var(--primary-faded);
-        //     transition: all 0.1s;
-        //     &:hover {
-        //         box-shadow: inset 0 0 0 1px var(--primary-solid);
-        //     }
-        // }
+        .icon-button.strip {
+            padding: 0 1rem;
+        }
     }
 }

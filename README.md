@@ -78,8 +78,6 @@ Tooltips.
 
 - [ ] **ADD:** Create a div that holds the tooltip element. Store tooltips in a json file and have elements append and remove elements on the tooltip div.
 
-<<<<<<< HEAD
-=======
 
 ## Workflow
 
@@ -95,4 +93,3 @@ Tooltips.
    - `git merge main`
 
 Rinse & repeat.
->>>>>>> main
