@@ -4,12 +4,11 @@
   "description": "Going to start off with a \"work in progress\" screen with canvas circles as background. Setting up React with Webpack and Babel, and Sass with Gulp.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development --hot",
     "build": "webpack-cli --mode production"
   },
   "keywords": [],
-  "author": "",
+  "author": "Eren Gazioglu",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.19.3",
