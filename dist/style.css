@@ -828,6 +828,12 @@ main p {
   align-items: center;
   gap: 1rem;
 }
+.landing a {
+  color: var(--text-basic);
+}
+.landing a:hover {
+  text-decoration: none;
+}
 .landing #eg-logo {
   transition: transform 0.4s;
   margin: 0 auto;

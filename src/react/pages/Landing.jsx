@@ -7,6 +7,8 @@ import IconButton from "../components/IconButton.jsx"
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faDownload, faFileLines, faGlobe } from '@fortawesome/free-solid-svg-icons';
 
+import fileCv from "../../assets/eren-gazioglu-cv-2022.pdf";
+
 const Landing = () => {
     return (    
         <main className='landing'>
@@ -37,7 +39,7 @@ const Landing = () => {
                 <IconButton strip icon={faFileLines} onClick={()=>{window.open("https://issuu.com/erengazioglu")}}>
                     Issuu profile (Print works).
                 </IconButton>
-                <IconButton strip icon={faDownload}>
+                <IconButton strip download={fileCv} icon={faDownload}>
                     Download CV.
                 </IconButton>
             </div>

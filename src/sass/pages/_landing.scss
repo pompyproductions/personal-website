@@ -11,6 +11,13 @@
     align-items: center;
     gap: 1rem;
 
+    a {
+        color: var(--text-basic);
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
     #eg-logo {
         transition: transform 0.4s;
         margin: 0 auto;
