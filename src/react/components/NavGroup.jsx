@@ -15,6 +15,7 @@ const NavGroup = (props) => {
                         "/": "Home",
                         "/about-me": "About me",
                         "/portfolio": "Portfolio",
+                        "/portfolio/the-odin-project": "Odin Project",
                         "/contact": "Contact"
                     }[location.pathname]
                 }

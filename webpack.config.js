@@ -8,6 +8,7 @@ module.exports = {
     output: { // this is where the final bundle goes
         path: path.join(__dirname, "/dist"),
         filename: "main.js",
+        publicPath: "/",
     },
     module: {
         rules: [
