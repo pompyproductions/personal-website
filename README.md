@@ -35,7 +35,7 @@ Prefix reference:
 
 v1.0 patch 2: Stopgap to accomodate changes in CV.
 
-- [ ] **ADD:** WIP page for "./landing": short text, links, and "Download CV".
+- [X] **ADD:** WIP page for "./landing": short text, links, and "Download CV".
 - [ ] **ADD:** WIP page for "./the-odin-project": short text, links to github repos and preview
 
 v1.0 patch 3: 
