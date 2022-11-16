@@ -897,7 +897,6 @@ main p {
 }
 @media only screen and (min-width: 720px) {
   .landing {
-    width: 64rem;
     margin: 0 auto;
     padding: 2rem;
   }
@@ -906,5 +905,10 @@ main p {
   }
   .landing .container#links {
     width: 32rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .landing {
+    width: 60rem;
   }
 }

@@ -82,7 +82,7 @@
     }
 
     @include break-at("medium") {
-        width: 64rem;
+        // width: 64rem;
         margin: 0 auto;
         padding: 2rem;
         .container {
@@ -91,5 +91,9 @@
                 width: 32rem;
             }
         }
+    }
+
+    @include break-at("large") {
+        width: 60rem;
     }
 }
