@@ -60,36 +60,6 @@
         }
         @include disable-selection;
     }
-    
-    // div {
-    //     align-items: center;
-    //     width: 100%;
-    //     gap: 1.4rem;
-    // }
-    // p {
-    //     width: 100%;
-    // }
-    // .typing > .animated-text {
-    //     @include break-at("medium") {
-    //         text-align: center !important;
-    //     }
-    // }
-    // h2 {
-    //     font-size: 1.2rem;
-    //     font-weight: 500;
-    // }
-
-    // .greeting-container {
-    //     width: 100%;
-    //     text-align: center;
-        
-    //     .animated-text {
-    //         @include break-at("thin") {
-    //             margin: 0 auto;
-    //             transform-origin: center;
-    //         }
-    //     }
-    // }
 
     @include break-at("thin") {
         text-align: center;
@@ -101,6 +71,18 @@
         }
         .icon-button.strip {
             padding: 0 1rem;
+        }
+    }
+
+    @include break-at("medium") {
+        width: 64rem;
+        margin: 0 auto;
+        padding: 2rem;
+        .container {
+            width: 40rem;
+            &#links {
+                width: 32rem;
+            }
         }
     }
 }

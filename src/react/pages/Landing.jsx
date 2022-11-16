@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 
 import PageGreeting from "../components/PageGreeting.jsx";
 import PageLogo from '../components/PageLogo.jsx';
@@ -9,7 +8,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faDownload, faFileLines, faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 const Landing = () => {
-    return (
+    return (    
         <main className='landing'>
             <div className="container" id="logo">
                 <PageLogo />

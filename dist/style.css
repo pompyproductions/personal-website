@@ -889,3 +889,16 @@ main p {
     padding: 0 1rem;
   }
 }
+@media only screen and (min-width: 720px) {
+  .landing {
+    width: 64rem;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  .landing .container {
+    width: 40rem;
+  }
+  .landing .container#links {
+    width: 32rem;
+  }
+}
