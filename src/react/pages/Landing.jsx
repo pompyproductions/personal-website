@@ -29,13 +29,13 @@ const Landing = () => {
                 </p>
             </div>
             <div className="container" id="links">
-                <IconButton strip onClick={window.open("https://erengazioglu.com")}>
+                <IconButton strip onClick={()=>{window.open("https://erengazioglu.com")}}>
                     Personal website.
                 </IconButton>
-                <IconButton strip icon={faGithub} onClick={window.open("https://github.com/pompyproductions")}>
+                <IconButton strip icon={faGithub} onClick={()=>{window.open("https://github.com/pompyproductions")}}>
                     Github profile (Projects).
                 </IconButton>
-                <IconButton strip onClick={window.open("https://issuu.com/erengazioglu")}>
+                <IconButton strip onClick={()=>{window.open("https://issuu.com/erengazioglu")}}>
                     Issuu profile (Print works).
                 </IconButton>
                 <IconButton strip icon={faFileDownload}>

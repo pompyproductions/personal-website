@@ -863,9 +863,16 @@ main p {
   flex-direction: row-reverse;
   justify-content: space-between;
   box-shadow: inset 0 0 0 1px var(--primary-faded);
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 .landing .icon-button.strip > button {
   border: none;
+}
+.landing .icon-button.strip:hover {
+  box-shadow: inset 0 0 0 1px var(--primary-solid);
 }
 @media only screen and (min-width: 320px) {
   .landing {
