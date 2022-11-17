@@ -5,12 +5,12 @@ import Bubbles from '../canvas/Bubbles.jsx';
 
 import odinLogo from "../../assets/odin-logo.png"
 import odinAdmin from "../../assets/odin-admin.png"
+import odinNewsletter from "../../assets/odin-newsletter.png"
 import odinCalc from "../../assets/odin-calculator.png"
 import odinEAS from "../../assets/odin-eas.png"
-import odinNewsletter from "../../assets/odin-newsletter.png"
-import odinRecipes from "../../assets/odin-recipes.png"
 import odinRPS from "../../assets/odin-rps.png"
 import odinLanding from "../../assets/odin-landing.png"
+import odinRecipes from "../../assets/odin-recipes.png"
 
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe, faDisplay } from '@fortawesome/free-solid-svg-icons';
@@ -58,10 +58,10 @@ const Odin = () => {
                 </div>
                 <h2>Assignment 07: Admin Dashboard</h2>
                 <p>
-                    Project description TBD.
+                    A full Dashboard mock-up page, relying on CSS Grid as much as possible.
                 </p>
                 <p>
-                    (Make this an EXPAND container).
+                    Used SASS for the first time. Implemented responsive design and some interactivity to the elements involved.
                 </p>
                 <IconButton icon={faDisplay}>Live Preview</IconButton>
                 <IconButton icon={faGithub}>Github Repository</IconButton>
@@ -77,10 +77,12 @@ const Odin = () => {
                 </div>
                 <h2>Assignment 06: Newsletter Form</h2>
                 <p>
-                    Project description TBD.
+                    A sign-up form mock-up for an imaginary service. 
                 </p>
                 <p>
-                    (Make this an EXPAND container).
+                    While a design file was provided by The Odin Project, the final design diverges from the original in a few points. 
+                    Implemented a ribbon with a "background blurring effect", added a tinted cover image that I made myself, and 
+                    changed the look and feel of the form itself.
                 </p>
                 <IconButton icon={faDisplay}>Live Preview</IconButton>
                 <IconButton icon={faGithub}>Github Repository</IconButton>
@@ -96,10 +98,16 @@ const Odin = () => {
                 </div>
                 <h2>Assignment 05: Verbose Calculator</h2>
                 <p>
-                    Project description TBD.
+                    On-screen calculator project with vanilla JS.
                 </p>
                 <p>
-                    (Make this an EXPAND container).
+                    While this project was mainly to consolidate basic JavaScript knowledge, I tried to make something more 
+                    complex and meaningful for this app. I decided to divide the screen into parts and have a section that 
+                    prints out the operations, effectively serving as an "operation history" module.
+                </p>
+                <p>
+                    At a certain point, I decided to stop working on it and move on with my learning, since it was taking a lot of time
+                    to hunt all the bugs and develop features in my then-limited JS knowledge.
                 </p>
                 <IconButton icon={faDisplay}>Live Preview</IconButton>
                 <IconButton icon={faGithub}>Github Repository</IconButton>
@@ -115,10 +123,11 @@ const Odin = () => {
                 </div>
                 <h2>Assignment 04: Etch-a-Sketch</h2>
                 <p>
-                    Project description TBD.
+                    An on-screen sketchpad, copying the functionality of a classic Etch-a-Sketch.
                 </p>
                 <p>
-                    (Make this an EXPAND container).
+                    Instead of sticking to a fixed x:y ratio, I went with a customizeable version while making sure that 
+                    it'll <em>always fit in the screen</em>.
                 </p>
                 <IconButton icon={faDisplay}>Live Preview</IconButton>
                 <IconButton icon={faGithub}>Github Repository</IconButton>
@@ -134,10 +143,13 @@ const Odin = () => {
                 </div>
                 <h2>Assignment 03: Rock-Paper-Scissors</h2>
                 <p>
-                    Project description TBD.
+                    Rock-Paper-Scissors game against simple AI.
                 </p>
                 <p>
-                    (Make this an EXPAND container).
+                    This project had two stages: the first step was to implement the game logic (purely JS on the browser console), 
+                    and the second was to design a UI for interactivity. I tried my hand at scene-switching 
+                    and dynamically generating pages <em>on vanilla JS,</em> which ended with me shelving the project 
+                    on account on how messy it got.
                 </p>
                 <IconButton icon={faDisplay}>Live Preview</IconButton>
                 <IconButton icon={faGithub}>Github Repository</IconButton>
@@ -153,10 +165,12 @@ const Odin = () => {
                 </div>
                 <h2>Assignment 02: Landing Page</h2>
                 <p>
-                    Project description TBD.
+                    A landing page mock-up for an imaginary service.
                 </p>
                 <p>
-                    (Make this an EXPAND container).
+                    While a design file was provided with by The Odin Project, I added some tweaks here and there, and also 
+                    tried my hand at hover and click animations. It is not responsive, since it was an assignment at a 
+                    very early stage in the curriculum.
                 </p>
                 <IconButton icon={faDisplay}>Live Preview</IconButton>
                 <IconButton icon={faGithub}>Github Repository</IconButton>
@@ -172,10 +186,11 @@ const Odin = () => {
                 </div>
                 <h2>Assignment 01: Recipes</h2>
                 <p>
-                    Project description TBD.
+                    A quick-and-dirty HTML page for cooking recipes.
                 </p>
                 <p>
-                    (Make this an EXPAND container).
+                    Intended as an early HTML exercise, it was meant to have no CSS styling at all; though it felt a bit sad, 
+                    so I ended up adding a font and a color anyway.
                 </p>
                 <IconButton icon={faDisplay}>Live Preview</IconButton>
                 <IconButton icon={faGithub}>Github Repository</IconButton>
