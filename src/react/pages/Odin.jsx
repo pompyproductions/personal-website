@@ -2,9 +2,12 @@ import React from 'react';
 import IconButton from '../components/IconButton.jsx';
 
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faGlobe, faDisplay } from '@fortawesome/free-solid-svg-icons';
 
 const Odin = () => {
+    function handleImageClick(e) {
+        e.target.classList.toggle("active");
+    }
     return (
         <main className='odin page-container'>
             <article className='content-card'>
@@ -26,16 +29,81 @@ const Odin = () => {
                 <IconButton icon={faGlobe}>Curriculum</IconButton>
             </article>
             <article className="content-card">
-                <h2>Assignment repositories</h2>
+                <h2>Assignment 07: Admin Dashboard</h2>
                 <p>
-                    The Odin Project gives a lot of project assignments to consolidate the knowledge learned throughout the chapters.
+                    Project description TBD.
                 </p>
                 <p>
-                    These are set up as GitHub repositories and are also accessible through Live Previews (that you can find in the respective README.md file of each project).
+                    (Make this an EXPAND container).
                 </p>
-                
-                <IconButton icon={faGlobe}>01 - Recipes</IconButton>
-                <IconButton icon={faGlobe}>02 - Blabla</IconButton>
+                <IconButton icon={faDisplay}>Live Preview</IconButton>
+                <IconButton icon={faGithub}>Github Repository</IconButton>
+            </article>
+            <article className="content-card">
+                <h2>Assignment 06: Newsletter Form</h2>
+                <p>
+                    Project description TBD.
+                </p>
+                <p>
+                    (Make this an EXPAND container).
+                </p>
+                <IconButton icon={faDisplay}>Live Preview</IconButton>
+                <IconButton icon={faGithub}>Github Repository</IconButton>
+            </article>
+            <article className="content-card">
+                <h2>Assignment 05: Verbose Calculator</h2>
+                <p>
+                    Project description TBD.
+                </p>
+                <p>
+                    (Make this an EXPAND container).
+                </p>
+                <IconButton icon={faDisplay}>Live Preview</IconButton>
+                <IconButton icon={faGithub}>Github Repository</IconButton>
+            </article>
+            <article className="content-card">
+                <h2>Assignment 04: Etch-a-Sketch</h2>
+                <p>
+                    Project description TBD.
+                </p>
+                <p>
+                    (Make this an EXPAND container).
+                </p>
+                <IconButton icon={faDisplay}>Live Preview</IconButton>
+                <IconButton icon={faGithub}>Github Repository</IconButton>
+            </article>
+            <article className="content-card">
+                <h2>Assignment 03: Rock-Paper-Scissors</h2>
+                <p>
+                    Project description TBD.
+                </p>
+                <p>
+                    (Make this an EXPAND container).
+                </p>
+                <IconButton icon={faDisplay}>Live Preview</IconButton>
+                <IconButton icon={faGithub}>Github Repository</IconButton>
+            </article>
+            <article className="content-card">
+                <h2>Assignment 02: Landing Page</h2>
+                <p>
+                    Project description TBD.
+                </p>
+                <p>
+                    (Make this an EXPAND container).
+                </p>
+                <IconButton icon={faDisplay}>Live Preview</IconButton>
+                <IconButton icon={faGithub}>Github Repository</IconButton>
+            </article>
+            <article className="content-card">
+                <h2>Assignment 01: Recipes</h2>
+                <p>
+                    Project description TBD.
+                </p>
+                <p>
+                    (Make this an EXPAND container).
+                </p>
+                <IconButton icon={faDisplay}>Live Preview</IconButton>
+                <IconButton icon={faGithub}>Github Repository</IconButton>
             </article>
         </main>
     )
