@@ -2,6 +2,8 @@ import React from 'react';
 
 import IconButton from '../components/IconButton.jsx';
 import Bubbles from '../canvas/Bubbles.jsx';
+import ExpandText from '../components/ExpandText.jsx';
+import ContentCard from "../clusters/ContentCard.jsx";
 
 import odinLogo from "../../assets/odin-logo.png"
 import odinAdmin from "../../assets/odin-admin.png"
@@ -30,7 +32,20 @@ const Odin = () => {
                     In the meantime, you can find some relevant links in the cards that follow.
                 </p>
             </article>
-            <article className="content-card">
+            <ContentCard
+                title="The Odin Project homepage"
+                image={[odinLogo, "The Odin Project logo."]}
+            >
+                <p>
+                    This is where you can find information about the project, 
+                    and view the full curriculum.
+                </p>
+                <IconButton icon={faGlobe}>Homepage</IconButton>
+                <IconButton icon={faGlobe}>Curriculum</IconButton>
+            </ContentCard>
+
+
+            {/* <article className="content-card">
                 <Bubbles/>
                 <div className="img-wrapper">
                     <img 
@@ -46,7 +61,7 @@ const Odin = () => {
                 </p>
                 <IconButton icon={faGlobe}>Homepage</IconButton>
                 <IconButton icon={faGlobe}>Curriculum</IconButton>
-            </article>
+            </article> */}
             <article className="content-card">
                 <Bubbles/>
                 <div className="img-wrapper">
@@ -57,12 +72,14 @@ const Odin = () => {
                     />
                 </div>
                 <h2>Assignment 07: Admin Dashboard</h2>
-                <p>
-                    A full Dashboard mock-up page, relying on CSS Grid as much as possible.
-                </p>
-                <p>
-                    Used SASS for the first time. Implemented responsive design and some interactivity to the elements involved.
-                </p>
+                <ExpandText>
+                    <p>
+                        A full Dashboard mock-up page, relying on CSS Grid as much as possible.
+                    </p>
+                    <p className='hidden'>
+                        Used SASS for the first time. Implemented responsive design and some interactivity to the elements involved.
+                    </p>
+                </ExpandText>
                 <IconButton icon={faDisplay}>Live Preview</IconButton>
                 <IconButton icon={faGithub}>Github Repository</IconButton>
             </article>
