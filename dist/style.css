@@ -404,6 +404,7 @@ canvas {
 .text-couple p:last-of-type {
   flex: 1 1 min-content;
   font-weight: 400 !important;
+  text-align: left;
 }
 @media only screen and (min-width: 320px) {
   .text-couple {
