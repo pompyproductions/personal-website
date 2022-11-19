@@ -5,10 +5,24 @@
     gap: .8em;
     align-items: center;
     cursor: pointer;
+
     &.strip {
         flex-direction: row-reverse;
+        justify-content: space-between;
+        box-shadow: inset 0 0 0 1px var(--primary-faded);
+        width: 100%;
+        & > button {
+            border: none;
+            width: 2em;
+        }
+        &:hover {
+            box-shadow: inset 0 0 0 1px var(--primary-solid);
+        }
+        @include disable-selection;
+        @include break-at("thin") {
+            padding: 0 1rem;
+        }
     }
-
 
     &:hover button {
         border-radius: 50%;

@@ -24,8 +24,10 @@ const Odin = () => {
     return (
         <main className='odin page-container'>
 
-            <ContentCard
+            <ContentCard 
+                banner
                 title="The Odin Project"
+                image={[odinLogo, "The Odin Project logo."]}
             >
                 <p>
                     Page under construction.
@@ -33,9 +35,13 @@ const Odin = () => {
                 <p>
                     In the meantime, you can find some relevant links in the cards that follow.
                 </p>
+                <div className='flex-spacer'></div>
+                <div className='hsep'></div>
+                <IconButton strip icon={faGlobe}>Homepage</IconButton>
+                <IconButton strip icon={faGlobe}>Curriculum</IconButton>
             </ContentCard>
 
-            <ContentCard
+            {/* <ContentCard
                 title="The Odin Project homepage"
                 image={[odinLogo, "The Odin Project logo."]}
             >
@@ -43,9 +49,8 @@ const Odin = () => {
                     This is where you can find information about the project, 
                     and view the full curriculum.
                 </p>
-                <IconButton icon={faGlobe}>Homepage</IconButton>
-                <IconButton icon={faGlobe}>Curriculum</IconButton>
-            </ContentCard>
+
+            </ContentCard> */}
 
             <ContentCard
                 title="Assignment 07: Admin Dashboard"
@@ -60,6 +65,8 @@ const Odin = () => {
                             Used SASS for the first time. Implemented responsive design and some interactivity to the elements involved.
                         </p>
                     </ExpandText>
+                    <div className='flex-spacer'></div>
+                    <div className='hsep'></div>
                     <IconButton icon={faDisplay}>Live Preview</IconButton>
                     <IconButton icon={faGithub}>Github Repository</IconButton>
                 </section>
@@ -80,6 +87,8 @@ const Odin = () => {
                             changed the look and feel of the form itself.
                         </p>
                     </ExpandText>
+                    <div className='flex-spacer'></div>
+                    <div className='hsep'></div>
                     <IconButton icon={faDisplay}>Live Preview</IconButton>
                     <IconButton icon={faGithub}>Github Repository</IconButton>
                 </section>
@@ -104,6 +113,8 @@ const Odin = () => {
                             to hunt all the bugs and develop features in my then-limited JS knowledge.
                         </p>
                     </ExpandText>
+                    <div className='flex-spacer'></div>
+                    <div className='hsep'></div>
                     <IconButton icon={faDisplay}>Live Preview</IconButton>
                     <IconButton icon={faGithub}>Github Repository</IconButton>
                 </section>
@@ -123,6 +134,8 @@ const Odin = () => {
                             it'll <em>always fit in the screen</em>.
                         </p>
                     </ExpandText>
+                    <div className='flex-spacer'></div>
+                    <div className='hsep'></div>
                     <IconButton icon={faDisplay}>Live Preview</IconButton>
                     <IconButton icon={faGithub}>Github Repository</IconButton>
                 </section>
@@ -144,6 +157,8 @@ const Odin = () => {
                             on account on how messy it got.
                         </p>
                     </ExpandText>
+                    <div className='flex-spacer'></div>
+                    <div className='hsep'></div>
                     <IconButton icon={faDisplay}>Live Preview</IconButton>
                     <IconButton icon={faGithub}>Github Repository</IconButton>
                 </section>
@@ -164,6 +179,8 @@ const Odin = () => {
                             very early stage in the curriculum.
                         </p>
                     </ExpandText>
+                    <div className='flex-spacer'></div>
+                    <div className='hsep'></div>
                     <IconButton icon={faDisplay}>Live Preview</IconButton>
                     <IconButton icon={faGithub}>Github Repository</IconButton>
                 </section>
@@ -183,6 +200,8 @@ const Odin = () => {
                             so I ended up adding a font and a color anyway.
                         </p>
                     </ExpandText>
+                    <div className='flex-spacer'></div>
+                    <div className='hsep'></div>
                     <IconButton icon={faDisplay}>Live Preview</IconButton>
                     <IconButton icon={faGithub}>Github Repository</IconButton>
                 </section>

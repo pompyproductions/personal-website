@@ -30,7 +30,7 @@ const ContentCard = (props) => {
     } 
     
     return (
-        <article className="content-card">
+        <article className={`content-card${props.banner ? " banner" : ""}`}>
             {bg}
             {image}
             <h2>{props.title}</h2>

@@ -133,6 +133,25 @@ canvas {
 }
 .icon-button.strip {
   flex-direction: row-reverse;
+  justify-content: space-between;
+  box-shadow: inset 0 0 0 1px var(--primary-faded);
+  width: 100%;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.icon-button.strip > button {
+  border: none;
+  width: 2em;
+}
+.icon-button.strip:hover {
+  box-shadow: inset 0 0 0 1px var(--primary-solid);
+}
+@media only screen and (min-width: 320px) {
+  .icon-button.strip {
+    padding: 0 1rem;
+  }
 }
 .icon-button:hover button {
   border-radius: 50%;
@@ -604,12 +623,20 @@ footer li:hover {
   overflow: hidden;
   box-shadow: inset 0 0 0 1px var(--primary-faded);
 }
-.content-card > p {
+.content-card p {
   font-weight: 200;
 }
-.content-card > h2 {
+.content-card h2 {
   font-weight: 200;
   font-variation-settings: "ital" 1;
+}
+.content-card.banner {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.content-card.banner h2 {
+  font-size: 2.4rem;
 }
 .content-card .img-wrapper {
   height: 11rem;
@@ -635,6 +662,8 @@ footer li:hover {
 }
 .content-card .hsep {
   background-color: var(--primary-faded);
+  min-height: 1px;
+  width: 100%;
 }
 .content-card .content-bit {
   display: flex;
@@ -773,6 +802,7 @@ main p {
   background-color: var(--primary-faded);
 }
 .page-container .content-bit {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
@@ -865,22 +895,6 @@ main p {
   font-size: 1.1rem;
   font-weight: 400;
 }
-.landing .icon-button.strip {
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  box-shadow: inset 0 0 0 1px var(--primary-faded);
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -webkit-tap-highlight-color: transparent;
-}
-.landing .icon-button.strip > button {
-  border: none;
-  width: 2em;
-}
-.landing .icon-button.strip:hover {
-  box-shadow: inset 0 0 0 1px var(--primary-solid);
-}
 @media only screen and (min-width: 320px) {
   .landing {
     text-align: center;
@@ -890,9 +904,6 @@ main p {
   }
   .landing .slanted {
     text-align: center;
-  }
-  .landing .icon-button.strip {
-    padding: 0 1rem;
   }
 }
 @media only screen and (min-width: 720px) {

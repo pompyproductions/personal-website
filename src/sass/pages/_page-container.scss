@@ -67,6 +67,7 @@ main {
     }
 
     .content-bit {
+        flex-grow: 1;
         display: flex;
         flex-direction: column;
         gap: 0.8rem;

@@ -6,12 +6,20 @@
     gap: 0.6rem;
     overflow: hidden; // for canvas clipping at rounded borders
     box-shadow: inset 0 0 0 1px var(--primary-faded);
-    & > p {
+    p {
         font-weight: 200;
     }
-    & > h2 {
+    h2 {
         font-weight: 200;
         font-variation-settings: "ital" 1;
+    }
+    &.banner {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        h2 {
+            font-size: 2.4rem;
+        }
     }
     .img-wrapper {
         height: 11rem;
@@ -38,6 +46,8 @@
     }
     .hsep {
         background-color: var(--primary-faded);
+        min-height: 1px;
+        width: 100%;
     }
     .content-bit {
         display: flex;
