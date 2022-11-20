@@ -30,16 +30,16 @@ const Landing = () => {
                 </p>
             </div>
             <div className="container" id="links">
-                <IconButton strip icon={faGlobe} onClick={()=>{window.open("https://erengazioglu.com")}}>
+                <IconButton icon={faGlobe} href="/" strip>
                     Personal website.
                 </IconButton>
-                <IconButton strip icon={faGithub} onClick={()=>{window.open("https://github.com/pompyproductions")}}>
+                <IconButton icon={faGithub} action="anchor" href="https://github.com/pompyproductions" strip>
                     Github profile (Projects).
                 </IconButton>
-                <IconButton strip icon={faFileLines} onClick={()=>{window.open("https://issuu.com/erengazioglu")}}>
+                <IconButton icon={faFileLines} action="anchor" href="https://issuu.com/erengazioglu" strip>
                     Issuu profile (Print works).
                 </IconButton>
-                <IconButton strip download={fileCv} icon={faDownload}>
+                <IconButton icon={faDownload} action="download" href={fileCv} strip>
                     Download CV.
                 </IconButton>
             </div>

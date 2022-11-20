@@ -7,9 +7,6 @@ const Passions = () => {
     return (
         <article className="content-card">
 
-
-
-
             <Bubbles/>
             <h2>Passions</h2>
 

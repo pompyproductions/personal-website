@@ -6,10 +6,7 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 const ExpandSection = (props) => {
 
     const expandContainer = useRef(null);
-    
-    // useEffect(()=>{
-    //     expandContainer.current.children[0].classList.add("constant")
-    // }, [])
+
     function handle() {
         expandContainer.current.classList.toggle("active")
     }
