@@ -638,6 +638,11 @@ footer li:hover {
 .content-card.banner h2 {
   font-size: 2.4rem;
 }
+.content-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
 .content-card .img-wrapper {
   height: 11rem;
   width: 100%;
@@ -675,11 +680,9 @@ footer li:hover {
 }
 .content-card .content-bit > h3 {
   background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.2117647059));
-}
-.content-card .content-bit ul {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+  font-weight: 200;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
 }
 .content-card canvas {
   width: 100%;
@@ -797,29 +800,6 @@ main p {
 }
 .page-container .img-wrapper img.active {
   height: 100%;
-}
-.page-container .hsep {
-  background-color: var(--primary-faded);
-}
-.page-container .content-bit {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-.page-container .content-bit > p {
-  font-weight: 200;
-}
-.page-container .content-bit > h3 {
-  background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.2117647059));
-  font-weight: 200;
-  font-size: 1.4rem;
-  line-height: 2.4rem;
-}
-.page-container .content-bit ul {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
 }
 .page-container canvas {
   width: 100%;

@@ -8,7 +8,7 @@ main {
     width: 100%;
     box-shadow: inset 0 0 0 1px var(--primary-faded);
     
-    &>div {
+    & > div {
         display: flex;
         gap: 1rem;
         flex-direction: column;
@@ -61,31 +61,6 @@ main {
             }
         }
     }
-
-    .hsep {
-        background-color: var(--primary-faded);
-    }
-
-    .content-bit {
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 0.8rem;
-        & > p {
-            font-weight: 200;
-        }
-        & > h3 {
-            background-image: linear-gradient(90deg, transparent, #00000036);
-            font-weight: 200;
-            font-size: 1.4rem;
-            line-height: 2.4rem;
-        }
-        ul {
-            display: flex;
-            flex-direction: column;
-            gap: 0.6rem;
-        }
-    }
     
     canvas {
         width: 100%;
@@ -119,9 +94,3 @@ main {
         }
     }
 }
-
-// .about-me {
-// }
-
-// .contact {
-// }

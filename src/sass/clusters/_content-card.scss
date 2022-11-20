@@ -21,6 +21,11 @@
             font-size: 2.4rem;
         }
     }
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+    }
     .img-wrapper {
         height: 11rem;
         width: 100%;
@@ -58,11 +63,9 @@
         }
         & > h3 {
             background-image: linear-gradient(90deg, transparent, #00000036);
-        }
-        ul {
-            display: flex;
-            flex-direction: column;
-            gap: 0.6rem;
+            font-weight: 200;
+            font-size: 1.4rem;
+            line-height: 2.4rem;
         }
     }
     canvas {
