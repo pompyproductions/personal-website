@@ -1,26 +1,23 @@
 import React from 'react';
 
 import IconButton from '../components/IconButton.jsx';
-import Bubbles from '../canvas/Bubbles.jsx';
 import ExpandText from '../components/ExpandText.jsx';
 import ContentCard from "../clusters/ContentCard.jsx";
+import TextCouple from "../components/TextCouple.jsx";
 
-import odinLogo from "../../assets/odin-logo.png"
-import odinAdmin from "../../assets/odin-admin.png"
-import odinNewsletter from "../../assets/odin-newsletter.png"
-import odinCalc from "../../assets/odin-calculator.png"
-import odinEAS from "../../assets/odin-eas.png"
-import odinRPS from "../../assets/odin-rps.png"
-import odinLanding from "../../assets/odin-landing.png"
-import odinRecipes from "../../assets/odin-recipes.png"
+import odinLogo from "../../assets/odin-logo.png";
+import odinAdmin from "../../assets/odin-admin.png";
+import odinNewsletter from "../../assets/odin-newsletter.png";
+import odinCalc from "../../assets/odin-calculator.png";
+import odinEAS from "../../assets/odin-eas.png";
+import odinRPS from "../../assets/odin-rps.png";
+import odinLanding from "../../assets/odin-landing.png";
+import odinRecipes from "../../assets/odin-recipes.png";
 
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe, faDisplay } from '@fortawesome/free-solid-svg-icons';
 
 const Odin = () => {
-    function handleImageClick(e) {
-        e.target.classList.toggle("active");
-    }
     return (
         <main className='odin page-container'>
 
@@ -64,7 +61,6 @@ const Odin = () => {
                     </p>
                 </ExpandText>
                 <div className='flex-spacer'></div>
-                <div className='hsep'></div>
                 <IconButton 
                     icon={faDisplay}
                     action="anchor"
@@ -73,6 +69,10 @@ const Odin = () => {
                     icon={faGithub}
                     action="anchor"
                     href="https://github.com/pompyproductions/odin-admin">Github Repository</IconButton>
+                <div className='hsep'></div>
+                <ul>
+                    <li><TextCouple title="Last updated">October 2022</TextCouple></li>
+                </ul>
             </ContentCard>
 
             <ContentCard
@@ -90,7 +90,6 @@ const Odin = () => {
                     </p>
                 </ExpandText>
                 <div className='flex-spacer'></div>
-                <div className='hsep'></div>
                 <IconButton 
                     icon={faDisplay}
                     action="anchor"
@@ -99,6 +98,10 @@ const Odin = () => {
                     icon={faGithub}
                     action="anchor"
                     href="https://github.com/pompyproductions/odin-form">Github Repository</IconButton>
+                <div className='hsep'></div>
+                <ul>
+                    <li><TextCouple title="Last updated">September 2022</TextCouple></li>
+                </ul>
             </ContentCard>
 
             <ContentCard
@@ -120,7 +123,6 @@ const Odin = () => {
                     </p>
                 </ExpandText>
                 <div className='flex-spacer'></div>
-                <div className='hsep'></div>
                 <IconButton 
                     icon={faDisplay}
                     action="anchor"
@@ -129,6 +131,10 @@ const Odin = () => {
                     icon={faGithub}
                     action="anchor"
                     href="https://github.com/pompyproductions/odin-calc">Github Repository</IconButton>
+                <div className='hsep'></div>
+                <ul>
+                    <li><TextCouple title="Last updated">October 2022</TextCouple></li>
+                </ul>
             </ContentCard>
 
             <ContentCard
@@ -145,7 +151,6 @@ const Odin = () => {
                     </p>
                 </ExpandText>
                 <div className='flex-spacer'></div>
-                <div className='hsep'></div>
                 <IconButton 
                     icon={faDisplay}
                     action="anchor"
@@ -154,6 +159,10 @@ const Odin = () => {
                     icon={faGithub}
                     action="anchor"
                     href="https://github.com/pompyproductions/odin-eas">Github Repository</IconButton>
+                <div className='hsep'></div>
+                <ul>
+                    <li><TextCouple title="Last updated">August 2022</TextCouple></li>
+                </ul>
             </ContentCard>
 
             <ContentCard
@@ -172,7 +181,6 @@ const Odin = () => {
                     </p>
                 </ExpandText>
                 <div className='flex-spacer'></div>
-                <div className='hsep'></div>
                 <IconButton 
                     icon={faDisplay}
                     action="anchor"
@@ -181,6 +189,10 @@ const Odin = () => {
                     icon={faGithub}
                     action="anchor"
                     href="https://github.com/pompyproductions/odin-rps">Github Repository</IconButton>
+                <div className='hsep'></div>
+                <ul>
+                    <li><TextCouple title="Last updated">June 2022</TextCouple></li>
+                </ul>
             </ContentCard>
 
             <ContentCard
@@ -198,7 +210,6 @@ const Odin = () => {
                     </p>
                 </ExpandText>
                 <div className='flex-spacer'></div>
-                <div className='hsep'></div>
                 <IconButton 
                     icon={faDisplay}
                     action="anchor"
@@ -207,6 +218,10 @@ const Odin = () => {
                     icon={faGithub}
                     action="anchor"
                     href="https://github.com/pompyproductions/odin-landing">Github Repository</IconButton>
+                <div className='hsep'></div>
+                <ul>
+                    <li><TextCouple title="Last updated">July 2022</TextCouple></li>
+                </ul>
             </ContentCard>
 
             <ContentCard
@@ -223,7 +238,6 @@ const Odin = () => {
                     </p>
                 </ExpandText>
                 <div className='flex-spacer'></div>
-                <div className='hsep'></div>
                 <IconButton 
                     icon={faDisplay}
                     action="anchor"
@@ -232,6 +246,10 @@ const Odin = () => {
                     icon={faGithub}
                     action="anchor"
                     href="https://github.com/pompyproductions/odin-recipes">Github Repository</IconButton>
+                <div className='hsep'></div>
+                <ul>
+                    <li><TextCouple title="Last updated">May 2022</TextCouple></li>
+                </ul>
             </ContentCard>
 
         </main>
