@@ -7,9 +7,6 @@ import ExpandText from '../../components/ExpandText.jsx';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const ProjectEuler = () => {
-    function handleButtonClick() {
-        window.open("https://github.com/pompyproductions/project-euler", "_blank");
-    }
 
     function handleImageClick(e) {
         e.target.classList.toggle("active");
@@ -45,7 +42,13 @@ const ProjectEuler = () => {
             </section>
             <div className="flex-spacer"></div>
             <section className="content-bit">
-                <IconButton icon={faGithub} onClick={handleButtonClick}>Visit GitHub repository</IconButton>
+                <IconButton 
+                    icon={faGithub} 
+                    action="anchor"
+                    href="https://github.com/pompyproductions/project-euler"
+                >
+                    Visit GitHub repository
+                </IconButton>
                 <div className="hsep"></div>
                 <ul>
                     <li><TextCouple title="Last updated">September 2022</TextCouple></li>

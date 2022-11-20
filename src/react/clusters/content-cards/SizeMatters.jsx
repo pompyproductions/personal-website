@@ -43,12 +43,14 @@ const SizeMatters = () => {
             <section className="content-bit">
                 <IconButton 
                     icon={faGamepad} 
+                    action="anchor"
                     href="https://pompyproductions.itch.io/size-matters" 
-                    onClick={handleButtonClick}>Play on itch.io</IconButton>
+                    >Play on itch.io</IconButton>
                 <IconButton 
                     icon={faGithub}
+                    action="anchor"
                     href="https://github.com/pompyproductions/size-matters"
-                    onClick={handleButtonClick}>Visit GitHub repository</IconButton>
+                    >Visit GitHub repository</IconButton>
                 <div className="hsep"></div>
                 <ul>
                     <li><TextCouple title="Last updated">June 2021</TextCouple></li>

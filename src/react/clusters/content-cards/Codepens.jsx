@@ -6,9 +6,6 @@ import TextCouple from '../../components/TextCouple.jsx';
 import { faCodepen } from '@fortawesome/free-brands-svg-icons';
 
 const Codepens = () => {
-    function handleButtonClick() {
-        window.open("https://codepen.io/pompyproductions", "_blank");
-    }
     function handleImageClick(e) {
         e.target.classList.toggle("active");
     }
@@ -26,7 +23,13 @@ const Codepens = () => {
             <p>Components and utilities I made and published for prototyping and archive purposes.</p>
             <div className="flex-spacer"></div>
             <section className="content-bit">
-                <IconButton icon={faCodepen} onClick={handleButtonClick}>Visit my Codepen profile</IconButton>
+                <IconButton 
+                    icon={faCodepen} 
+                    action="anchor" 
+                    href="https://codepen.io/pompyproductions"
+                >
+                    Visit my Codepen profile
+                </IconButton>
                 <div className="hsep"></div>
                 <ul>
                     <li><TextCouple title="Last updated">October 2022</TextCouple></li>

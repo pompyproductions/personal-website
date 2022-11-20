@@ -4,14 +4,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
 
-// FLEXIBLE: can be used for router links, anchor tags, downloads.
+// FLEXIBLE: can be used for router links, anchor tags, downloads, email.
 // refer to "defaultProps" and the switch statement for possible params.
 
 const IconButton = (props) => {
+    function sendEmail() {
+        window.open('mailto:eren.g94@gmail.com?subject=Let\'s get in touch');
+    }
 
     const content = 
         <div 
-            className={`icon-button ${props.className} ${props.strip ? "strip" : ""}`}
+            className={`icon-button ${props.strip ? "strip" : ""}`}
+            onClick={props.action === "email" ? sendEmail : undefined}
         >
             <button>
                 <FontAwesomeIcon icon={props.icon} />
@@ -30,6 +34,8 @@ const IconButton = (props) => {
         case "anchor":
             wrapper = <a href={props.href} target="_blank">{content}</a>;
             break;
+        case "email":
+            wrapper = content;
     }
 
     return wrapper;

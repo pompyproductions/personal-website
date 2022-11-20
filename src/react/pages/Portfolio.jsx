@@ -18,7 +18,6 @@ import { faGlobe, faDisplay } from '@fortawesome/free-solid-svg-icons';
 
 
 const Portfolio = () => {
-
     return (
         <main className="portfolio page-container">
             <ContentCard
@@ -37,13 +36,11 @@ const Portfolio = () => {
                 <IconButton 
                     icon={faGlobe}
                     action="link"
-                    href="odin"
-                >
-                    Projects
-                </IconButton>
+                    href="./the-odin-project"
+                    >Projects</IconButton>
                 <div className='hsep'></div>
                 <ul>
-                        <li><TextCouple title="Last updated">October 2022</TextCouple></li>
+                    <li><TextCouple title="Last updated">October 2022</TextCouple></li>
                 </ul>
             </ContentCard>
 

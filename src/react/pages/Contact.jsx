@@ -7,9 +7,6 @@ import IconButton from '../components/IconButton.jsx';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 const Contact = () => {
-    function sendEmail() {
-        window.open('mailto:eren.g94@gmail.com?subject=Let\'s get in touch');
-    }
     return (
         <main className="contact page-container">
             <ContentCard
@@ -37,7 +34,7 @@ const Contact = () => {
                         You can also reach me through my social media profiles linked below,
                         or send me an email directly.
                     </p>
-                    <IconButton icon={faPaperPlane} onClick={sendEmail}>eren.g94@gmail.com</IconButton>
+                    <IconButton icon={faPaperPlane} action="email">eren.g94@gmail.com</IconButton>
                     <div className="flex-spacer"></div>
                     <div className="hsep"></div>
                     <ul>
