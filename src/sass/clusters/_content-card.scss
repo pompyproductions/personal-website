@@ -31,7 +31,7 @@
         width: 100%;
     }
     img {
-        // margin: -2rem;
+        cursor: pointer;
         position: absolute;
         top: 0;
         left: 0;
@@ -47,6 +47,9 @@
         }
         &#euler {
             object-position: 50% 18%;
+        }
+        &:hover {
+            transform: scale(1.05);
         }
     }
     .hsep {

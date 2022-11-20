@@ -20,7 +20,7 @@ import { faGlobe, faDisplay } from '@fortawesome/free-solid-svg-icons';
 const Portfolio = () => {
     return (
         <main className="portfolio page-container">
-            <ContentCard
+            <ContentCard hidden
                 title="The Odin Project"
                 image={[odinLogo, "The Odin Project logo."]}
             >

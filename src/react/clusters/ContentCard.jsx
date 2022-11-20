@@ -19,11 +19,12 @@ const ContentCard = (props) => {
     let image = null;
     if (props.image) {
         image = <>
-            <div className='img-wrapper'>
+            <div className="img-wrapper">
                 <img 
                     src={props.image[0]}
                     alt={props.image[1]}
                     onClick={handleImageClick}
+                    className={`${props.hidden ? "active" : ""}`}
                 />
             </div>
         </>
@@ -42,7 +43,8 @@ const ContentCard = (props) => {
 ContentCard.defaultProps = {
     bg: "bubbles",
     title: "Title",
-    children: <p>Content goes here!</p>
+    children: <p>Content goes here!</p>,
+    hidden: false
 }
 
 export default ContentCard;
