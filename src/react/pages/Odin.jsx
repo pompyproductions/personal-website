@@ -37,8 +37,18 @@ const Odin = () => {
                 </p>
                 <div className='flex-spacer'></div>
                 <div className='hsep'></div>
-                <IconButton className="strip" icon={faGlobe}>Homepage</IconButton>
-                <IconButton className="strip" icon={faGlobe}>Curriculum</IconButton>
+                <IconButton 
+                    className="strip" 
+                    icon={faGlobe}
+                    action="anchor"
+                    href="https://www.theodinproject.com/">Homepage
+                </IconButton>
+                <IconButton 
+                    className="strip" 
+                    icon={faGlobe}
+                    action="anchor"
+                    href="https://www.theodinproject.com/paths">Curriculum
+                </IconButton>
             </ContentCard>
 
             <ContentCard
@@ -55,8 +65,14 @@ const Odin = () => {
                 </ExpandText>
                 <div className='flex-spacer'></div>
                 <div className='hsep'></div>
-                <IconButton icon={faDisplay}>Live Preview</IconButton>
-                <IconButton icon={faGithub}>Github Repository</IconButton>
+                <IconButton 
+                    icon={faDisplay}
+                    action="anchor"
+                    href="https://pompyproductions.github.io/odin-admin/dist/index.html">Live Preview</IconButton>
+                <IconButton 
+                    icon={faGithub}
+                    action="anchor"
+                    href="https://github.com/pompyproductions/odin-admin">Github Repository</IconButton>
             </ContentCard>
 
             <ContentCard
@@ -75,8 +91,14 @@ const Odin = () => {
                 </ExpandText>
                 <div className='flex-spacer'></div>
                 <div className='hsep'></div>
-                <IconButton icon={faDisplay}>Live Preview</IconButton>
-                <IconButton icon={faGithub}>Github Repository</IconButton>
+                <IconButton 
+                    icon={faDisplay}
+                    action="anchor"
+                    href="https://pompyproductions.github.io/odin-form/">Live Preview</IconButton>
+                <IconButton 
+                    icon={faGithub}
+                    action="anchor"
+                    href="https://github.com/pompyproductions/odin-form">Github Repository</IconButton>
             </ContentCard>
 
             <ContentCard
@@ -99,8 +121,14 @@ const Odin = () => {
                 </ExpandText>
                 <div className='flex-spacer'></div>
                 <div className='hsep'></div>
-                <IconButton icon={faDisplay}>Live Preview</IconButton>
-                <IconButton icon={faGithub}>Github Repository</IconButton>
+                <IconButton 
+                    icon={faDisplay}
+                    action="anchor"
+                    href="https://pompyproductions.github.io/odin-calc/">Live Preview</IconButton>
+                <IconButton 
+                    icon={faGithub}
+                    action="anchor"
+                    href="https://github.com/pompyproductions/odin-calc">Github Repository</IconButton>
             </ContentCard>
 
             <ContentCard
@@ -118,8 +146,14 @@ const Odin = () => {
                 </ExpandText>
                 <div className='flex-spacer'></div>
                 <div className='hsep'></div>
-                <IconButton icon={faDisplay}>Live Preview</IconButton>
-                <IconButton icon={faGithub}>Github Repository</IconButton>
+                <IconButton 
+                    icon={faDisplay}
+                    action="anchor"
+                    href="https://pompyproductions.github.io/odin-eas/">Live Preview</IconButton>
+                <IconButton 
+                    icon={faGithub}
+                    action="anchor"
+                    href="https://github.com/pompyproductions/odin-eas">Github Repository</IconButton>
             </ContentCard>
 
             <ContentCard
@@ -139,8 +173,14 @@ const Odin = () => {
                 </ExpandText>
                 <div className='flex-spacer'></div>
                 <div className='hsep'></div>
-                <IconButton icon={faDisplay}>Live Preview</IconButton>
-                <IconButton icon={faGithub}>Github Repository</IconButton>
+                <IconButton 
+                    icon={faDisplay}
+                    action="anchor"
+                    href="https://pompyproductions.github.io/odin-rps/">Live Preview</IconButton>
+                <IconButton 
+                    icon={faGithub}
+                    action="anchor"
+                    href="https://github.com/pompyproductions/odin-rps">Github Repository</IconButton>
             </ContentCard>
 
             <ContentCard
@@ -159,8 +199,14 @@ const Odin = () => {
                 </ExpandText>
                 <div className='flex-spacer'></div>
                 <div className='hsep'></div>
-                <IconButton icon={faDisplay}>Live Preview</IconButton>
-                <IconButton icon={faGithub}>Github Repository</IconButton>
+                <IconButton 
+                    icon={faDisplay}
+                    action="anchor"
+                    href="https://pompyproductions.github.io/odin-landing/">Live Preview</IconButton>
+                <IconButton 
+                    icon={faGithub}
+                    action="anchor"
+                    href="https://github.com/pompyproductions/odin-landing">Github Repository</IconButton>
             </ContentCard>
 
             <ContentCard
@@ -178,8 +224,14 @@ const Odin = () => {
                 </ExpandText>
                 <div className='flex-spacer'></div>
                 <div className='hsep'></div>
-                <IconButton icon={faDisplay}>Live Preview</IconButton>
-                <IconButton icon={faGithub}>Github Repository</IconButton>
+                <IconButton 
+                    icon={faDisplay}
+                    action="anchor"
+                    href="https://pompyproductions.github.io/odin-recipes/">Live Preview</IconButton>
+                <IconButton 
+                    icon={faGithub}
+                    action="anchor"
+                    href="https://github.com/pompyproductions/odin-recipes">Github Repository</IconButton>
             </ContentCard>
 
         </main>
