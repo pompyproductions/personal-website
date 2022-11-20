@@ -140,6 +140,7 @@ canvas {
   -webkit-user-select: none;
   -moz-user-select: none;
   -webkit-tap-highlight-color: transparent;
+  transition: all 80ms;
 }
 .icon-button.strip > button {
   border: none;
@@ -152,9 +153,6 @@ canvas {
   .icon-button.strip {
     padding: 0 1rem;
   }
-}
-.icon-button:hover button {
-  border-radius: 50%;
 }
 .icon-button > p {
   cursor: pointer;
@@ -173,7 +171,7 @@ canvas {
   cursor: pointer;
   width: 2.4em;
   height: 2.4em;
-  border: 1px solid var(--text-basic);
+  border: 1px solid var(--primary-faded);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -183,8 +181,9 @@ canvas {
   color: var(--text-basic);
   font-size: 1.2em;
 }
-.icon-button > button:hover svg {
-  color: var(--text-basic);
+.icon-button:hover > button {
+  border-radius: 50%;
+  border-color: var(--text-basic);
 }
 .icon-button * {
   pointer-events: none;

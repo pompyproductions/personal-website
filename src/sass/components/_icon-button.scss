@@ -22,11 +22,10 @@
         @include break-at("thin") {
             padding: 0 1rem;
         }
+        transition: all 80ms;
     }
 
-    &:hover button {
-        border-radius: 50%;
-    }
+
     
     & > p {
         cursor: pointer;
@@ -44,7 +43,7 @@
         cursor: pointer;
         width: 2.4em;
         height: 2.4em;
-        border: 1px solid var(--text-basic);
+        border: 1px solid var(--primary-faded);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -54,10 +53,13 @@
             color: var(--text-basic);
             font-size: 1.2em;
         }
-        &:hover svg {
-            color: var(--text-basic);
-        }
     }
+
+    &:hover > button {
+        border-radius: 50%;
+        border-color: var(--text-basic);
+    }
+
     * {
         pointer-events: none;
     }
