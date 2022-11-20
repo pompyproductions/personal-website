@@ -83,13 +83,15 @@ Tooltips.
 
 1. Plan out the work in the Roadmap section of _README.md_. **(Always on main branch!)**
 2. Switch to the development branch (`git checkout development`). Work with atomic commits.
-3. When the patch is done and ready to merge, update _version-history.md_ and _README.md_.
+3. When the patch is done and ready to merge, update _version-history.md_ and _README.md_. Commit to development branch.
 4. Squash commits:
    - `git checkout main`
    - `git merge --squash development`
    - `git commit -m "v#.# patch #` (replace #'s with versions)
+   - `git push`
 5. Update the deployment branch:
    - `git checkout netlify-deploy`
    - `git merge main`
+   - `git push`
 
 Rinse & repeat.
