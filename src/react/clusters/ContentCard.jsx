@@ -1,6 +1,15 @@
 import React from 'react';
 import Bubbles from '../canvas/Bubbles.jsx';
 
+// Accepts the following attributes:
+// title(string), image(array), imageID(string), hidden(bool).
+//
+// Accepts any element as children, 
+// do use div.hsep and div.flex-spacer for nicer layout.
+//
+// Use imageID to manually position the image if needed.
+
+
 const ContentCard = (props) => {
     function handleImageClick(e) {
         e.target.classList.toggle("active");
@@ -25,6 +34,7 @@ const ContentCard = (props) => {
                     alt={props.image[1]}
                     onClick={handleImageClick}
                     className={`${props.hidden ? "active" : ""}`}
+                    id={props.imageID}
                 />
             </div>
         </>
