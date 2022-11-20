@@ -166,7 +166,7 @@ canvas {
     display: block;
   }
 }
-.icon-button > button {
+.icon-button button {
   background-color: transparent;
   cursor: pointer;
   width: 2.4em;
@@ -177,7 +177,7 @@ canvas {
   align-items: center;
   transition: all 0.2s;
 }
-.icon-button > button svg {
+.icon-button button svg {
   color: var(--text-basic);
   font-size: 1.2em;
 }
@@ -670,19 +670,54 @@ footer li:hover {
   min-height: 1px;
   width: 100%;
 }
-.content-card .content-bit {
+.content-card section {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
 }
-.content-card .content-bit p {
+.content-card section p {
   font-weight: 200;
 }
-.content-card .content-bit > h3 {
-  background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.2117647059));
+.content-card section h3 {
   font-weight: 200;
   font-size: 1.4rem;
   line-height: 2.4rem;
+}
+.content-card section.expand {
+  overflow: hidden;
+  margin: 0 -1rem;
+  padding: 0 1rem;
+  height: 2.4rem;
+}
+.content-card section.expand.active {
+  height: auto;
+}
+.content-card section.expand.active svg {
+  transform: rotateX(180deg);
+}
+.content-card section .expand-title {
+  cursor: pointer;
+  color: var(--text-basic);
+  background-color: transparent;
+  background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.2509803922));
+  border: none;
+  font-size: 1.4rem;
+  margin: 0 -1rem;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s;
+}
+.content-card section .expand-title svg {
+  width: 2.4rem;
+  transition: transform 0.2s;
+}
+.content-card section .expand-title:hover {
+  background-color: var(--primary-solid);
+}
+.content-card section .expand-title h3 {
+  cursor: pointer;
 }
 .content-card canvas {
   width: 100%;
