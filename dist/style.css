@@ -131,8 +131,28 @@ canvas {
   align-items: center;
   cursor: pointer;
 }
-.icon-button:hover button {
-  border-radius: 50%;
+.icon-button.strip {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  box-shadow: inset 0 0 0 1px var(--primary-faded);
+  width: 100%;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 80ms;
+}
+.icon-button.strip > button {
+  border: none;
+  width: 2em;
+}
+.icon-button.strip:hover {
+  box-shadow: inset 0 0 0 1px var(--primary-solid);
+}
+@media only screen and (min-width: 320px) {
+  .icon-button.strip {
+    padding: 0 1rem;
+  }
 }
 .icon-button > p {
   cursor: pointer;
@@ -146,26 +166,35 @@ canvas {
     display: block;
   }
 }
-.icon-button > button {
+.icon-button button {
   background-color: transparent;
   cursor: pointer;
   width: 2.4em;
   height: 2.4em;
-  border: 1px solid var(--text-basic);
+  border: 1px solid var(--primary-faded);
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 0.2s;
 }
-.icon-button > button svg {
+.icon-button button svg {
   color: var(--text-basic);
   font-size: 1.2em;
 }
-.icon-button > button:hover svg {
-  color: var(--text-basic);
+.icon-button:hover > button {
+  border-radius: 50%;
+  border-color: var(--text-basic);
 }
 .icon-button * {
   pointer-events: none;
+}
+
+.button-wrapper {
+  color: var(--text-basic);
+  width: 100%;
+}
+.button-wrapper:hover {
+  text-decoration: none;
 }
 
 .hsep {
@@ -382,6 +411,7 @@ canvas {
 .text-couple p:last-of-type {
   flex: 1 1 min-content;
   font-weight: 400 !important;
+  text-align: left;
 }
 @media only screen and (min-width: 320px) {
   .text-couple {
@@ -601,18 +631,32 @@ footer li:hover {
   overflow: hidden;
   box-shadow: inset 0 0 0 1px var(--primary-faded);
 }
-.content-card > p {
+.content-card p {
   font-weight: 200;
 }
-.content-card > h2 {
+.content-card h2 {
   font-weight: 200;
   font-variation-settings: "ital" 1;
+}
+.content-card.banner {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.content-card.banner h2 {
+  font-size: 2.4rem;
+}
+.content-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
 }
 .content-card .img-wrapper {
   height: 11rem;
   width: 100%;
 }
 .content-card img {
+  cursor: pointer;
   position: absolute;
   top: 0;
   left: 0;
@@ -630,24 +674,62 @@ footer li:hover {
 .content-card img#euler {
   object-position: 50% 18%;
 }
+.content-card img:hover {
+  transform: scale(1.05);
+}
 .content-card .hsep {
   background-color: var(--primary-faded);
+  min-height: 1px;
+  width: 100%;
 }
-.content-card .content-bit {
+.content-card section {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
 }
-.content-card .content-bit p {
+.content-card section p {
   font-weight: 200;
 }
-.content-card .content-bit > h3 {
-  background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.2117647059));
+.content-card section h3 {
+  font-weight: 200;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
 }
-.content-card .content-bit ul {
+.content-card section.expand {
+  overflow: hidden;
+  margin: 0 -1rem;
+  padding: 0 1rem;
+  height: 2.4rem;
+}
+.content-card section.expand.active {
+  height: auto;
+}
+.content-card section.expand.active svg {
+  transform: rotateX(180deg);
+}
+.content-card section .expand-title {
+  cursor: pointer;
+  color: var(--text-basic);
+  background-color: transparent;
+  background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.2509803922));
+  border: none;
+  font-size: 1.4rem;
+  margin: 0 -1rem;
+  padding: 0 1rem;
   display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s;
+}
+.content-card section .expand-title svg {
+  width: 2.4rem;
+  transition: transform 0.2s;
+}
+.content-card section .expand-title:hover {
+  background-color: var(--primary-solid);
+}
+.content-card section .expand-title h3 {
+  cursor: pointer;
 }
 .content-card canvas {
   width: 100%;
@@ -703,30 +785,6 @@ footer li:hover {
 
 aside {
   position: fixed;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
-}
-
-.wip-content {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  padding: 2em 1em;
-  gap: 1em;
-}
-
-p {
-  text-align: left;
-  white-space: pre-wrap;
-}
-@media only screen and (min-width: 720px) {
-  p {
-    text-align: left;
-  }
 }
 
 .page-home {
@@ -790,28 +848,6 @@ main p {
 .page-container .img-wrapper img.active {
   height: 100%;
 }
-.page-container .hsep {
-  background-color: var(--primary-faded);
-}
-.page-container .content-bit {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-.page-container .content-bit > p {
-  font-weight: 200;
-}
-.page-container .content-bit > h3 {
-  background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.2117647059));
-  font-weight: 200;
-  font-size: 1.4rem;
-  line-height: 2.4rem;
-}
-.page-container .content-bit ul {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
 .page-container canvas {
   width: 100%;
   height: 100%;
@@ -838,4 +874,79 @@ main p {
 }
 .portfolio .img-wrapper img.active {
   height: 100%;
+}
+
+.landing {
+  grid-area: 1/1/-1/-1 !important;
+  box-shadow: inset 0 0 0 1px var(--primary-faded);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+}
+.landing a {
+  color: var(--text-basic);
+}
+.landing a:hover {
+  text-decoration: none;
+}
+.landing #eg-logo {
+  transition: transform 0.4s;
+  margin: 0 auto;
+  width: 3rem;
+}
+.landing #eg-logo:hover {
+  transform: scale(1.2);
+}
+.landing .container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.landing .container#links {
+  gap: 0.8rem;
+  align-items: stretch;
+  width: 100%;
+}
+.landing .greeting-container > .slanted {
+  margin-bottom: 0.5rem;
+}
+@media only screen and (min-width: 320px) {
+  .landing .greeting-container .animated-text {
+    transform-origin: center;
+  }
+}
+.landing h2 {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+@media only screen and (min-width: 320px) {
+  .landing {
+    text-align: center;
+  }
+  .landing .animated-text {
+    margin: auto;
+  }
+  .landing .slanted {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 720px) {
+  .landing {
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  .landing .container {
+    width: 40rem;
+  }
+  .landing .container#links {
+    width: 32rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .landing {
+    width: 60rem;
+  }
 }

@@ -33,27 +33,27 @@ Prefix reference:
 
 ### NOW
 
-v1.0 patch 2: Stopgap to accomodate changes in CV.
+v1.1 patch 1:
+- [ ] Delete the "Passions" component, write it directly inside "About Me" page.
 
-- [ ] **ADD:** WIP page for "./landing": short text, links, and "Download CV".
-- [ ] **ADD:** WIP page for "./the-odin-project": short text, links to github repos and preview
+v1.1 patch 2:
+- [ ] Work on ContentCard images to have better display.
 
 
 ### NEXT
 
-v1.1: Full-fledged landing page:
-
-- [ ] **ADD:** "./landing": a page with greeting, scrolls down to a link carousel, and then to "download cv" link.
-
-v1.2: Overall page content improvements.
-
-- [ ] **REF:** Create a new react component for content cards, and use that instead of manually typing them out.
-- [ ] **ADD:** Create a collapsible section for content cards, and implement for the "Passions" section in "About Me".
-- [ ] **MOD:** Make clickable images more evident. (`cursor: pointer` and hover effects)
-- [ ] **MOD:** Make clickable links (anchor styling) more evident.
+To be decided.
 
 
 ### LATER
+
+Scrolling behavior.
+
+- [ ] **MOD:** Rework grid layout to have fixed footer and header, and scrolling main container.
+
+Full-fledged landing page.
+
+- [ ] **ADD:** "./landing": a page with greeting, scrolls down to a link carousel, and then to "download cv" link.
 
 Background canvas.
 

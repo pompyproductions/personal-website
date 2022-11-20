@@ -11,6 +11,7 @@ import Home from "./Home.jsx";
 import AboutMe from "./AboutMe.jsx";
 import Portfolio from "./Portfolio.jsx";
 import Contact from "./Contact.jsx";
+import Odin from "./Odin.jsx";
 
 
 const MasterLayout = () => {
@@ -20,9 +21,12 @@ const MasterLayout = () => {
             <HamburgerMenu />
             <Header />
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route index element={<Home />} />
                 <Route path="/about-me" element={<AboutMe />} />
-                <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/portfolio">
+                    <Route index element={<Portfolio />} />
+                    <Route path="the-odin-project" element={<Odin />} />
+                </Route>
                 <Route path="/contact" element={<Contact />} />
             </Routes>
             <Footer />

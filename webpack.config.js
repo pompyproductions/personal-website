@@ -8,6 +8,7 @@ module.exports = {
     output: { // this is where the final bundle goes
         path: path.join(__dirname, "/dist"),
         filename: "main.js",
+        publicPath: "/",
     },
     module: {
         rules: [
@@ -36,7 +37,7 @@ module.exports = {
                 use: ['@svgr/webpack'],
             },
             {
-                test: /\.(png|jpg|jpeg|gif)$/i,
+                test: /\.(png|jpg|jpeg|gif|pdf)$/i,
                 type: 'asset/resource',
             },
         ]
@@ -51,5 +52,8 @@ module.exports = {
                 path.resolve(__dirname, "src/assets", "_redirects")
             ]
         }),
-    ]
+    ],
+    devServer: {
+        historyApiFallback: true,
+    }
 }
