@@ -159,12 +159,16 @@ canvas {
   align-self: unset;
   display: block;
   font-weight: 200;
+  color: var(--text-basic);
   font-family: "Space Grotesk", sans-serif;
 }
 @media only screen and (min-width: 720px) {
   .icon-button > p {
     display: block;
   }
+}
+.icon-button > p:hover {
+  text-decoration: none;
 }
 .icon-button button {
   background-color: transparent;
@@ -625,6 +629,9 @@ footer li:hover {
 }
 .content-card p {
   font-weight: 200;
+}
+.content-card a:hover {
+  text-decoration: none;
 }
 .content-card h2 {
   font-weight: 200;

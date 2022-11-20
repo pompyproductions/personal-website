@@ -24,17 +24,19 @@
         }
         transition: all 80ms;
     }
-
-
     
     & > p {
         cursor: pointer;
         align-self: unset;
         display: block;
         font-weight: 200;
+        color: var(--text-basic);
         font-family: "Space Grotesk", sans-serif;
         @include break-at("medium") {
             display: block;
+        }
+        &:hover {
+            text-decoration: none;
         }
     }
     button {
