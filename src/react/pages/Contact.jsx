@@ -34,7 +34,7 @@ const Contact = () => {
                         You can also reach me through my social media profiles linked below,
                         or send me an email directly.
                     </p>
-                    <IconButton icon={faPaperPlane} action="email">eren.g94@gmail.com</IconButton>
+                    <IconButton icon={faPaperPlane} action="custom" href="email">eren.g94@gmail.com</IconButton>
                     <div className="flex-spacer"></div>
                     <div className="hsep"></div>
                     <ul>

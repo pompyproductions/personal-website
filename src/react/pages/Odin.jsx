@@ -37,8 +37,8 @@ const Odin = () => {
                 </p>
                 <div className='flex-spacer'></div>
                 <div className='hsep'></div>
-                <IconButton strip icon={faGlobe}>Homepage</IconButton>
-                <IconButton strip icon={faGlobe}>Curriculum</IconButton>
+                <IconButton className="strip" icon={faGlobe}>Homepage</IconButton>
+                <IconButton className="strip" icon={faGlobe}>Curriculum</IconButton>
             </ContentCard>
 
             <ContentCard

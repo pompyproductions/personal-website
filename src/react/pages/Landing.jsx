@@ -30,16 +30,16 @@ const Landing = () => {
                 </p>
             </div>
             <div className="container" id="links">
-                <IconButton icon={faGlobe} href="/" strip>
+                <IconButton icon={faGlobe} href="/" className="strip">
                     Personal website.
                 </IconButton>
-                <IconButton icon={faGithub} action="anchor" href="https://github.com/pompyproductions" strip>
+                <IconButton icon={faGithub} action="anchor" href="https://github.com/pompyproductions" className="strip">
                     Github profile (Projects).
                 </IconButton>
-                <IconButton icon={faFileLines} action="anchor" href="https://issuu.com/erengazioglu" strip>
+                <IconButton icon={faFileLines} action="anchor" href="https://issuu.com/erengazioglu" className="strip">
                     Issuu profile (Print works).
                 </IconButton>
-                <IconButton icon={faDownload} action="download" href={fileCv} strip>
+                <IconButton icon={faDownload} action="download" href={fileCv} className="strip">
                     Download CV.
                 </IconButton>
             </div>

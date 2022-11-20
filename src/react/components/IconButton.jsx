@@ -11,11 +11,26 @@ const IconButton = (props) => {
     function sendEmail() {
         window.open('mailto:eren.g94@gmail.com?subject=Let\'s get in touch');
     }
+    function toggleHamburger() {
+        document.querySelectorAll(".hamburger").forEach(elem => {
+            elem.classList.toggle("active");
+        })
+    }
+
+    let customAction;
+    switch (props.href) {
+        case "email":
+            customAction = sendEmail;
+            break;
+        case "hamburger":
+            customAction = toggleHamburger;
+            break;
+    }
 
     const content = 
         <div 
-            className={`icon-button ${props.strip ? "strip" : ""}`}
-            onClick={props.action === "email" ? sendEmail : undefined}
+            className={`icon-button ${props.className}`}
+            onClick={props.action === "custom" ? customAction : undefined}
         >
             <button>
                 <FontAwesomeIcon icon={props.icon} />
@@ -34,7 +49,7 @@ const IconButton = (props) => {
         case "anchor":
             wrapper = <a href={props.href} target="_blank">{content}</a>;
             break;
-        case "email":
+        case "custom":
             wrapper = content;
     }
 

@@ -36,8 +36,9 @@ const Header = () => {
         {/* <KnobSelector /> */}
         <NavGroup />
         <IconButton icon={faBars} 
-            className="hamburger" 
-            onClick={toggleHamburger}/>
+            className="hamburger"
+            action="custom" 
+            href="hamburger"/>
     </header>
 }
 
