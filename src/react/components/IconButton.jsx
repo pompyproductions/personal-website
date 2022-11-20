@@ -41,13 +41,13 @@ const IconButton = (props) => {
     let wrapper;
     switch (props.action) {
         case "link":
-            wrapper = <Link to={props.href}>{content}</Link>;
+            wrapper = <Link to={props.href} className="button-wrapper">{content}</Link>;
             break;
         case "download":
-            wrapper = <a href={props.href} download>{content}</a>;
+            wrapper = <a href={props.href} download className="button-wrapper">{content}</a>;
             break;
         case "anchor":
-            wrapper = <a href={props.href} target="_blank">{content}</a>;
+            wrapper = <a href={props.href} target="_blank" className="button-wrapper">{content}</a>;
             break;
         case "custom":
             wrapper = content;
