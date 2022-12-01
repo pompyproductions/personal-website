@@ -12,7 +12,7 @@ const Passions = () => {
 
             <ExpandSection
                 title="Programming"
-                className="active"
+                // className="active"
             >
                 <p>Self-taught programmer & web developer, with a sensibility toward good and intuitive interfaces.</p>
                 <div className="hsep"></div>
