@@ -69,28 +69,30 @@ main {
     }
 
     article {
-        padding: 1rem;
+        @include inset-box;
+        position: relative;
     }
-}
 
-.portfolio {
-    .img-wrapper {
-        height: 9.2rem; // taking padding into account
-        img {
-            // margin: -2rem;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            width: 100%;
-            height: 8rem;
-            object-fit: cover;
-            object-position: 50% 53%;
-            transition: all .3s;
-            box-shadow: 3px 3px 5px rgba(20, 20, 20, 0.6);
-            &.active {
-                height: calc(100%);
+    .portfolio {
+        .img-wrapper {
+            height: 9.2rem; // taking padding into account
+            img {
+                // margin: -2rem;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 8rem;
+                object-fit: cover;
+                object-position: 50% 53%;
+                transition: all .3s;
+                box-shadow: 3px 3px 5px rgba(20, 20, 20, 0.6);
+                &.active {
+                    height: calc(100%);
+                }
             }
         }
     }
 }
+
