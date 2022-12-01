@@ -16,7 +16,10 @@ body {
     padding: 0;
     margin: 0;
     font-size: 100%;
-    min-height: 100vh;
+    min-height: 100vh;            /* fall-back */
+    min-height: -moz-available;
+    min-height: -webkit-fill-available;
+    min-height: fill-available;
     overflow: inherit;
 } h1, h2, h3, p {
     margin: 0;
