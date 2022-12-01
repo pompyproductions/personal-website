@@ -6,7 +6,6 @@
     grid-auto-rows: min-content;
     @include break-at("medium") {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr min-content;
         .content-card:first-of-type {
             grid-column: 1 / -1;
         }
