@@ -1,7 +1,10 @@
 @charset "UTF-8";
 html {
   box-sizing: border-box;
-  min-height: 100vh;
+  min-height: 100vh; /* fall-back */
+  min-height: -moz-available;
+  min-height: -webkit-fill-available;
+  min-height: fill-available;
   overflow: hidden;
 }
 
