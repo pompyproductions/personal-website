@@ -1,0 +1,9 @@
+@use "theme" as *;
+
+body {
+    background-color: #121212;
+}
+
+a {
+    color: var(--text-bright);
+}

@@ -22,23 +22,19 @@ header {
 
     h1 {
         font-weight: 200;
+        font-size: 1rem;
+        letter-spacing: 0.06em;
         display: none;
         align-self: center;
         justify-self: flex-end;
         @include break-at("thin") {
-            font-size: 1.2rem;
             display: block;
         }
         @include break-at("medium") {
             display: none;
         }
         a {
-            color: var(--primary-solid);
-            transition: color 0.2s;
-            &:hover {
-                color: var(--primary-bright);
-                text-decoration: none;
-            }
+            color: inherit;
         }
     }
 
@@ -60,7 +56,6 @@ header {
         }
         .hsep {
             margin-bottom: 0.6rem;
-            background-color: var(--text-faded);
         }
         svg {
             width: 1rem;

@@ -14,18 +14,11 @@ body {
     margin: 0;
     font-size: 100%;
     min-height: 100vh;
-    overflow: auto;
-    background-color: #44282e;
+    overflow: hidden;
 } h1, h2, h3, p {
     margin: 0;
     font-size: .8rem;
-    cursor: default;
 } 
-
-a {
-    color: var(--text-faded);
-    cursor: pointer;
-}
 
 li {
     list-style: none;

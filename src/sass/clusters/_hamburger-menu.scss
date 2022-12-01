@@ -48,14 +48,15 @@ nav.hamburger {
         color: var(--text-basic);
     }
     p {
-        height: 78.47px; // magic number: header height
-        line-height: 78.47px; // magic number: header height
+        height: 71.42px; // magic number: header height
+        line-height: 71.42px; // magic number: header height
         margin-left: 1rem;
         font-size: 1em;
     }
     .hsep {
         width: 100%;
         margin-bottom: 1em;
+        background-color: var(--text-basic);
     }
     svg {
         width: 1.4rem; // could be improved

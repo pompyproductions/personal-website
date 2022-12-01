@@ -1,6 +1,8 @@
+@use "globals" as *;
+
 .hsep {
     min-height: 1px;
-    background-color: var(--text-basic);
+    background-color: var(--accent-faded);
 }
 
 .flex-spacer {

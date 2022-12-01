@@ -1,19 +1,22 @@
-@use "breakpoints" as *;
+@use "mixins" as *;
+@use "theme" as *;
 
 body {
     font-family: "Karla", sans-serif;
-    line-height: 1.3;
+    line-height: 1.4;
+    font-weight: 300;
     color: var(--text-basic);
 }
 
 h1, h2, h3,
 h4, h5, h6 {
-    font-family: "Space Grotesk", sans-serif;
+    font-family: "Archivo Expanded", sans-serif;
     font-weight: 700;
 }
 
 p {
-    // font-size: .85rem;
+    font-size: .85rem;
+    letter-spacing: 0.012em;
     @include break-at("medium") {
         font-size: 1rem;
     }
@@ -29,8 +32,10 @@ h1 {
 
 a {
     text-decoration: none;
+    transition: 0.18s;
     &:hover {
-        text-decoration: underline;
+        text-decoration: none;
+        color: var(--primary-bright);
     }
 }
 

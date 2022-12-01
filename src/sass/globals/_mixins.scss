@@ -1,3 +1,18 @@
+$breakpoints: (
+    "thin": 320px,
+    "medium": 720px,
+    "large": 1024px,
+    "huge": 1200px
+);
+
+@mixin break-at($size) {
+    @if map-has-key($breakpoints, $size) {
+        @media only screen and (min-width: map-get($breakpoints, $size)) {
+            @content;
+        }
+    }
+}
+
 @mixin disable-selection {
     user-select: none;
     -webkit-user-select: none;

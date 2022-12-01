@@ -6,11 +6,11 @@
     gap: .6rem;
     span {
         display: inline;
-        color: var(--primary-bright);
+        color: var(--text-faded);
         cursor: pointer;
         @include disable-selection;
         &:hover {
-            text-decoration: underline;
+            color: var(--primary-bright);
         }
     }
     .hidden {

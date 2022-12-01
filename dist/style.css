@@ -16,19 +16,12 @@ body {
   margin: 0;
   font-size: 100%;
   min-height: 100vh;
-  overflow: auto;
-  background-color: #44282e;
+  overflow: hidden;
 }
 
 h1, h2, h3, p {
   margin: 0;
   font-size: 0.8rem;
-  cursor: default;
-}
-
-a {
-  color: var(--text-faded);
-  cursor: pointer;
 }
 
 li {
@@ -40,18 +33,37 @@ li ul, li ol {
   padding: 0;
 }
 
+:root {
+  --primary-faded: hsl(0deg 58% 96% / 9%);
+  --primary-solid: #5311d0a8;
+  --primary-bright: hsl(64deg 73% 53%);
+  --text-basic: hsl(0deg 58% 96%);
+  --text-faded: hsl(186deg 32% 54%);
+  --text-bright: hsl(186deg 48% 68%);
+  --accent-faded: hsl(173deg 55% 20%);
+  --background: linear-gradient(45deg, #260909, #20131f);
+  --hamburger-background: linear-gradient(
+      hsl(186deg 32% 54% / 70%),
+      hsl(173deg 55% 20% / 40%));
+}
+
 body {
   font-family: "Karla", sans-serif;
-  line-height: 1.3;
+  line-height: 1.4;
+  font-weight: 300;
   color: var(--text-basic);
 }
 
 h1, h2, h3,
 h4, h5, h6 {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Archivo Expanded", sans-serif;
   font-weight: 700;
 }
 
+p {
+  font-size: 0.85rem;
+  letter-spacing: 0.012em;
+}
 @media only screen and (min-width: 720px) {
   p {
     font-size: 1rem;
@@ -70,26 +82,23 @@ h1 {
 
 a {
   text-decoration: none;
+  transition: 0.18s;
 }
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: var(--primary-bright);
 }
 
 ul, ol {
   list-style: none;
 }
 
-:root {
-  --primary-faded: #9d26412e;
-  --primary-solid: #a42843;
-  --primary-bright: #df3169;
-  --text-basic: #fbf0f0fb;
-  --text-faded: #3daab6;
-  --text-bright: #67d8e5;
-  --background: linear-gradient(45deg, #260909, #20131f);
-  --hamburger-background: linear-gradient(
-      rgb(55 150 127 / 90%),
-      rgb(80 115 80 / 40%));
+body {
+  background-color: #121212;
+}
+
+a {
+  color: var(--text-bright);
 }
 
 @keyframes appear {
@@ -147,7 +156,7 @@ canvas {
   width: 2em;
 }
 .icon-button.strip:hover {
-  box-shadow: inset 0 0 0 1px var(--primary-solid);
+  box-shadow: inset 0 0 0 1px var(--primary-bright);
 }
 @media only screen and (min-width: 320px) {
   .icon-button.strip {
@@ -194,12 +203,12 @@ canvas {
   width: 100%;
 }
 .button-wrapper:hover {
-  text-decoration: none;
+  color: var(--text-basic);
 }
 
 .hsep {
   min-height: 1px;
-  background-color: var(--text-basic);
+  background-color: var(--accent-faded);
 }
 
 .flex-spacer {
@@ -217,7 +226,7 @@ canvas {
   transition: transform 0.2s;
   transform-origin: left;
   font-size: 1.4rem;
-  font-family: "Space Grotesk";
+  font-family: "Archivo Expanded", sans-serif;
 }
 @media only screen and (min-width: 320px) {
   .animated-text {
@@ -240,14 +249,17 @@ canvas {
 
 .greeting-container .hsep {
   min-height: 1px;
-  background-color: var(--text-faded);
 }
 
 .slanted {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   margin-bottom: 1em;
   font-style: italic;
-  color: #3daab6;
+  color: var(--text-faded);
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 .slanted::after {
   content: "  ↓";
@@ -418,7 +430,7 @@ canvas {
     gap: 0.8em;
   }
   .text-couple p:first-of-type {
-    width: 6rem;
+    width: 6.2rem;
     text-align: right;
     color: var(--text-bright);
   }
@@ -434,7 +446,7 @@ canvas {
 }
 .expand-text span {
   display: inline;
-  color: var(--primary-bright);
+  color: var(--text-faded);
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
@@ -442,7 +454,7 @@ canvas {
   -webkit-tap-highlight-color: transparent;
 }
 .expand-text span:hover {
-  text-decoration: underline;
+  color: var(--primary-bright);
 }
 .expand-text .hidden {
   display: none;
@@ -469,13 +481,14 @@ header a {
 }
 header h1 {
   font-weight: 200;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
   display: none;
   align-self: center;
   justify-self: flex-end;
 }
 @media only screen and (min-width: 320px) {
   header h1 {
-    font-size: 1.2rem;
     display: block;
   }
 }
@@ -485,12 +498,7 @@ header h1 {
   }
 }
 header h1 a {
-  color: var(--primary-solid);
-  transition: color 0.2s;
-}
-header h1 a:hover {
-  color: var(--primary-bright);
-  text-decoration: none;
+  color: inherit;
 }
 header nav {
   color: var(--text-basic);
@@ -511,7 +519,6 @@ header nav li {
 }
 header nav .hsep {
   margin-bottom: 0.6rem;
-  background-color: var(--text-faded);
 }
 header nav svg {
   width: 1rem;
@@ -578,14 +585,15 @@ nav.hamburger a {
   color: var(--text-basic);
 }
 nav.hamburger p {
-  height: 78.47px;
-  line-height: 78.47px;
+  height: 71.42px;
+  line-height: 71.42px;
   margin-left: 1rem;
   font-size: 1em;
 }
 nav.hamburger .hsep {
   width: 100%;
   margin-bottom: 1em;
+  background-color: var(--text-basic);
 }
 nav.hamburger svg {
   width: 1.4rem;
@@ -612,14 +620,13 @@ footer ul a:hover {
   color: var(--text-faded);
 }
 footer li {
-  box-shadow: inset 0 0 0 1px var(--primary-faded);
   transition: all 0.1s;
   padding: 0.6rem 1rem;
   color: var(--text-faded);
 }
 footer li:hover {
   color: var(--text-basic);
-  box-shadow: inset 0 0 0 1px var(--primary-solid);
+  box-shadow: inset 0 0 0 1px var(--primary-bright);
 }
 
 .content-card {
@@ -637,6 +644,8 @@ footer li:hover {
 .content-card h2 {
   font-weight: 200;
   font-variation-settings: "ital" 1;
+  color: var(--text-faded);
+  letter-spacing: 0.06em;
 }
 .content-card.banner {
   justify-content: center;
@@ -644,7 +653,14 @@ footer li:hover {
   text-align: center;
 }
 .content-card.banner h2 {
-  font-size: 2.4rem;
+  white-space: nowrap;
+  font-size: 1.6rem;
+  color: var(--text-basic);
+}
+@media only screen and (min-width: 320px) {
+  .content-card.banner h2 {
+    font-size: 2rem;
+  }
 }
 .content-card ul {
   display: flex;
@@ -652,8 +668,8 @@ footer li:hover {
   gap: 0.6rem;
 }
 .content-card .img-wrapper {
-  height: 11rem;
-  width: 100%;
+  height: 13.2rem;
+  margin: -1rem;
 }
 .content-card img {
   cursor: pointer;
@@ -726,7 +742,7 @@ footer li:hover {
   transition: transform 0.2s;
 }
 .content-card section .expand-title:hover {
-  background-color: var(--primary-solid);
+  background-color: var(--accent-faded);
 }
 .content-card section .expand-title h3 {
   cursor: pointer;
@@ -745,7 +761,6 @@ footer li:hover {
   grid-template-columns: 1fr;
   gap: 1rem;
   color: var(--text-basic);
-  background-image: var(--background);
 }
 #root header {
   grid-row: 1;
@@ -830,8 +845,9 @@ main p {
   font-variation-settings: "ital" 1;
 }
 .page-container .img-wrapper {
-  height: 11rem;
-  width: 100%;
+  height: 13.2rem;
+  margin: -1rem;
+  overflow: hidden;
 }
 .page-container .img-wrapper img {
   position: absolute;
@@ -857,8 +873,7 @@ main p {
 }
 
 .portfolio .img-wrapper {
-  height: 7rem;
-  width: 100%;
+  height: 9.2rem;
 }
 .portfolio .img-wrapper img {
   position: absolute;

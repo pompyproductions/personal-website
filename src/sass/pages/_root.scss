@@ -45,8 +45,6 @@
     @include break-at("large") {
         background-color: rgb(48, 48, 177);
     }
-
-    background-image: var(--background);
 }
 
 aside {

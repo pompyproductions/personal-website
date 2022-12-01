@@ -12,7 +12,7 @@
     transform-origin: left;
 
     font-size: 1.4rem;
-    font-family: "Space Grotesk";
+    font-family: "Archivo Expanded", sans-serif;
 
 
     @include break-at("thin") {
@@ -31,14 +31,15 @@
 
 .greeting-container .hsep {
     min-height: 1px;
-    background-color: var(--text-faded);
 }
 
 .slanted {
-    font-size: .7rem;
+    font-size: .8rem;
     margin-bottom: 1em;
 
     font-style: italic;
-    color: #3daab6;
+    color: var(--text-faded);
     &::after {content:"  ↓"}
+
+    @include disable-selection;
 }
