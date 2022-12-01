@@ -14,7 +14,7 @@ const Passions = () => {
                 title="Programming"
                 // className="active"
             >
-                <p>Self-taught programmer & web developer, with a sensibility toward good and intuitive interfaces.</p>
+                <p>Self-taught programmer & web developer, with a sensibility toward good design and intuitive interfaces.</p>
                 <div className="hsep"></div>
                 <ul>
                     <li><TextCouple title="Basics">Solid foundation in HTML+CSS+JS, and some knowledge of Python.</TextCouple></li>
