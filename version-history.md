@@ -1,5 +1,25 @@
 # Version History
 
+## v1.2: Restyling and Scrolling Sections
+
+### Scrollbars
+
+In the previous versions, the entire HTML had the `overflow: auto` property. Now the webpage is `100vh`, and the `.page-container` elements (the main page content, outside of header and footer) has its own scrollbar that appears only when its own content overflows. Header and footer stay fixed. Scrollbars are also styled, both with `::-webkit-scrollbar` pseudo-elements and `scrollbar-width` and `scrollbar-color` standard properties.
+
+### Theme
+
+Colors are now more neutral, following a dark-scheme: anthracite for background, more icy blue for accents. Some highlights (e.g. hover effects) are yellow.
+
+### Typography
+
+Replaced Space Grotesk with Archivo. Used variable font properties for special titles and hover effects (`font-variation-settings`). Applied very subtle `letter-spacing`.
+
+### Content
+
+Added new cards to front page: a "latest news" card for updates, and a "what next" card for page navigation.
+
+Created a "WIP" page for `./aoc2022` (the Advent of Code 2022 event). Will be updating regularly.
+
 ## v1.1: ContentCard and IconButton overhaul
 
 - [X] **ADD:** WIP page for "./landing": short text, links, and "Download CV".

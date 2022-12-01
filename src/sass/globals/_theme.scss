@@ -1,12 +1,13 @@
 :root {
-    --primary-faded: #9d26412e;
-    --primary-solid: #a42843;
-    --primary-bright: #df3169;
-    --text-basic: #fbf0f0fb;
-    --text-faded: #3daab6;
-    --text-bright: #67d8e5;
+    --primary-faded: hsl(0deg 58% 96% / 9%);
+    --primary-solid: #5311d0a8;
+    --primary-bright: hsl(64deg 73% 53%);
+    --text-basic: hsl(0deg 58% 96%);
+    --text-faded: hsl(186deg 32% 54%);
+    --text-bright: hsl(186deg 48% 68%);
+    --accent-faded: hsl(173deg 55% 20%);
     --background: linear-gradient(45deg, #260909, #20131f);
     --hamburger-background: linear-gradient(
-        rgb(55 150 127 / 90%), 
-        rgb(80 115 80 / 40%));
+        hsl(186deg 32% 54% / 70%),
+        hsl(173deg 55% 20% / 40%));
 }

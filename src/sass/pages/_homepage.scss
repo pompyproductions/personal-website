@@ -1,4 +1,13 @@
-.page-home {
+@use "../globals" as *;
+
+.page-container.home {
     height: 100%;
-    padding: 1rem;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    @include break-at("medium") {
+        grid-template-columns: repeat(2, 1fr);
+        .content-card:first-of-type {
+            grid-column: 1 / -1;
+        }
+    }
 }

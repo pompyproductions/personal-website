@@ -1,44 +1,55 @@
 @use "../globals" as *;
 
-.animated-text {
-    cursor: pointer;
+.greeting-container {
+
+    gap: 0 !important;
+
+    .animated-text {
+        cursor: pointer;
+        
+        width: min-content;
     
-    width: min-content;
-
-    @include disable-selection;
-    // align-self: center;
-    white-space: nowrap;
-    transition: transform .2s;
-    transform-origin: left;
-
-    font-size: 1.4rem;
-    font-family: "Space Grotesk";
-
-
-    @include break-at("thin") {
-        font-size: 2rem;
+        @include disable-selection;
+        // align-self: center;
+        white-space: nowrap;
+        transition: transform .2s, font-variation-settings .2s;
+        transform-origin: left;
+    
+        font-size: 1.4rem;
+        font-family: "Archivo";
+        font-variation-settings: "wght" 200, "wdth" 115;
+    
+        @include break-at("thin") {
+            font-size: 2rem;
+        }
+        @include break-at("medium") {
+            font-size: 3.2rem;
+        }
+        @include break-at("large") {
+            font-size: 5rem;
+        }
+        &:hover {
+            transform: scale(1.1);
+            font-variation-settings: "wght" 300, "wdth" 125;
+        }
     }
+
+    .slanted {
+        font-size: .8rem;
+        margin-bottom: 1em;
+    
+        font-style: italic;
+        color: var(--text-faded);
+        &::after {content:"  ↓"}
+    
+        @include disable-selection;
+    }
+
+    .hsep {
+        background-color: var(--accent-faded);
+    }
+
     @include break-at("medium") {
-        font-size: 3.2rem;
+        margin-bottom: 1rem;
     }
-    @include break-at("large") {
-        font-size: 5rem;
-    }
-    &:hover {
-        transform: skew(-10deg) scale(1.2);
-    }
-}
-
-.greeting-container .hsep {
-    min-height: 1px;
-    background-color: var(--text-faded);
-}
-
-.slanted {
-    font-size: .7rem;
-    margin-bottom: 1em;
-
-    font-style: italic;
-    color: #3daab6;
-    &::after {content:"  ↓"}
 }

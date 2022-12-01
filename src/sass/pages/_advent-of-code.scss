@@ -1,0 +1,17 @@
+.advent-of-code {
+    grid-column: 1 / -1 !important;
+    grid-row: 1 / -1 !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-rows: min-content;
+    place-items: center;
+    gap: 1rem;
+    article {
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

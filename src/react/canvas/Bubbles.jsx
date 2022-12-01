@@ -105,7 +105,7 @@ Bubbles.defaultProps = {
     invert: true,
     styles: {
         lineColor: false,
-        fillColor: "#9d26412e"
+        fillColor: "#fbf0f010"
     }
 }
 

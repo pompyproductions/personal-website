@@ -16,7 +16,7 @@
             width: 2em;
         }
         &:hover {
-            box-shadow: inset 0 0 0 1px var(--primary-solid);
+            box-shadow: inset 0 0 0 1px var(--primary-bright);
         }
         @include disable-selection;
         @include break-at("thin") {
@@ -30,7 +30,8 @@
         align-self: unset;
         display: block;
         font-weight: 200;
-        font-family: "Space Grotesk", sans-serif;
+        font-family: "Archivo", sans-serif;
+        font-stretch: 115%;
         @include break-at("medium") {
             display: block;
         }
@@ -66,7 +67,7 @@
 .button-wrapper {
     color: var(--text-basic);
     &:hover {
-        text-decoration: none;
+        color: var(--text-basic);
     }
     width: 100%;
 }

@@ -1,33 +1,22 @@
 @use "../globals" as *;
 
-main {
-    position: relative; // for canvas absolute positioning
-    z-index: 0; // creates new stacking context
-    overflow: hidden;
-    
-    width: 100%;
-    box-shadow: inset 0 0 0 1px var(--primary-faded);
-    
-    & > div {
-        display: flex;
-        gap: 1rem;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
-    p {
-        font-size: 1rem;
+::-webkit-scrollbar {
+    width: 8px;
+    &-thumb {
+        background-color: var(--primary-faded);
     }
 }
 
 .page-container {
     z-index: 0; // creates new stacking context
     position: relative; // for canvas absolute positioning
-    overflow: hidden; // for canvas clipping at rounded borders
     
     display: grid;
     grid-auto-rows: min-content;
     gap: 1rem;
+
+    scrollbar-color: var(--primary-faded);
+    scrollbar-width: 8px;
 
     @include break-at("medium") {
         grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
@@ -42,8 +31,9 @@ main {
     }
     
     .img-wrapper {
-        height: 11rem; // taking 1rem padding into account
-        width: 100%;
+        height: 13.2rem;
+        margin: -1rem;
+        overflow: hidden;
         img {
             // margin: -2rem;
             position: absolute;
@@ -68,29 +58,30 @@ main {
     }
 
     article {
-        padding: 1rem;
+        @include inset-box;
+        position: relative;
     }
-}
 
-.portfolio {
-    .img-wrapper {
-        height: 7rem; // taking 1rem padding into account
-        width: 100%;
-        img {
-            // margin: -2rem;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            width: 100%;
-            height: 8rem;
-            object-fit: cover;
-            object-position: 50% 53%;
-            transition: all .3s;
-            box-shadow: 3px 3px 5px rgba(20, 20, 20, 0.6);
-            &.active {
-                height: calc(100%);
+    .portfolio {
+        .img-wrapper {
+            height: 9.2rem; // taking padding into account
+            img {
+                // margin: -2rem;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 8rem;
+                object-fit: cover;
+                object-position: 50% 53%;
+                transition: all .3s;
+                box-shadow: 3px 3px 5px rgba(20, 20, 20, 0.6);
+                &.active {
+                    height: calc(100%);
+                }
             }
         }
     }
 }
+

@@ -1,3 +1,5 @@
+@use "../globals" as *;
+
 .content-card {
     z-index: 0;
     position: relative; // for canvas absolute positioning
@@ -5,13 +7,31 @@
     flex-direction: column;
     gap: 0.6rem;
     overflow: hidden; // for canvas clipping at rounded borders
-    box-shadow: inset 0 0 0 1px var(--primary-faded);
     p {
         font-weight: 200;
     }
     h2 {
         font-weight: 200;
-        font-variation-settings: "ital" 1;
+        color: var(--text-bright);
+        letter-spacing: 0.05em;
+    }
+    &.banner {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        h2 {
+            white-space: nowrap;
+            font-size: 1.6rem;
+            color: var(--text-basic);
+            @include break-at("thin") {
+                font-size: 2rem;
+            }
+        }
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
     }
     &.banner {
         justify-content: center;
@@ -27,8 +47,8 @@
         gap: 0.6rem;
     }
     .img-wrapper {
-        height: 11rem;
-        width: 100%;
+        height: 13.2rem;
+        margin: -1rem;
     }
     img {
         cursor: pointer;
@@ -74,8 +94,6 @@
             overflow: hidden;
             margin: 0 -1rem;
             padding: 0 1rem;
-            // min-height: 2.4rem;
-            // transition: all 1s;
             height: 2.4rem;
             &.active {
                 height: auto;
@@ -110,23 +128,15 @@
             }
 
             &:hover {
-                background-color: var(--primary-solid);
+                background-color: var(--accent-faded);
             }
 
             h3 {
-                cursor: pointer
+                cursor: pointer;
+                font-family: "Archivo";
+                font-variation-settings: "wght" 240, "wdth" 115;
+                letter-spacing: 0.015em;
             }
-            
-            
-            // button {
-            //     border: 1px solid var(--primary-faded);
-            //     color: var(--text-basic);
-            //     flex-basis: 2.4rem;
-            //     transition: all 0.2s;
-            //     &:hover {
-            //         border-color: var(--text-basic);
-            //     }
-            // }
         }
     }
     canvas {
