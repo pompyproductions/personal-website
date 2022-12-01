@@ -33,10 +33,15 @@ Prefix reference:
 
 ### NOW
 
-v1.1 patch 1:
+Continuous development: Advent of Code 2022 solutions.
+
+v1.2 patch 1:
 - [ ] Delete the "Passions" component, write it directly inside "About Me" page.
 
-v1.1 patch 2:
+v1.2 patch 2:
+- [ ] Implement JS solution for the `100vh` issue on mobile.
+
+v1.2 patch 3:
 - [ ] Work on ContentCard images to have better display.
 
 
@@ -44,12 +49,11 @@ v1.1 patch 2:
 
 To be decided.
 
-
-### LATER
-
-Scrolling behavior.
-
 - [ ] **MOD:** Rework grid layout to have fixed footer and header, and scrolling main container.
+
+Full-fledged landing page.
+
+- [ ] **ADD:** "./landing": a page with greeting, scrolls down to a link carousel, and then to "download cv" link.
 
 Full-fledged landing page.
 
@@ -83,7 +87,7 @@ Tooltips.
 
 1. Plan out the work in the Roadmap section of _README.md_. **(Always on main branch!)**
 2. Switch to the development branch (`git checkout development`). Work with atomic commits.
-3. When the patch is done and ready to merge, update _version-history.md_ and _README.md_. Commit to development branch.
+3. When the patch is done and ready to merge, update _version-history.md_ and _README.md_. Commit again.
 4. Squash commits:
    - `git checkout main`
    - `git merge --squash development`

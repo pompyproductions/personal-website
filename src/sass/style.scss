@@ -1,4 +1,7 @@
+// go from generic to specific for simpler cascading
+// and to avoid having to reach for "!important"
+
 @use "globals";
-@use "components";
-@use "clusters";
 @use "pages";
+@use "clusters";
+@use "components";

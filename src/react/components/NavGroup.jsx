@@ -23,8 +23,8 @@ const NavGroup = (props) => {
             <li>
                 <div className="hsep"></div>
                 <NavItem icon={faHome} to="/">Home</NavItem>
-                <NavItem icon={faAddressCard} to="/about-me">About me</NavItem>
                 <NavItem icon={faCode} to="/portfolio">Portfolio</NavItem>
+                <NavItem icon={faAddressCard} to="/about-me">About me</NavItem>
                 <NavItem icon={faPaperPlane} to="/contact">Get in touch</NavItem>
             </li>
         </nav>
