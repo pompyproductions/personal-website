@@ -12,12 +12,12 @@
         @include disable-selection;
         // align-self: center;
         white-space: nowrap;
-        transition: transform .2s;
+        transition: transform .2s, font-variation-settings .2s;
         transform-origin: left;
     
         font-size: 1.4rem;
-        font-family: "Archivo Expanded", sans-serif;
-    
+        font-family: "Archivo";
+        font-variation-settings: "wght" 200, "wdth" 115;
     
         @include break-at("thin") {
             font-size: 2rem;
@@ -29,7 +29,8 @@
             font-size: 5rem;
         }
         &:hover {
-            transform: skew(-10deg) scale(1.2);
+            transform: scale(1.1);
+            font-variation-settings: "wght" 300, "wdth" 125;
         }
     }
 

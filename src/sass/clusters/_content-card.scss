@@ -12,9 +12,9 @@
     }
     h2 {
         font-weight: 200;
-        font-variation-settings: "ital" 1;
+        // font-variation-settings: "ital" 1;
         color: var(--text-bright);
-        letter-spacing: 0.06em;
+        letter-spacing: 0.05em;
     }
     &.banner {
         justify-content: center;
@@ -120,7 +120,10 @@
             }
 
             h3 {
-                cursor: pointer
+                cursor: pointer;
+                font-family: "Archivo";
+                font-variation-settings: "wght" 240, "wdth" 115;
+                letter-spacing: 0.015em;
             }
         }
     }

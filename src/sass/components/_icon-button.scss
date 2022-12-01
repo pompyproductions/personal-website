@@ -30,7 +30,8 @@
         align-self: unset;
         display: block;
         font-weight: 200;
-        font-family: "Space Grotesk", sans-serif;
+        font-family: "Archivo", sans-serif;
+        font-stretch: 115%;
         @include break-at("medium") {
             display: block;
         }
