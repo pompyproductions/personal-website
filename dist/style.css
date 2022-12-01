@@ -792,11 +792,6 @@ footer li:hover {
     grid-column: 2;
   }
 }
-@media only screen and (min-width: 1024px) {
-  #root {
-    background-color: rgb(48, 48, 177);
-  }
-}
 
 aside {
   position: fixed;
