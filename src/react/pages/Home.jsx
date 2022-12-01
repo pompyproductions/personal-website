@@ -9,8 +9,8 @@ import ExpandText from '../components/ExpandText.jsx';
 import IconButton from '../components/IconButton.jsx';
 
 // icons
-import { faGithub, faCodepen } from '@fortawesome/free-brands-svg-icons';
-import { faGlobe, faCode } from '@fortawesome/free-solid-svg-icons';
+// import { faGithub, faCodepen } from '@fortawesome/free-brands-svg-icons';
+import { faGlobe, faCode, faAddressCard } from '@fortawesome/free-solid-svg-icons';
 
 const Home = () => {
     return (
@@ -32,6 +32,28 @@ const Home = () => {
                 </TextCouple>
             </article>
             <ContentCard
+                title="What next?"
+                banner
+            >
+                <p>If you're interested in finding out more about what I do, hop over to one of these pages:</p>
+                {/* <div className="flex-spacer"></div>
+                <div className="hsep"></div> */}
+                <IconButton 
+                    icon={faCode}
+                    action="link"
+                    href="./portfolio"
+                    className="strip">
+                    Portfolio
+                </IconButton>
+                <IconButton 
+                    icon={faAddressCard}
+                    action="link"
+                    href="./about-me"
+                    className="strip">
+                    About me
+                </IconButton>
+            </ContentCard>
+            <ContentCard
                 title="Latest news — December 2022"
             >
                 <ExpandText>
@@ -46,21 +68,20 @@ const Home = () => {
                         So as you may have already guessed, <strong>I'm joining in!</strong> I'll be publishing my solutions as well as my approach in the links below. <Link to="/contact">Get in touch</Link> if you're participating as well — the more the merrier!
                     </p>
                 </ExpandText>
-                    <div className="flex-spacer"></div>
-                    <div className="hsep"></div>
-                    <IconButton 
-                        icon={faCode}
-                        action="link"
-                        href="./aoc2022">
-                        My solutions
-                    </IconButton>
-                    <IconButton 
-                        icon={faGlobe}
-                        action="anchor"
-                        href="https://adventofcode.com/">
-                        Official website
-                    </IconButton>
-
+                <div className="flex-spacer"></div>
+                <div className="hsep"></div>
+                <IconButton 
+                    icon={faCode}
+                    action="link"
+                    href="./aoc2022">
+                    My solutions
+                </IconButton>
+                <IconButton 
+                    icon={faGlobe}
+                    action="anchor"
+                    href="https://adventofcode.com/">
+                    Official website
+                </IconButton>
             </ContentCard>
         </main>
     )

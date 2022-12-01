@@ -180,6 +180,15 @@ aside {
   grid-template-columns: 1fr;
   grid-auto-rows: min-content;
 }
+@media only screen and (min-width: 720px) {
+  .page-container.home {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr min-content;
+  }
+  .page-container.home .content-card:first-of-type {
+    grid-column: 1/-1;
+  }
+}
 
 main {
   position: relative;
