@@ -35,11 +35,8 @@ Prefix reference:
 
 Continuous development: Advent of Code 2022 solutions.
 
-v1.2 patch 1:
-- [ ] Delete the "Passions" component, write it directly inside "About Me" page.
-
 v1.2 patch 2:
-- [ ] Implement JS solution for the `100vh` issue on mobile.
+- [ ] Delete the "Passions" component, write it directly inside "About Me" page.
 
 v1.2 patch 3:
 - [ ] Work on ContentCard images to have better display.
