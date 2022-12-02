@@ -49,7 +49,8 @@ module.exports = {
         }),
         new CopyPlugin({
             patterns: [
-                path.resolve(__dirname, "src/assets", "_redirects")
+                path.resolve(__dirname, "src/assets", "_redirects"),
+                path.resolve(__dirname, "src/js", "resize-window.js")
             ]
         }),
     ],

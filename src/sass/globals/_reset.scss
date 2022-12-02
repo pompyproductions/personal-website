@@ -1,6 +1,12 @@
+// this is used for document window resizing through JS
+:root {
+    --doc-height: 100vh;
+}
+
 html {
     box-sizing: border-box;
-    min-height: 100vh;
+    height: 100vh; // JS fallback
+    height: var(--doc-height);
     overflow: hidden;
 } 
 *, *::before, *::after {
@@ -13,7 +19,8 @@ body {
     padding: 0;
     margin: 0;
     font-size: 100%;
-    min-height: 100vh;
+    height: 100vh; // JS fallback
+    height: var(--doc-height);
     overflow: inherit;
 } h1, h2, h3, p {
     margin: 0;
