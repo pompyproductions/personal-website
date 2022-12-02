@@ -2,7 +2,8 @@
 
 #root {
     padding: 1rem;
-    height: 100vh;
+    height: 100vh; // JS fallback
+    height: var(--doc-height);
 
     display: grid;
     grid-template-rows: min-content 1fr;

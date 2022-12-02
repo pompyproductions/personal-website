@@ -1,5 +1,9 @@
 # Version History
 
+## v1.2 patch 1: 100vh issue
+
+Bundled a tiny new js script (`resize-window.js`) to set window height dynamically on resize. Uses a CSS variable (`--doc-height`) which the styles access to set the height of `html, body, #root`.
+
 ## v1.2: Restyling and Scrolling Sections
 
 ### Scrollbars
